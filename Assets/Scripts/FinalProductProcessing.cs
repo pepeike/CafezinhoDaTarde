@@ -1,54 +1,66 @@
 using UnityEngine;
 
-public class FinalProduct
-{
-    public string productName {  get; set; }
-    public int ingrA { get; set; }
-    public int ingrB { get; set; }
-    public int ingrC { get; set; }
-
-}
 
 public class FinalProductProcessing : MonoBehaviour {
 
-    public FinalProduct product;
+    public string productName; // Nome do produto
 
-    private void Awake() {
-        product = new FinalProduct();
-    }
+    // Ingredientes colocados no produto, determinam o nome do produto
+    int ingredientA;
+    int ingredientB;
+    int ingredientC;
 
+    // Processos feitos no produto, tambem determinam o nome (até o momento inutilizados)
+    public bool processA = false;
+    public bool processB = false;
+    public bool processC = false;
 
+    // Metodo chamado quando um ingrediente é adicionado
     public void OnDropIngredient(IngredientCarrier drop) {
 
         IngredientType dropIngredient = drop.type;
 
-        switch (dropIngredient) {
+        switch (dropIngredient) {                           // Switch pra determinar qual ingrediente deve ser adicionado
             case IngredientType.ingredientA:
-                product.ingrA++;
-                Debug.Log(product.ingrA);
+                ingredientA++;
+                
+                Debug.Log($"IngredientA: {ingredientA} " +
+                    $"\nIngredientB: {ingredientB} " +
+                    $"\nIngredientC: {ingredientC}");
+
                 break;
+
             case IngredientType.ingredientB:
-                product.ingrB++;
-                Debug.Log(product.ingrB);
+                ingredientB++;
+
+                Debug.Log($"IngredientA: {ingredientA} " +
+                    $"\nIngredientB: {ingredientB} " +
+                    $"\nIngredientC: {ingredientC}");
+
                 break;
+
             case IngredientType.ingredientC:
-                product.ingrC++;
-                Debug.Log(product.ingrC);
+                ingredientC++;
+
+                Debug.Log($"IngredientA: {ingredientA} " + 
+                    $"\nIngredientB: {ingredientB} " + 
+                    $"\nIngredientC: {ingredientC}");
+
                 break;
         }
 
-        UpdateProduct();
+        //UpdateProduct();
 
     }
 
+    
+
+    // Metodo pra determinar o nome do produto com base nos ingredientes adicionados
+    //
+    // NOTA: Talvez seja prudente o uso de um botão que "finaliza" o café para que o
+    // código não rode toda vez que um ingrediente é acrescentado
     private void UpdateProduct() {
-        if (product.ingrA > product.ingrB && product.ingrA > product.ingrC) {
-            gameObject.GetComponentInChildren<SpriteRenderer>().color = Color.red;
-        } else if (product.ingrB > product.ingrA && product.ingrB > product.ingrC) {
-            gameObject.GetComponentInChildren<SpriteRenderer>().color = Color.green;
-        } else if (product.ingrC > product.ingrB && product.ingrC > product.ingrA) {
-            gameObject.GetComponentInChildren<SpriteRenderer>().color = Color.blue;
-        }
+        
     }
 
 }

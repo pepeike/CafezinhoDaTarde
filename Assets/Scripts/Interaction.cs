@@ -1,71 +1,85 @@
-using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class Interaction : MonoBehaviour {
 
-    Camera mainCamera;
-    [SerializeField]
-    GameObject player;
-    PlayerInput playerInput;
+    // ============================================
+    // || Esse script fica no MANAGER da cena    ||
+    // ============================================
 
+    Camera mainCamera;
+
+    // Constante pra manter objetos ou instancias de prefabs na mesma coordenada Z (profundidade) dos outros objetos
+    const int Z_ABSOLUTE_SCENE_POS = 0;
+
+    // Variaveis para o Input System
+    PlayerInput playerInput;
     InputAction touchAction;
     InputAction positionAction;
-    [SerializeField]
-    GameObject ingredient;
+
+    // WaitForFixedUpdate fixo para as corotinas nao precisarem criar novas instancias
     WaitForFixedUpdate waitForFixedUpdate = new WaitForFixedUpdate();
 
+    // Posição na tela para que objetos movidos acompanhem o dedo do jogador
     public Vector3 cursorPos;
 
     
 
-
+    // Definindo variaveis
     private void Awake() {
-        //player = gameObject;
         mainCamera = Camera.main;
         playerInput = GetComponent<PlayerInput>();
-        touchAction = playerInput.actions["TouchPress"];
-        positionAction = playerInput.actions["TouchPosition"];
+
+        // ====================================================================================================================
+        // Input System: as InputActions aqui usam o NOME DA AÇÃO EM *Assets\InputSystem_Actions.inputactions* COMO REFERÊNCIA,
+        //               manter isso em mente caso alguem mude um nome posteriormente
+
+        touchAction = playerInput.actions["TouchPress"];       // Ação do toque
+        positionAction = playerInput.actions["TouchPosition"]; // posição do dedo na tela
+
+        // ====================================================================================================================
     }
 
+    // Ativando e desativando mapas de ações do InputActions
     private void OnEnable() {
-        touchAction.Enable();
-        
-        touchAction.performed += touchPressed;
+        touchAction.Enable(); 
+        touchAction.performed += touchPressed; // Inscreve o metodo ao evento touchAction.performed (quando o jogador toca na tela)
     }
-
     private void OnDisable() {
-        touchAction.performed -= touchPressed;
+        touchAction.performed -= touchPressed; // Desinscreve quando o script é desativado
         touchAction.Disable();
     }
 
-    
-
-    private void touchPressed(InputAction.CallbackContext context) {
+    // Metodo pro cursor (cursorPos) acompanhar onde o jogador encosta ou ta encostando na tela
+    private void UpdateCursorPosition() {
         cursorPos = mainCamera.ScreenToWorldPoint(positionAction.ReadValue<Vector2>());
-        cursorPos.z = player.transform.position.z;
-        RaycastHit2D hit = Physics2D.Raycast(cursorPos, Vector2.zero);
+        cursorPos.z = Z_ABSOLUTE_SCENE_POS;
+    }
+
+    
+    // Metodo chamado quando o jogo recebe o input de toque na tela
+    private void touchPressed(InputAction.CallbackContext context) {
+        UpdateCursorPosition();
+        RaycastHit2D hit = Physics2D.Raycast(cursorPos, Vector2.zero); // Raycast pra detectar objetos
         if (hit.collider != null) {
             SelectParser(hit);
         }
     }
 
+    // Metodo pra determinar que objeto foi detectado primeiro pelo raycast
     private void SelectParser(RaycastHit2D hit) {
-        if (hit.collider.GetComponent<Ingredient>()) {
-            //GameObject inst = Instantiate(hit.collider.gameObject, cursorPos, Quaternion.identity);
-            //inst.transform.GetChild(0).GetComponent<SpriteRenderer>().sortingOrder = 2;
-            //StartCoroutine(DragIngredient(inst));
+        if (hit.collider.GetComponent<Ingredient>()) {               // Para Ingredientes
             hit.collider.GetComponent<Ingredient>().OnClicked();
-        } else if (hit.collider.CompareTag("Product")) {
+        } else if (hit.collider.CompareTag("Product")) {             // Para o produto final (Café)
             StartCoroutine(DragProduct(hit.transform.gameObject));
         }
     }
 
+    // Corrotina pra arrastar ingredientes pela tela
     public IEnumerator DragIngredient(GameObject obj) {
         while (touchAction.ReadValue<float>() != 0) {
-            cursorPos = mainCamera.ScreenToWorldPoint(positionAction.ReadValue<Vector2>());
-            cursorPos.z = player.transform.position.z;
+            UpdateCursorPosition();
             obj.transform.position = cursorPos;
             yield return waitForFixedUpdate;
         }
@@ -80,10 +94,11 @@ public class Interaction : MonoBehaviour {
         }
     }
 
+    // Corrotina pra arrastar o produto até alguma maquina que altere o produto
+    // INCOMPLETO
     public IEnumerator DragProduct(GameObject obj) {
         while (touchAction.ReadValue < float>() != 0) {
-            cursorPos = mainCamera.ScreenToWorldPoint(positionAction.ReadValue<Vector2>());
-            cursorPos.z = player.transform.position.z;
+            UpdateCursorPosition();
             obj.transform.position = cursorPos;
             yield return waitForFixedUpdate;
         }
