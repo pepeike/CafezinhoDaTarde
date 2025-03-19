@@ -7,6 +7,7 @@ TagManager:
   - Object
   - Product
   - Coffie
+  - Process
   layers:
   - Default
   - TransparentFX
