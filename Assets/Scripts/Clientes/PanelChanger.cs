@@ -45,5 +45,5 @@ public class PanelChanger : MonoBehaviour
             Debug.LogWarning("ChangeToNonExistantPanel " + Panel);
         }
     }
-    public void ChangeLevel(string NextLevel) { /*SceneManager.LoadScene(NextLevel);*/ Debug.Log("LoadScene ."+ NextLevel); }
+    public void ChangeLevel(string NextLevel) { SceneManager.LoadScene(NextLevel); /* Debug.Log("LoadScene ."+ NextLevel); */ }
 }
