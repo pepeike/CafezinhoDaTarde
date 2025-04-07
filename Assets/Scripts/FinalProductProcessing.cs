@@ -61,7 +61,7 @@ public class FinalProductProcessing : MonoBehaviour
                 break;
         }
 
-        UpdateProduct();
+        //UpdateProduct();
 
     }
 
@@ -71,7 +71,7 @@ public class FinalProductProcessing : MonoBehaviour
     //
     // NOTA: Talvez seja prudente o uso de um botão que "finaliza" o café para que o
     // código não rode toda vez que um ingrediente é acrescentado
-    private void UpdateProduct()
+    public void UpdateProduct()
     {
         int[] _ingreds = { ingredientA, ingredientB, ingredientC,                  // Junta os ingredientes
                            processA ? 1 : 0, processB ? 1 : 0, processC ? 1 : 0 }; //       e processos em 1 array (bools viram 1 ou 0)
