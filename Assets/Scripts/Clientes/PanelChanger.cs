@@ -4,46 +4,33 @@ using UnityEngine.SceneManagement;
 
 public class PanelChanger : MonoBehaviour
 {
-    public int StartingPanel;
-    private int Panel;
-    public List<GameObject> PanelList;
-   
-
-    //Requires a seperet System for the in game Options Menu
+    public List<int> StartingPanel;     //List For The Panels in PanelList That Are Visible at the start of the scene
+    public List<GameObject> PanelList;  //List of all Panels (Active and Inactive)
 
     private void Start()
     {
-        foreach (GameObject Panel in PanelList)
+        foreach (GameObject Panel in PanelList)  //Sets all panels False
         {
             Panel.SetActive(false);
         }
-        if (StartingPanel < PanelList.Count - 1 && StartingPanel >= 0)
+        foreach (int SP in StartingPanel)  //Sets all Panels, Determined in StartingPanel List, as true
         {
-            PanelList[StartingPanel].SetActive(true);
-            Panel = StartingPanel;
+            if (SP < PanelList.Count - 1 && SP >= 0)
+            {
+                PanelList[SP].SetActive(true);
+            }
+            else { Debug.LogError("PanelStartOutsideOfRange"); }// <= Error if There is a Panel Set to be true that does not exist
         }
-        else
-        {
-            PanelList[0].SetActive(true);
-            Panel = 0;
-        }
-            ChangePanel(0);
     }
 
-    public void ChangePanel(int Panel)
+    public void SetPanelTrue(int Panel)// <= Sets panel true (Button)
     {
-        if (Panel <= PanelList.Count - 1 && Panel >= 0)
-        {
-            PanelList[this.Panel].SetActive(false);
-            PanelList[Panel].SetActive(true);
-            this.Panel = Panel;
-        }
-        else
-        {
-            PanelList[0].SetActive(true);
-            this.Panel = 0;
-            Debug.LogWarning("ChangeToNonExistantPanel " + Panel);
-        }
+        PanelList[Panel].SetActive(true);
+    }
+
+    public void SetPanelFalse(int Panel)// <= Sets panel false (Button)
+    {
+        PanelList[Panel].SetActive(false);
     }
     public void ChangeLevel(string NextLevel) { SceneManager.LoadScene(NextLevel); /* Debug.Log("LoadScene ."+ NextLevel); */ }
 }

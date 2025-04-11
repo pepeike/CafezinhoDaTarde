@@ -12,23 +12,36 @@ public class CliantManager : MonoBehaviour
     private TMP_Text Text;      // Componente de texto
     bool cooldown;      // Status do timer de retorno do a pergunta
 
+    private Cliant CurrentCliant;
+    private int IntCurrentCliant;
+    private int QuestionDialog;
+
+
+    private string[] A = { "A", "B","C","D","E" };
+    private string[] B = { "B", "C","D","E","F" };
+    private string[] C = { "C", "D","E","F","G" };
+
     private void Start()
     {
         this.Text = CliantSpeshObject.GetComponent<TMP_Text>();
         cliants = new List<Cliant>();
         cooldown = true;
 
-        // <= Crie os clientes aqui. =========================================================
 
-        cliants.Add(new Cliant("QueroCafeéeééé", "Latte", "Th", "NÃÃÃÃÃÃAÃhhhhhhhhhhhhhho"));
-        cliants.Add(new Cliant("Caffé", "Caputino", "THENKS", "NÃÃo"));
 
-        // ======================================================================================
-        Text.text = cliants[0].Demand;
+        cliants.Add(new Cliant(A)); //cliants.Add(new Cliant(B)); cliants.Add(new Cliant(C));
+
+        CurrentCliant = cliants[0];
+        IntCurrentCliant = 0;
+        QuestionDialog = 0;
     }
 
     void OnTriggerEnter2D(Collider2D col)
     {
+        ChangeQuestionPart();
+        ChangeCliant();
+        ChangeCliant();
+        /*
         if (cliants.Count > 0)
         {
             //Debug.LogWarning("Colided");
@@ -37,15 +50,11 @@ public class CliantManager : MonoBehaviour
                 if (col.tag == "Coffie")        // Verifica se o objeto é um café. (Evita o erro de tentar pegar um objeto que não tenha o CoffieInfo)
                 {
                     CoffieInfo CoffieInfo = col.gameObject.GetComponent<CoffieInfo>();
-                    if (cliants[0].ToString() == CoffieInfo.ToString())     // Se o café é o meso que o cliente atual quer.
+                    if (CurrentCliant.ToString() == CoffieInfo.ToString())     // Se o café é o meso que o cliente atual quer.
                     {                                                   // Sim
-                        Text.text = cliants[0].Right;
-                        ChangeCliant();
                     }
                     else
                     {                                                   // Não
-                        Text.text = cliants[0].Wrong;
-                        // <= Add Corrotina
                         StartCoroutine(ReturnToDemand(1.5f));
                     }
                 }
@@ -59,23 +68,41 @@ public class CliantManager : MonoBehaviour
             }
         }
         else { Debug.LogError("clients.List is empty"); }
+        */
     }
 
     // Muda o cliente atual para o procimo Cliente
     void ChangeCliant()
     {
-        Cliant C = cliants[0];
-        cliants.Remove(C);
-        if (cliants.Count > 0)
+        IntCurrentCliant++;
+        if (cliants.Count > IntCurrentCliant)
         {
-            StartCoroutine(ReturnToDemand(1.5f));
+            CurrentCliant = cliants[IntCurrentCliant];
         }
-        else
+        else 
         {
-            // <= Inserir condição de fim de jogo
-            Debug.LogWarning("End OF the Line");
+            IntCurrentCliant = IntCurrentCliant - 1;
+            // //////////////////////////////////////// <= ADD Win Condition
+            Debug.LogError("Awaiting Win/End_Condition Code");
         }
     }
+
+    private void ChangeQuestionPart()
+    {
+        //int A = CurrentCliant.DemandArray.Length;
+        //int B = QuestionDialog;
+        if (QuestionDialog <= CurrentCliant.DemandArray.Length - 1)
+        {
+            Text.text = CurrentCliant.DemandArray[QuestionDialog];
+            QuestionDialog++;
+        }
+    }
+
+    private void ChangeResponcePart(int ResponceArrayPos)
+    {
+
+    }
+
 
     // Timer de Cooldown depois de um objeto ter sido entregue e Retorna a Pergunta do cliente atual
     private IEnumerator ReturnToDemand(float Seconds)
@@ -90,7 +117,5 @@ public class CliantManager : MonoBehaviour
         }
         yield return null;
         cooldown = true;
-        Text.text = cliants[0].Demand;
     }
-
 }
