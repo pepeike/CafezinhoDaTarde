@@ -391,7 +391,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dd8c379598d0e0429230af98dce2bac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StartingPanel: 278447232
+  StartingPanel: 0100000002000000
   PanelList:
   - {fileID: 348530192}
   - {fileID: 993732229}

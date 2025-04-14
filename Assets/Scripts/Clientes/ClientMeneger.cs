@@ -17,9 +17,18 @@ public class CliantManager : MonoBehaviour
     private int QuestionDialog;
 
 
-    private string[] A = { "A", "B","C","D","E" };
-    private string[] B = { "B", "C","D","E","F" };
-    private string[] C = { "C", "D","E","F","G" };
+    private string[] A = { "A", "B", "C", "D", "E" };
+    private string[] B = { "B", "C", "D", "E", "F" };
+    private string[] C = { "C", "D", "E", "F", "G" };
+    private string[,] w = { { "C", "D", "E", "F", "G" }, { "s", "a", "a", "a", "s" } };
+
+
+
+
+    private List<string> A1 = new List<string> { "asda", "sdf" };
+
+
+
 
     private void Start()
     {
@@ -27,20 +36,17 @@ public class CliantManager : MonoBehaviour
         cliants = new List<Cliant>();
         cooldown = true;
 
-
-
-        cliants.Add(new Cliant(A)); //cliants.Add(new Cliant(B)); cliants.Add(new Cliant(C));
+        cliants.Add(new Cliant(A, w)); //cliants.Add(new Cliant(B)); cliants.Add(new Cliant(C));
 
         CurrentCliant = cliants[0];
         IntCurrentCliant = 0;
         QuestionDialog = 0;
+
+
     }
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        ChangeQuestionPart();
-        ChangeCliant();
-        ChangeCliant();
         /*
         if (cliants.Count > 0)
         {
@@ -79,7 +85,7 @@ public class CliantManager : MonoBehaviour
         {
             CurrentCliant = cliants[IntCurrentCliant];
         }
-        else 
+        else
         {
             IntCurrentCliant = IntCurrentCliant - 1;
             // //////////////////////////////////////// <= ADD Win Condition
@@ -97,12 +103,6 @@ public class CliantManager : MonoBehaviour
             QuestionDialog++;
         }
     }
-
-    private void ChangeResponcePart(int ResponceArrayPos)
-    {
-
-    }
-
 
     // Timer de Cooldown depois de um objeto ter sido entregue e Retorna a Pergunta do cliente atual
     private IEnumerator ReturnToDemand(float Seconds)
