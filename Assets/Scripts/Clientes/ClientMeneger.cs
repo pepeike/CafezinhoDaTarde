@@ -18,16 +18,8 @@ public class CliantManager : MonoBehaviour
 
 
     private string[] A = { "A", "B", "C", "D", "E" };
-    private string[] B = { "B", "C", "D", "E", "F" };
-    private string[] C = { "C", "D", "E", "F", "G" };
-    private string[,] w = { { "C", "D", "E", "F", "G" }, { "s", "a", "a", "a", "s" } };
 
-
-
-
-    private List<string> A1 = new List<string> { "asda", "sdf" };
-
-
+    private List<string>[] E = new List<string>[4];
 
 
     private void Start()
@@ -36,13 +28,21 @@ public class CliantManager : MonoBehaviour
         cliants = new List<Cliant>();
         cooldown = true;
 
-        cliants.Add(new Cliant(A, w)); //cliants.Add(new Cliant(B)); cliants.Add(new Cliant(C));
+        E[0] = new List<string>() {"1","2"};
+        E[1] = new List<string>() {"3","4"};
+        E[2] = new List<string>() {"5","6"};
+        E[3] = new List<string>() {"7","8"};
+
+        cliants.Add(new Cliant(A, E)); //cliants.Add(new Cliant(B)); cliants.Add(new Cliant(C));
 
         CurrentCliant = cliants[0];
         IntCurrentCliant = 0;
         QuestionDialog = 0;
 
-
+        DebugAnswer(cliants[0].Answers[0], "1");
+        DebugAnswer(cliants[0].Answers[1], "2");
+        DebugAnswer(cliants[0].Answers[2], "3");
+        DebugAnswer(cliants[0].Answers[3], "4");
     }
 
     void OnTriggerEnter2D(Collider2D col)
@@ -117,5 +117,17 @@ public class CliantManager : MonoBehaviour
         }
         yield return null;
         cooldown = true;
+    }
+
+    private void DebugQuestion()
+    {
+
+    }
+    private void DebugAnswer(List<string> ListStr, string DebugSection)
+    {
+        foreach (string I in ListStr)
+        {
+            Debug.Log(DebugSection + " String = " +I);
+        }
     }
 }
