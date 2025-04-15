@@ -1,15 +1,13 @@
 using System.Collections;
 using UnityEngine;
 
-public enum ProcessType
-{
+public enum ProcessType {
     processA,
     processB,
     processC
 }
 
-public class CoffeeProcess : MonoBehaviour
-{
+public class CoffeeProcess : MonoBehaviour {
     // Script para as maquinas que processam o café
 
     // Processo a ser feito (definido pelo inspetor na unity)
@@ -22,37 +20,26 @@ public class CoffeeProcess : MonoBehaviour
     // Metodo chamado no script Interaction
     // Confere se o produto ja foi processado nessa maquina
     // Se nao tiver sido, ele processa
-    public void OnDropProduct(FinalProductProcessing obj)
-    {
-        switch (process)
-        {
+    public void OnDropProduct(FinalProductProcessing obj) {
+        switch (process) {
             case ProcessType.processA:
-                if (obj.processA)
-                {
+                if (obj.processA) {
                     break;
-                }
-                else
-                {
+                } else {
                     StartCoroutine(Processing(obj));
                 }
                 break;
             case ProcessType.processB:
-                if (obj.processB)
-                {
+                if (obj.processB) {
                     break;
-                }
-                else
-                {
+                } else {
                     StartCoroutine(Processing(obj));
                 }
                 break;
             case ProcessType.processC:
-                if (obj.processC)
-                {
+                if (obj.processC) {
                     break;
-                }
-                else
-                {
+                } else {
                     StartCoroutine(Processing(obj));
                 }
                 break;
@@ -61,8 +48,7 @@ public class CoffeeProcess : MonoBehaviour
     }
 
     // Metodo para o processamento
-    public IEnumerator Processing(FinalProductProcessing obj)
-    {
+    public IEnumerator Processing(FinalProductProcessing obj) {
         obj.occupied = true;                        // Deixa o café imovel durante o processo
         switch (process)                            // Decide qual booleana deve ser alterada no script FinalProductProcessing (scrript do café)
         {

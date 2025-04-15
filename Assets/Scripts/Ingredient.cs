@@ -1,9 +1,10 @@
 using UnityEngine;
 
 public enum IngredientType {        // Enum pra facilitar a computação de cada ingrediente
-    ingredientA,                    // Nomes provisórios, mudar depois!!
-    ingredientB,
-    ingredientC
+    LavaShroom,                    // Nomes provisórios, mudar depois!!
+    NethSucralose,
+    SkullTwig,
+    SourTree
 }
 public class Ingredient : MonoBehaviour
 {
