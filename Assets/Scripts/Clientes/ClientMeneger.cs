@@ -14,7 +14,7 @@ public class CliantManager : MonoBehaviour
 
     private Cliant CurrentCliant;
     private int IntCurrentCliant;
-    private int QuestionDialog;
+    private int QuestionDialog, AnswerDialog;
 
 
     private string[] A = { "A", "B", "C", "D", "E" };
@@ -28,16 +28,15 @@ public class CliantManager : MonoBehaviour
         cliants = new List<Cliant>();
         cooldown = true;
 
-        E[0] = new List<string>() {"1","2"};
-        E[1] = new List<string>() {"3","4"};
-        E[2] = new List<string>() {"5","6"};
-        E[3] = new List<string>() {"7","8"};
+        E[0] = new List<string>() { "1", "2" };
+        E[1] = new List<string>() { "3", "4" };
+        E[2] = new List<string>() { "5", "6" };
+        E[3] = new List<string>() { "7", "8" };
 
         cliants.Add(new Cliant(A, E)); //cliants.Add(new Cliant(B)); cliants.Add(new Cliant(C));
 
         CurrentCliant = cliants[0];
         IntCurrentCliant = 0;
-        QuestionDialog = 0;
 
         DebugAnswer(cliants[0].Answers[0], "1");
         DebugAnswer(cliants[0].Answers[1], "2");
@@ -47,6 +46,7 @@ public class CliantManager : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
+        ReedQuestionStart();
         /*
         if (cliants.Count > 0)
         {
@@ -93,7 +93,9 @@ public class CliantManager : MonoBehaviour
         }
     }
 
-    private void ChangeQuestionPart()
+    private void ReedQuestionStart() { QuestionDialog = 0; ReedQuestion(); }
+
+    private void ReedQuestion()
     {
         //int A = CurrentCliant.DemandArray.Length;
         //int B = QuestionDialog;
@@ -102,6 +104,15 @@ public class CliantManager : MonoBehaviour
             Text.text = CurrentCliant.DemandArray[QuestionDialog];
             QuestionDialog++;
         }
+    }
+    private void ReedAnswerStart(int answer)
+    {
+        AnswerDialog = 0;
+        //Text.text = CurrentCliant.Answers[answer].
+    }
+    private void ReedAnswer(int Answer)
+    {
+
     }
 
     // Timer de Cooldown depois de um objeto ter sido entregue e Retorna a Pergunta do cliente atual
@@ -127,7 +138,7 @@ public class CliantManager : MonoBehaviour
     {
         foreach (string I in ListStr)
         {
-            Debug.Log(DebugSection + " String = " +I);
+            Debug.Log(DebugSection + " String = " + I);
         }
     }
 }
