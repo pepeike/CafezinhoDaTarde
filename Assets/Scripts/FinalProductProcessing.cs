@@ -84,8 +84,8 @@ public class FinalProductProcessing : MonoBehaviour
     // código não rode toda vez que um ingrediente é acrescentado
     public void UpdateProduct()
     {
-        int[] _ingreds = { taste, effect,                  // Junta os ingredientes
-                           processA ? 1 : 0, processB ? 1 : 0, processC ? 1 : 0 }; //       e processos em 1 array (bools viram 1 ou 0)
+        int[] _ingreds = { taste, effect };                                          // Junta os ingredientes
+                           //processA ? 1 : 0, processB ? 1 : 0, processC ? 1 : 0 }; //       e processos em 1 array (bools viram 1 ou 0)
         string _key = string.Join(",", _ingreds);                                  // Transforma o array em string pra ser usado com o dicionario
         if (coffeeDict.TryGetValue(_key, out string _name))                        // Ve se a combinação existe no dicionario
         {

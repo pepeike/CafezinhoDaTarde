@@ -29,6 +29,10 @@ public class CookingManager : MonoBehaviour
         }
     }
 
+    public void ResetCoffee() {
+        Destroy(finalProduct.gameObject);
+        finalProduct = Instantiate(initialProductPrefab, initCoffeePos, Quaternion.identity).GetComponent<FinalProductProcessing>();
+    }
 
     public void DeliverCoffee() {
         finalProduct.UpdateProduct();
@@ -36,8 +40,7 @@ public class CookingManager : MonoBehaviour
 
         //codigo pra entregar o café
 
-        Destroy(finalProduct.gameObject);
-        finalProduct = Instantiate(initialProductPrefab, initCoffeePos, Quaternion.identity).GetComponent<FinalProductProcessing>();
+        ResetCoffee();
 
     }
 
