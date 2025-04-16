@@ -12,13 +12,18 @@ public class CliantManager : MonoBehaviour
     private TMP_Text Text;      // Componente de texto
     bool cooldown;      // Status do timer de retorno do a pergunta
 
+    CliantConstructer CC;
     private Cliant CurrentCliant;
     private int IntCurrentCliant;
-    private int QuestionDialog, AnswerDialog;
+    private int QuestionDialog, AnswerIn, AnswerDialog;
+    private bool QuestionOrAnswer;
 
+    public FinalProductProcessing finalProduct;
+    public GameObject initialProductPrefab;
+    private int[] ingredients;
+    [SerializeField] Vector3 initCoffeePos;
 
     private string[] A = { "A", "B", "C", "D", "E" };
-
     private List<string>[] E = new List<string>[4];
 
 
@@ -28,53 +33,37 @@ public class CliantManager : MonoBehaviour
         cliants = new List<Cliant>();
         cooldown = true;
 
-        E[0] = new List<string>() { "1", "2" };
-        E[1] = new List<string>() { "3", "4" };
-        E[2] = new List<string>() { "5", "6" };
-        E[3] = new List<string>() { "7", "8" };
+        //E[0] = new List<string>() { "1", "2", "asda" };
+        //E[1] = new List<string>() { "3", "4", "Vaca", "s" };
+        //E[2] = new List<string>() { "5", "6" };
+        //E[3] = new List<string>() { "7" };
 
-        cliants.Add(new Cliant(A, E)); //cliants.Add(new Cliant(B)); cliants.Add(new Cliant(C));
+        //cliants.Add(new Cliant(A, E)); //cliants.Add(new Cliant(B)); cliants.Add(new Cliant(C));
 
-        CurrentCliant = cliants[0];
+        
         IntCurrentCliant = 0;
 
-        DebugAnswer(cliants[0].Answers[0], "1");
-        DebugAnswer(cliants[0].Answers[1], "2");
-        DebugAnswer(cliants[0].Answers[2], "3");
-        DebugAnswer(cliants[0].Answers[3], "4");
-    }
+        //DebugAnswer(cliants[0].Answers[0], "1");
+        //DebugAnswer(cliants[0].Answers[1], "2");
+        //DebugAnswer(cliants[0].Answers[2], "3");
+        //DebugAnswer(cliants[0].Answers[3], "4");
 
-    void OnTriggerEnter2D(Collider2D col)
-    {
+        //  <= Start Cliant
+        CC = new CliantConstructer();
+        cliants = CC.ReturnCliants();
+
+        CurrentCliant = cliants[0];
         ReedQuestionStart();
-        /*
-        if (cliants.Count > 0)
-        {
-            //Debug.LogWarning("Colided");
-            if (cooldown == true)       // se o cooldown timer esta ativo
-            {
-                if (col.tag == "Coffie")        // Verifica se o objeto é um café. (Evita o erro de tentar pegar um objeto que não tenha o CoffieInfo)
-                {
-                    CoffieInfo CoffieInfo = col.gameObject.GetComponent<CoffieInfo>();
-                    if (CurrentCliant.ToString() == CoffieInfo.ToString())     // Se o café é o meso que o cliente atual quer.
-                    {                                                   // Sim
-                    }
-                    else
-                    {                                                   // Não
-                        StartCoroutine(ReturnToDemand(1.5f));
-                    }
-                }
-                else
-                {                               // O objeto Não possui a tag "Coffie"
-                    //Debug.Log("Not My Coffie");
-                    Text.text = "Isso Não É CAFÉ";
-                    // <= ADD Corrotina
-                    StartCoroutine(ReturnToDemand(1.5f));
-                }
-            }
-        }
-        else { Debug.LogError("clients.List is empty"); }
-        */
+    }
+    // Doce+ Amargo- // Energetico+ Relachante-
+
+
+    public void DeliverCoffee()
+    {
+        finalProduct.UpdateProduct();
+        ingredients = finalProduct.productProperties;
+        ResetCoffee();
+        ReedAnswerStart();
     }
 
     // Muda o cliente atual para o procimo Cliente
@@ -90,29 +79,63 @@ public class CliantManager : MonoBehaviour
             IntCurrentCliant = IntCurrentCliant - 1;
             // //////////////////////////////////////// <= ADD Win Condition
             Debug.LogError("Awaiting Win/End_Condition Code");
+            Text.text = "Dialogo Necessario";
         }
     }
 
-    private void ReedQuestionStart() { QuestionDialog = 0; ReedQuestion(); }
+    private void ReedQuestionStart() { QuestionDialog = 0; ReedQuestion(); QuestionOrAnswer = false; }
 
-    private void ReedQuestion()
+    public void ReedQuestion()
     {
         //int A = CurrentCliant.DemandArray.Length;
         //int B = QuestionDialog;
-        if (QuestionDialog <= CurrentCliant.DemandArray.Length - 1)
+        if (QuestionOrAnswer == false)
         {
-            Text.text = CurrentCliant.DemandArray[QuestionDialog];
-            QuestionDialog++;
+            if (QuestionDialog <= CurrentCliant.DemandArray.Length - 1)
+            {
+                Text.text = CurrentCliant.DemandArray[QuestionDialog];
+                QuestionDialog++;
+            }
         }
     }
-    private void ReedAnswerStart(int answer)
-    {
-        AnswerDialog = 0;
-        //Text.text = CurrentCliant.Answers[answer].
-    }
-    private void ReedAnswer(int Answer)
-    {
 
+    // Doce+ Amargo- // Energetico+ Relachante-
+    private void ReedAnswerStart()
+    {
+        QuestionOrAnswer = true;
+        AnswerDialog = 0;
+        if (ingredients[0] >= 0 && ingredients[1] >= 0)
+        {
+            // doce e energetico
+            AnswerIn = 0;
+        }
+        else if(ingredients[0] >= 0 && ingredients[1] < 0)
+        {
+            // doce e Relachante
+            AnswerIn = 1;
+        }
+        else if (ingredients[0] < 0 && ingredients[1] >= 0)
+        {
+            // Amargo e energetico
+            AnswerIn = 2;
+        }
+        else
+        {
+            // Amargo e Relachante
+            AnswerIn = 3;
+        }
+        ReedAnswer();
+    }
+    public void ReedAnswer()
+    {
+        if (QuestionOrAnswer == true)
+        {
+            if (AnswerDialog <= CurrentCliant.Answers[AnswerIn].Count - 1)
+            {
+                Text.text = CurrentCliant.Answers[AnswerIn][AnswerDialog];
+                AnswerDialog++;
+            }
+        }
     }
 
     // Timer de Cooldown depois de um objeto ter sido entregue e Retorna a Pergunta do cliente atual
@@ -130,6 +153,15 @@ public class CliantManager : MonoBehaviour
         cooldown = true;
     }
 
+    public void ResetCoffee()
+    {
+        Destroy(finalProduct.gameObject);
+        finalProduct = Instantiate(initialProductPrefab, initCoffeePos, Quaternion.identity).GetComponent<FinalProductProcessing>();
+    }
+
+    /// <summary> Debug
+    /// ///////////////////////////////////////////////////////////////////////////////////////////////////////
+    /// </summary>
     private void DebugQuestion()
     {
 
