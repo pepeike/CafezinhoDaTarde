@@ -16,15 +16,14 @@ public class CliantManager : MonoBehaviour
     private Cliant CurrentCliant;
     private int IntCurrentCliant;
     private int QuestionDialog, AnswerIn, AnswerDialog;
+
+    // Question is True, Answer is false
     private bool QuestionOrAnswer;
 
     public FinalProductProcessing finalProduct;
     public GameObject initialProductPrefab;
     private int[] ingredients;
     [SerializeField] Vector3 initCoffeePos;
-
-    private string[] A = { "A", "B", "C", "D", "E" };
-    private List<string>[] E = new List<string>[4];
 
 
     private void Start()
@@ -33,20 +32,8 @@ public class CliantManager : MonoBehaviour
         cliants = new List<Cliant>();
         cooldown = true;
 
-        //E[0] = new List<string>() { "1", "2", "asda" };
-        //E[1] = new List<string>() { "3", "4", "Vaca", "s" };
-        //E[2] = new List<string>() { "5", "6" };
-        //E[3] = new List<string>() { "7" };
-
-        //cliants.Add(new Cliant(A, E)); //cliants.Add(new Cliant(B)); cliants.Add(new Cliant(C));
-
         
         IntCurrentCliant = 0;
-
-        //DebugAnswer(cliants[0].Answers[0], "1");
-        //DebugAnswer(cliants[0].Answers[1], "2");
-        //DebugAnswer(cliants[0].Answers[2], "3");
-        //DebugAnswer(cliants[0].Answers[3], "4");
 
         //  <= Start Cliant
         CC = new CliantConstructer();
@@ -63,7 +50,10 @@ public class CliantManager : MonoBehaviour
         finalProduct.UpdateProduct();
         ingredients = finalProduct.productProperties;
         ResetCoffee();
-        ReedAnswerStart();
+        if (QuestionOrAnswer == false)
+        {
+            ReedAnswerStart();
+        }
     }
 
     // Muda o cliente atual para o procimo Cliente
@@ -73,6 +63,8 @@ public class CliantManager : MonoBehaviour
         if (cliants.Count > IntCurrentCliant)
         {
             CurrentCliant = cliants[IntCurrentCliant];
+            Debug.LogWarning("clientChanged");
+            ReedQuestionStart();
         }
         else
         {
@@ -135,22 +127,13 @@ public class CliantManager : MonoBehaviour
                 Text.text = CurrentCliant.Answers[AnswerIn][AnswerDialog];
                 AnswerDialog++;
             }
+            else
+            {
+                QuestionOrAnswer = false;
+                Debug.LogWarning("ChangeTheCliant");
+                ChangeCliant();
+            }
         }
-    }
-
-    // Timer de Cooldown depois de um objeto ter sido entregue e Retorna a Pergunta do cliente atual
-    private IEnumerator ReturnToDemand(float Seconds)
-    {
-        cooldown = false;
-        float time = Seconds;
-        while (time >= 0)
-        {
-            time = time - Time.deltaTime;
-            yield return new WaitForFixedUpdate();
-            //Debug.Log("seconds " + time);
-        }
-        yield return null;
-        cooldown = true;
     }
 
     public void ResetCoffee()
@@ -162,10 +145,6 @@ public class CliantManager : MonoBehaviour
     /// <summary> Debug
     /// ///////////////////////////////////////////////////////////////////////////////////////////////////////
     /// </summary>
-    private void DebugQuestion()
-    {
-
-    }
     private void DebugAnswer(List<string> ListStr, string DebugSection)
     {
         foreach (string I in ListStr)
