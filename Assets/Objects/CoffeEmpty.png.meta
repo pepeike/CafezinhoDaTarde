@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 0f15a8b2d1f269f4caa81cefbb0060e3
+guid: 4fa706a54b8891648a52c882dcfb2a68
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -9149808880020146542
-    second: Cafeteira2_0
+      213: -2327111843206717409
+    second: CoffeEmpty_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -72,7 +72,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 64
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Cafeteira2_0
+      name: CoffeEmpty_0
       rect:
         serializedVersion: 2
-        x: 7
-        y: 3
-        width: 66
-        height: 66
+        x: 17
+        y: 16
+        width: 33
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2963fa72d49550180800000000000000
-      internalID: -9149808880020146542
+      spriteID: f102f01bb1074bfd0800000000000000
+      internalID: -2327111843206717409
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Cafeteira2_0: -9149808880020146542
+      CoffeEmpty_0: -2327111843206717409
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
