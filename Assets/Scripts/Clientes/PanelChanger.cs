@@ -32,5 +32,11 @@ public class PanelChanger : MonoBehaviour
     {
         PanelList[Panel].SetActive(false);
     }
+
+    public void Transition()
+    {
+
+    }
+
     public void ChangeLevel(string NextLevel) { SceneManager.LoadScene(NextLevel); /* Debug.Log("LoadScene ."+ NextLevel); */ }
 }

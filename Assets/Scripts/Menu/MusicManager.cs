@@ -3,11 +3,10 @@ using UnityEngine.SceneManagement;
 
 public class MusicManager : MonoBehaviour
 {
-    [SerializeField] private AudioSource backgroundMusic;
+    [SerializeField] public AudioSource backgroundMusic;
 
- 
-
-    public void MusicValue(float value)
+    float bgmusicVolume;
+    public void MasterVolumeValue(float value)
     {
         backgroundMusic.volume = value;
         // adicionar os efeitos aqui
@@ -16,6 +15,9 @@ public class MusicManager : MonoBehaviour
     public void BackGroundMusic(float value)
     {
         backgroundMusic.volume = value;
+        bgmusicVolume = backgroundMusic.volume;
+        PlayerPrefs.SetFloat("playervolume", bgmusicVolume);
+        PlayerPrefs.Save();
     }
 
     public void EffectsMusic(float value)
