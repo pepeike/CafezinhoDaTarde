@@ -6,6 +6,8 @@ public class PanelChanger : MonoBehaviour
 {
     public List<int> StartingPanel;     //List For The Panels in PanelList That Are Visible at the start of the scene
     public List<GameObject> PanelList;  //List of all Panels (Active and Inactive)
+    public GameObject openoutTransition;
+    public Animator pausescreenReturn;
 
     private void Start()
     {
@@ -35,8 +37,12 @@ public class PanelChanger : MonoBehaviour
 
     public void Transition()
     {
-
+        openoutTransition.SetActive(true);
     }
 
+    public void PaperReturn()
+    {
+        pausescreenReturn.SetTrigger("Return");
+    }
     public void ChangeLevel(string NextLevel) { SceneManager.LoadScene(NextLevel); /* Debug.Log("LoadScene ."+ NextLevel); */ }
 }
