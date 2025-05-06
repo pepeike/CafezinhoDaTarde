@@ -23,7 +23,7 @@ public class Ingredient : MonoBehaviour
     Interaction interaction;
 
     private void Awake() {
-        interaction = GameObject.Find("Manager").GetComponent<Interaction>();                          // Busca o script de interação
+        interaction = GameObject.Find("S_Manager").GetComponent<Interaction>();                          // Busca o script de interação
     }
 
     // Metodo chamado em Interaction quando o jogador clica (toca) no container de ingredientes

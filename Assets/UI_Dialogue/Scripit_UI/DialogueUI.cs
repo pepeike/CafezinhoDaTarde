@@ -9,6 +9,7 @@ public class DialogueUI : MonoBehaviour
     Image backGround;
     TextMeshProUGUI nameText;
     TextMeshProUGUI talkText;
+    
 
     public float speed = 10f;
     bool open = false;
@@ -41,11 +42,13 @@ public class DialogueUI : MonoBehaviour
 
     public void Enable()
     {
+        
         backGround.fillAmount = 0;
         open = true;
     }
     public void Disable()
     { 
+        
         open = false;
         nameText.text = "";
         talkText.text = "";
