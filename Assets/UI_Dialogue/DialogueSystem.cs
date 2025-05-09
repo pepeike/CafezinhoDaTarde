@@ -25,7 +25,7 @@ public class DialogueSystem : MonoBehaviour
         
         dialogueUI = Object.FindFirstObjectByType<DialogueUI>();
 
-        typeText.typeFinished = OnTypeFinishe;
+        typeText.typeFinished = OnTypeFinishe;                          // O Escritor terminou
     }
     void Start()
     {
@@ -34,7 +34,10 @@ public class DialogueSystem : MonoBehaviour
 
     void Update()
     {
-        if(state == STATE.DISABLED)  return;
+        if(state == STATE.DISABLED)
+            return;
+
+
 
         switch (state) 
         { 
@@ -44,9 +47,7 @@ public class DialogueSystem : MonoBehaviour
             case STATE.TYPING:
                 Typing();
                 break;
-
         }
-        
     }
 
     public void Next()
@@ -55,13 +56,13 @@ public class DialogueSystem : MonoBehaviour
         {
             dialogueUI.Enable();
         }
+                                                                        // O Codigo Empilha as letras
+        dialogueUI.SetName(dialogueData.talkScript[currentText].name);      //Nome do Personagem
+                
 
-        dialogueUI.SetName(dialogueData.talkScript[currentText].name);
+        typeText.fullText = dialogueData.talkScript[currentText++].text;    //escreve o Dialogo
 
-
-        typeText.fullText = dialogueData.talkScript[currentText++].text;
-
-        if (currentText == dialogueData.talkScript.Count) finished = true;
+        if (currentText == dialogueData.talkScript.Count) finished = true;      //Verifica se o Escritor Terminou de escrever
 
         typeText.StartTyping();
         state = STATE.TYPING;
@@ -88,22 +89,15 @@ public class DialogueSystem : MonoBehaviour
                 currentText = 0;
                 finished = false;
             }
-
         }
-
     }
     // configurar o botão de input de k, para toque;
-    void Typing()
+    void Typing()                                   // Para Dar Skip no Escritor
     {
         if (Input.GetKeyDown(KeyCode.K))
         {
             typeText.Skip();
             state = STATE.WAITING;
         }
-
     }
-
-    
-
-    
 }

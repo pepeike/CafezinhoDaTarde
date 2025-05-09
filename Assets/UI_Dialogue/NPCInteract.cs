@@ -11,7 +11,7 @@ public class NPCInteract : MonoBehaviour
     {
         dialogueSystem = FindAnyObjectByType<DialogueSystem>();
     }
-
+    //ParaMudar O NPC
    void Update()
     {
         //aplicar para iniciar o dialogo, trocar para inciar ao clicar no personagem

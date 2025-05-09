@@ -7,52 +7,42 @@ public class CliantManager : MonoBehaviour
 {
     // Cria e Manega os clientes e suas respostas.
 
-    public GameObject CliantSpeshObject;    // Objeto com o testo para as perguntas e respostas
     public List<Cliant> cliants;    // Lista de Clientes
-    private TMP_Text Text;      // Componente de texto
-    bool cooldown;      // Status do timer de retorno do a pergunta
+    private Cliant CurrentCliant;   // Separates Current Cliant
+    private int IntCurrentCliant;   // Position of current Cliant in List
 
-    CliantConstructer CC;
-    private Cliant CurrentCliant;
-    private int IntCurrentCliant;
-    private int QuestionDialog, AnswerIn, AnswerDialog;
+    private int AnswerIn /*Selects The Cliant Responce*/;
 
-    // Question is True, Answer is false
-    private bool QuestionOrAnswer;
 
-    public FinalProductProcessing finalProduct;
-    public GameObject initialProductPrefab;
-    private int[] ingredients;
-    [SerializeField] Vector3 initCoffeePos;
+    private bool QuestionOrAnswer; // Flip Flop in between Question And Answer // Question is /*True*/, Answer is /*false*/
+
+    public FinalProductProcessing finalProduct; // Used to Reset FinalProduct
+    public GameObject initialProductPrefab;     // Prefab For the Coffie
+    private int[] ingredients;                  // Ingredients of the Final Product
+    [SerializeField] Vector3 initCoffeePos;     // Psition of the Coffie
 
 
     private void Start()
     {
-        this.Text = CliantSpeshObject.GetComponent<TMP_Text>();
-        cliants = new List<Cliant>();
-        cooldown = true;
-
-        
+        cliants = new List<Cliant>();           // Generates a new List<Cliant>
         IntCurrentCliant = 0;
 
-        //  <= Start Cliant
-        CC = new CliantConstructer();
-        cliants = CC.ReturnCliants();
-
+        // Before 
+                                                //<= Use this Space To Populate List<Cliant>
+        // Cliants 
         CurrentCliant = cliants[0];
-        ReedQuestionStart();
+        ReedQuestion();
     }
-    // Doce+ Amargo- // Energetico+ Relachante-
 
 
     public void DeliverCoffee()
     {
-        finalProduct.UpdateProduct();
-        ingredients = finalProduct.productProperties;
-        ResetCoffee();
-        if (QuestionOrAnswer == false)
+        if(QuestionOrAnswer == false)
         {
-            ReedAnswerStart();
+            finalProduct.UpdateProduct();
+            ingredients = finalProduct.productProperties;
+            finalProduct.ResetTasteEffect();
+            SelectAnswer();
         }
     }
 
@@ -64,51 +54,42 @@ public class CliantManager : MonoBehaviour
         {
             CurrentCliant = cliants[IntCurrentCliant];
             Debug.LogWarning("clientChanged");
-            ReedQuestionStart();
         }
         else
         {
             IntCurrentCliant = IntCurrentCliant - 1;
-            // //////////////////////////////////////// <= ADD Win Condition
-            Debug.LogError("Awaiting Win/End_Condition Code");
-            Text.text = "Dialogo Necessario";
+                                                                                 //<= ADD Win Condition
+            Debug.LogWarning("Awaiting Win/End_Condition Code");
         }
     }
 
-    private void ReedQuestionStart() { QuestionDialog = 0; ReedQuestion(); QuestionOrAnswer = false; }
-
     public void ReedQuestion()
     {
-        //int A = CurrentCliant.DemandArray.Length;
-        //int B = QuestionDialog;
         if (QuestionOrAnswer == false)
         {
-            if (QuestionDialog <= CurrentCliant.DemandArray.Length - 1)
-            {
-                Text.text = CurrentCliant.DemandArray[QuestionDialog];
-                QuestionDialog++;
-            }
+            QuestionOrAnswer = true;
+            ////////////////////////////////////////// <= Set the ReedFunction
         }
     }
 
     // Doce+ Amargo- // Energetico+ Relachante-
-    private void ReedAnswerStart()
+    private void SelectAnswer()
     {
         QuestionOrAnswer = true;
-        AnswerDialog = 0;
+        //AnswerDialog = 0;
         if (ingredients[0] >= 0 && ingredients[1] >= 0)
         {
-            // doce e energetico
+            // Doce e Energetico
             AnswerIn = 0;
         }
         else if(ingredients[0] >= 0 && ingredients[1] < 0)
         {
-            // doce e Relachante
+            // Doce e Relachante
             AnswerIn = 1;
         }
         else if (ingredients[0] < 0 && ingredients[1] >= 0)
         {
-            // Amargo e energetico
+            // Amargo e Energetico
             AnswerIn = 2;
         }
         else
@@ -116,40 +97,6 @@ public class CliantManager : MonoBehaviour
             // Amargo e Relachante
             AnswerIn = 3;
         }
-        ReedAnswer();
-    }
-    public void ReedAnswer()
-    {
-        if (QuestionOrAnswer == true)
-        {
-            if (AnswerDialog <= CurrentCliant.Answers[AnswerIn].Count - 1)
-            {
-                Text.text = CurrentCliant.Answers[AnswerIn][AnswerDialog];
-                AnswerDialog++;
-            }
-            else
-            {
-                QuestionOrAnswer = false;
-                Debug.LogWarning("ChangeTheCliant");
-                ChangeCliant();
-            }
-        }
-    }
-
-    public void ResetCoffee()
-    {
-        Destroy(finalProduct.gameObject);
-        finalProduct = Instantiate(initialProductPrefab, initCoffeePos, Quaternion.identity).GetComponent<FinalProductProcessing>();
-    }
-
-    /// <summary> Debug
-    /// ///////////////////////////////////////////////////////////////////////////////////////////////////////
-    /// </summary>
-    private void DebugAnswer(List<string> ListStr, string DebugSection)
-    {
-        foreach (string I in ListStr)
-        {
-            Debug.Log(DebugSection + " String = " + I);
-        }
+        //ReedAnswer();
     }
 }

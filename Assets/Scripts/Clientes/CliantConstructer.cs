@@ -35,11 +35,6 @@ public class CliantConstructer
         A4[1] = new List<string>() { "A4 R2 P1", "A4 R2 P2", "A4 R2 P3", "A4 R2 P4" };
         A4[2] = new List<string>() { "A4 R3 P1", "A4 R3 P2" };
         A4[3] = new List<string>() { "A4 R4 P1" };
-
-        cliants.Add(new Cliant(A, A1));
-        cliants.Add(new Cliant(B, A2));
-        cliants.Add(new Cliant(C, A3));
-        cliants.Add(new Cliant(D, A4));
     }
     public List<Cliant> ReturnCliants()
     {
