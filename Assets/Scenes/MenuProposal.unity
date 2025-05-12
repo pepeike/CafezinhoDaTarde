@@ -1231,6 +1231,7 @@ MonoBehaviour:
   - {fileID: 279708242}
   - {fileID: 276233053}
   openoutTransition: {fileID: 599435964}
+  pausescreenReturn: {fileID: 0}
 --- !u!1 &444665161
 GameObject:
   m_ObjectHideFlags: 0
@@ -2045,6 +2046,7 @@ MonoBehaviour:
   StartingPanel: 
   PanelList: []
   openoutTransition: {fileID: 599435964}
+  pausescreenReturn: {fileID: 0}
 --- !u!114 &599435970
 MonoBehaviour:
   m_ObjectHideFlags: 0

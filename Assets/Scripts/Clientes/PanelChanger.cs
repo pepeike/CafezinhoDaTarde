@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using static UnityEngine.Rendering.DebugUI;
 
 public class PanelChanger : MonoBehaviour
 {
@@ -28,10 +29,12 @@ public class PanelChanger : MonoBehaviour
     public void SetPanelTrue(int Panel)// <= Sets panel true (Button)
     {
         PanelList[Panel].SetActive(true);
+        
     }
 
     public void SetPanelFalse(int Panel)// <= Sets panel false (Button)
     {
+
         PanelList[Panel].SetActive(false);
     }
 
@@ -40,9 +43,8 @@ public class PanelChanger : MonoBehaviour
         openoutTransition.SetActive(true);
     }
 
-    public void PaperReturn()
-    {
-        pausescreenReturn.SetTrigger("Return");
-    }
+    
+
+    
     public void ChangeLevel(string NextLevel) { SceneManager.LoadScene(NextLevel); /* Debug.Log("LoadScene ."+ NextLevel); */ }
 }
