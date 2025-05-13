@@ -1206,6 +1206,7 @@ RectTransform:
   - {fileID: 279708245}
   - {fileID: 276233054}
   - {fileID: 599435965}
+  - {fileID: 728913127}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1232,6 +1233,8 @@ MonoBehaviour:
   - {fileID: 276233053}
   openoutTransition: {fileID: 599435964}
   pausescreenReturn: {fileID: 0}
+  interact: {fileID: 0}
+  closeinTransition: {fileID: 0}
 --- !u!1 &444665161
 GameObject:
   m_ObjectHideFlags: 0
@@ -1976,7 +1979,7 @@ GameObject:
   - component: {fileID: 599435971}
   - component: {fileID: 599435970}
   m_Layer: 5
-  m_Name: OpenOutAnim
+  m_Name: closeintransition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1989,16 +1992,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 599435964}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_LocalScale: {x: 0.10000001, y: 0.10000001, z: 0.10000001}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 441115445}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -1}
+  m_AnchoredPosition: {x: 1746.0249, y: 846.6261}
   m_SizeDelta: {x: 16.6485, y: 16.6485}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &599435966
@@ -2047,6 +2050,8 @@ MonoBehaviour:
   PanelList: []
   openoutTransition: {fileID: 599435964}
   pausescreenReturn: {fileID: 0}
+  interact: {fileID: 0}
+  closeinTransition: {fileID: 0}
 --- !u!114 &599435970
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2525,12 +2530,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 728913124}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -587.7, y: -285.9081, z: 0}
+  m_LocalScale: {x: 0.3970946, y: 0.3970946, z: 0.3970946}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 441115445}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &728913128
 MonoBehaviour:
@@ -5541,5 +5546,4 @@ SceneRoots:
   m_Roots:
   - {fileID: 839904788}
   - {fileID: 441115445}
-  - {fileID: 728913127}
   - {fileID: 844476281}

@@ -1,6 +1,8 @@
 using System.Collections.Generic;
+using UnityEditor.Search;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UIElements;
 using static UnityEngine.Rendering.DebugUI;
 
 public class PanelChanger : MonoBehaviour
@@ -9,9 +11,13 @@ public class PanelChanger : MonoBehaviour
     public List<GameObject> PanelList;  //List of all Panels (Active and Inactive)
     public GameObject openoutTransition;
     public Animator pausescreenReturn;
+    public AudioSource interact;
+    public GameObject closeinTransition;
 
     private void Start()
     {
+       // closeinTransition = GameObject.Find("closeintransition");
+
         foreach (GameObject Panel in PanelList)  //Sets all panels False
         {
             Panel.SetActive(false);
@@ -29,6 +35,7 @@ public class PanelChanger : MonoBehaviour
     public void SetPanelTrue(int Panel)// <= Sets panel true (Button)
     {
         PanelList[Panel].SetActive(true);
+ //       interact.Play();
         
     }
 
@@ -36,6 +43,7 @@ public class PanelChanger : MonoBehaviour
     {
 
         PanelList[Panel].SetActive(false);
+  //      interact.Play();
     }
 
     public void Transition()
@@ -44,7 +52,13 @@ public class PanelChanger : MonoBehaviour
     }
 
     
-
+    public void TransitionScene()
+    {
+       // closeinTransition.SetActive(true);
+    }
     
-    public void ChangeLevel(string NextLevel) { SceneManager.LoadScene(NextLevel); /* Debug.Log("LoadScene ."+ NextLevel); */ }
+    public void ChangeLevel(string NextLevel)
+    { 
+        SceneManager.LoadScene(NextLevel);  Debug.Log("LoadScene ."+ NextLevel); 
+    }
 }
