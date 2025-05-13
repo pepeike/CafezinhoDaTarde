@@ -8,12 +8,11 @@ public enum STATE
 }
 public class DialogueSystem : MonoBehaviour
 {
-
     public DialogueData dialogueData;//pega o objeto de fala!
 
     int currentText = 0;
     bool finished = false;
-
+    public bool isWriting { get; private set; }
     TypeTextAnimation typeText;
     DialogueUI dialogueUI;
 
@@ -38,7 +37,7 @@ public class DialogueSystem : MonoBehaviour
             return;
 
 
-
+        //                RLH107- "This switch may be a of a problem due to the processing requaried"
         switch (state) 
         { 
             case STATE.WAITING:
@@ -78,19 +77,27 @@ public class DialogueSystem : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.K))
         {
-            if (!finished)
-            {
-                Next();
-            }
-            else
-            {
-                dialogueUI.Disable();
-                state = STATE.DISABLED;
-                currentText = 0;
-                finished = false;
-            }
+            Wting();
         }
     }
+
+    public void Wting()
+    {
+        isWriting = true;
+        if (!finished)
+        {
+            Next();
+        }
+        else
+        {
+            dialogueUI.Disable();
+            state = STATE.DISABLED;
+            currentText = 0;
+            finished = false;
+            isWriting = false;
+        }
+    }
+
     // configurar o botão de input de k, para toque;
     void Typing()                                   // Para Dar Skip no Escritor
     {
