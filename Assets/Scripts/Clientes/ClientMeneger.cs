@@ -7,16 +7,15 @@ public class CliantManager : MonoBehaviour
 {
     // Cria e Manega os clientes e suas respostas.
 
-    public List<Cliant> cliants;    // Lista de Clientes
-    private Cliant currentCliant;   // Separates Current Cliant
-    private int intCurrentCliant;   // Position of current Cliant in List
+    public List<Cliant> cliants;    /* Lista de Clientes */    private Cliant currentCliant;   /* Separates Current Cliant */ private int intCurrentCliant;   // Position of current Cliant in List
     private bool questionOrAnswer; // Flip Flop in between Question And Answer // Question is /*True*/, Answer is /*false*/
     public FinalProductProcessing finalProduct; // Used to Reset FinalProduct
     public DialogueSystem dialogueSystem;
 
     private void Start()
     {
-        cliants = new List<Cliant>();
+        questionOrAnswer = false;
+        //cliants = new List<Cliant>();
         intCurrentCliant = 0;
         // Before 
                           //<= Use this Space To Populate List<Cliant>
@@ -25,26 +24,15 @@ public class CliantManager : MonoBehaviour
         WriteQuestionOrAnswer();//Remove Once to activat
     }
 
-    private void FixedUpdate()
-    {
-        if(dialogueSystem.isWriting == false)
-        {
-            if (DelegateCallUnLockInteractions != null)
-            {
-                DelegateCallUnLockInteractions();
-            }
-        }
-    }
-
     public void DeliverCoffee() //Button
     {
         if(questionOrAnswer == false)
         {
-            //////////////////////////////////////  // <= Add the Get Ingredents
+            WriteQuestionOrAnswer();
         }
     }
 
-    public void WriteQuestionOrAnswer() //Cliant
+    private void WriteQuestionOrAnswer() //Selects question or answer and calls the text writer
     {
         if (questionOrAnswer == false)
         {
@@ -53,14 +41,14 @@ public class CliantManager : MonoBehaviour
         }
         if (questionOrAnswer == true)
         {
-            questionOrAnswer = false;
-            dialogueSystem.dialogueData = currentCliant.Answers;
+            dialogueSystem.dialogueData = currentCliant.Answers[0];    /*Redue THIS ONce IT IS Ready*/
         }
-        dialogueSystem.Wting();
-        if(DelegateCallLockInteractions != null)
+
+        if(DelegateCallLockInteractions != null)    
         {
             DelegateCallLockInteractions();
-        }
+        } //Lock other inputs
+        dialogueSystem.Wting();                 //Call Writer
     }
 
     public delegate void LockInteraction();
@@ -68,8 +56,19 @@ public class CliantManager : MonoBehaviour
     public delegate void UnLockInteraction();
     UnLockInteraction DelegateCallUnLockInteractions;
 
+    public void UnlockOtherInput()
+    {
+        if(DelegateCallUnLockInteractions != null)
+        {
+            DelegateCallUnLockInteractions();
+        }
+    }
+
     // Doce+ Amargo- // Energetico+ Relachante-
-    private void AnalyseDrink(int Gosto, int Efeito) { }    // <= use this To analyse What Drink is the correct One (if necessery)
+    private void AnalyseDrink(int Gosto, int Efeito) // <= use this To analyse What Drink is the correct One (if necessery)
+    {
+        //Leve this inside the cliant so there is a bigger change between characters
+    }    
 
 
     // Muda o cliente atual para o procimo Cliente
@@ -87,5 +86,6 @@ public class CliantManager : MonoBehaviour
                                                                             //<= ADD Win Condition
             Debug.LogWarning("Awaiting Win/End_Condition Code");
         }
-    }
+        questionOrAnswer = false;
+    } /* And sets The text select Back to question */
 }

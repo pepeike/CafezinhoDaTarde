@@ -12,9 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0743f96f3849ff442a4bee12da2effcf, type: 3}
   m_Name: Cliant
   m_EditorClassIdentifier: 
-  Demand: {fileID: 11400000, guid: 35917c7dd9dccf542ba86d197869fe26, type: 2}
+  cliantName: Plato
+  Demand: {fileID: 11400000, guid: bf0d51d323ffd3a40932bba839eff461, type: 2}
   Answers:
-  - {fileID: 11400000, guid: b6b15f8d655dd514cb53669189c8ac6e, type: 2}
-  - {fileID: 11400000, guid: 9475050c06ef84a4ea60b879cf69df68, type: 2}
-  - {fileID: 11400000, guid: 86b8af73f5a02264da49000eb9c96e28, type: 2}
-  - {fileID: 11400000, guid: 362a2db0ca889a34fa52584efe20b43b, type: 2}
+  - {fileID: 11400000, guid: b209e67386ce7df4094c4b536f4c6e25, type: 2}

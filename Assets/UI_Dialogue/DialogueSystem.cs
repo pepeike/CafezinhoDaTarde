@@ -12,7 +12,7 @@ public class DialogueSystem : MonoBehaviour
 
     int currentText = 0;
     bool finished = false;
-    public bool isWriting { get; private set; }
+    public CliantManager CM;
     TypeTextAnimation typeText;
     DialogueUI dialogueUI;
 
@@ -83,7 +83,6 @@ public class DialogueSystem : MonoBehaviour
 
     public void Wting()
     {
-        isWriting = true;
         if (!finished)
         {
             Next();
@@ -94,7 +93,7 @@ public class DialogueSystem : MonoBehaviour
             state = STATE.DISABLED;
             currentText = 0;
             finished = false;
-            isWriting = false;
+            CM.UnlockOtherInput();
         }
     }
 
