@@ -7,13 +7,14 @@ using UnityEngine;
 public class Cliant : ScriptableObject
 {
     //script para guardar as informações de cada cliente
-    public string cliantName;
+    public string debugCliantName;
+    [SerializeField]
     public int tipeOfCliant
     {
         get => tipeOfCliant;
         set => tipeOfCliant = value >= 0 && value < 4
             ? value
-            : throw new ArgumentOutOfRangeException("Clients/tipeOfCliant/" + cliantName);
+            : throw new ArgumentOutOfRangeException("Clients/tipeOfCliant/" + debugCliantName);
     }
 
     public DialogueData Demand;

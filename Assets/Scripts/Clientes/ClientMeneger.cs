@@ -1,14 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
 
 public class CliantManager : MonoBehaviour
 {
     // Cria e Manega os clientes e suas respostas.
 
     public List<Cliant> cliants;    /* Lista de Clientes */    private Cliant currentCliant;   /* Separates Current Cliant */ private int intCurrentCliant;   // Position of current Cliant in List
-    private bool questionOrAnswer; // Flip Flop in between Question And Answer // Question is /*True*/, Answer is /*false*/
+    private bool questionOrAnswer; // Flip Flop in between Question And Answer // Question is /*false*/, Answer is /*true*/
     public FinalProductProcessing finalProduct; // Used to Reset FinalProduct
     public DialogueSystem dialogueSystem;
 
@@ -26,7 +25,7 @@ public class CliantManager : MonoBehaviour
 
     public void DeliverCoffee() //Button
     {
-        if(questionOrAnswer == false)
+        if(questionOrAnswer == true)
         {
             WriteQuestionOrAnswer();
         }
@@ -34,21 +33,33 @@ public class CliantManager : MonoBehaviour
 
     private void WriteQuestionOrAnswer() //Selects question or answer and calls the text writer
     {
-        if (questionOrAnswer == false)
+        if (questionOrAnswer == false) //Question
         {
-            questionOrAnswer = true;
             dialogueSystem.dialogueData = currentCliant.Demand;
+            dialogueSystem.Wting();//Call Writer
         }
-        if (questionOrAnswer == true)
+        else if (questionOrAnswer == true) //Answer
         {
-            dialogueSystem.dialogueData = currentCliant.Answers[0];    /*Redue THIS ONce IT IS Ready*/
+            /*Redue THIS, ONce IT IS Ready*/
+            AnalyseDrink();
+            dialogueSystem.Wting();//Call Writer
         }
 
-        if(DelegateCallLockInteractions != null)    
+        if (DelegateCallLockInteractions != null)  //Lock other inputs
         {
             DelegateCallLockInteractions();
-        } //Lock other inputs
-        dialogueSystem.Wting();                 //Call Writer
+        }
+    }
+    public void InvertQuestionOrAnswer()
+    {
+        if (questionOrAnswer)
+        {
+            questionOrAnswer = false;
+        }
+        else if(questionOrAnswer == false)
+        {
+            questionOrAnswer = true;
+        }
     }
 
     public delegate void LockInteraction();
@@ -65,14 +76,15 @@ public class CliantManager : MonoBehaviour
     }
 
     // Doce+ Amargo- // Energetico+ Relachante-
-    private void AnalyseDrink(int Gosto, int Efeito) // <= use this To analyse What Drink is the correct One (if necessery)
+    private void AnalyseDrink()
     {
         //Leve this inside the cliant so there is a bigger change between characters
+        dialogueSystem.dialogueData = currentCliant.Answers[0];
     }    
 
 
     // Muda o cliente atual para o procimo Cliente
-    void ChangeCliant()
+    public void ChangeCliant()
     {
         intCurrentCliant++;
         if (cliants.Count > intCurrentCliant)
@@ -88,4 +100,22 @@ public class CliantManager : MonoBehaviour
         }
         questionOrAnswer = false;
     } /* And sets The text select Back to question */
+
+
+
+    // Temporery Function
+
+
+    public bool ButtonState = false;
+    public void ChangeText()
+    {
+        StartCoroutine(DelayState(0.1f));
+    }
+
+    IEnumerator DelayState(float a)
+    {
+        ButtonState = true;
+        yield return new WaitForSeconds(a);
+        ButtonState = false;
+    }
 }

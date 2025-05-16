@@ -75,13 +75,14 @@ public class DialogueSystem : MonoBehaviour
     // configurar o botão de input de k, para toque;
     void Waiting()
     {
-        if (Input.GetKeyDown(KeyCode.K))
+        if (Input.GetKeyDown(KeyCode.K) || CM.ButtonState)
         {
-            Wting();
+            CM.ButtonState = false;
+            Wting(); //RLH107
         }
     }
 
-    public void Wting()
+    public void Wting() //RLH107
     {
         if (!finished)
         {
@@ -93,15 +94,16 @@ public class DialogueSystem : MonoBehaviour
             state = STATE.DISABLED;
             currentText = 0;
             finished = false;
-            CM.UnlockOtherInput();
+            CM.InvertQuestionOrAnswer();
         }
     }
 
     // configurar o botão de input de k, para toque;
-    void Typing()                                   // Para Dar Skip no Escritor
+    void Typing()     // Para Dar Skip no Escritor
     {
-        if (Input.GetKeyDown(KeyCode.K))
+        if (Input.GetKeyDown(KeyCode.K) || CM.ButtonState)
         {
+            CM.ButtonState = false;
             typeText.Skip();
             state = STATE.WAITING;
         }

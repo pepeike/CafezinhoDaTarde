@@ -36,7 +36,6 @@ public class TypeTextAnimation : MonoBehaviour
             yield return new WaitForSeconds(typeDelay);
         }
         typeFinished?.Invoke();
-
     }
 
     public void Skip()
