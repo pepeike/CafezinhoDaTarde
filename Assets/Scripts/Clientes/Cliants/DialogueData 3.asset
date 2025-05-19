@@ -9,11 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0743f96f3849ff442a4bee12da2effcf, type: 3}
-  m_Name: Cliant 1
+  m_Script: {fileID: 11500000, guid: 5a7276e88c3b4634486f89d1533ee889, type: 3}
+  m_Name: DialogueData 3
   m_EditorClassIdentifier: 
-  debugCliantName: Cliant 1
-  Demand: {fileID: 11400000, guid: f9e9fa1ceb39ded4b9e7f3b796fea934, type: 2}
-  aceptedBeverages: []
-  CorrectAnswer: {fileID: 0}
-  WrongAnswer: {fileID: 0}
+  talkScript: []

@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -19,9 +20,13 @@ public class Cliant : ScriptableObject
 
     public DialogueData Demand;
     //[Tooltip("List Needs to have 4 in Lenth; 0 = Very Satisfied 1 = Satisfied 2 = Unsatisfied 3 = Very Unsatisfied")]
-    public DialogueData[] Answers;
+    public DialogueData CorrectAnswer;
+    public DialogueData WrongAnswer;
+    
+    public Dictionary<string, DialogueData> ay;
 
-    public void InitiateCliant()
+    public string[] aceptedBeverages;
+    public void InitiateCliant() //Selects the kind of Cliant
     {
         switch (tipeOfCliant)
         {
@@ -33,6 +38,40 @@ public class Cliant : ScriptableObject
                 break;
             case 3:
                 break;
+        }
+    }
+
+    public DialogueData AnalyseBeverege(string Beverege)
+    {
+        bool isThere = false;
+        foreach (string name in aceptedBeverages) 
+        {
+            if(Beverege == name)
+            {
+                isThere = true;
+            }
+        }
+        if(isThere == true)
+        {
+            return CorrectAnswer;
+        }
+        else
+        {
+            return WrongAnswer;
+        }
+    }
+    IEnumerator CliantPatience(float TimeBeforeReturn, int multyplier)
+    {
+        if (multyplier <= 0)
+        {
+            yield return new WaitForSeconds(TimeBeforeReturn);
+        }
+        else
+        {
+            for (int i = 0; i <= multyplier; i++) // this for can be used for the display of timer
+            {
+                yield return new WaitForSeconds(TimeBeforeReturn);
+            }
         }
     }
 }

@@ -15,18 +15,18 @@ public class CliantManager : MonoBehaviour
     {
         questionOrAnswer = false;
         //cliants = new List<Cliant>();
-        intCurrentCliant = 0;
-        // Before 
-                          //<= Use this Space To Populate List<Cliant>
-        // Cliants 
-        currentCliant = cliants[0];
+        intCurrentCliant = 0; //Num Of current Cliant
+        currentCliant = cliants[0]; //Current Cliant
+        currentCliant.InitiateCliant(); //start for cliant
         WriteQuestionOrAnswer();//Remove Once to activat
     }
 
-    public void DeliverCoffee() //Button
+    private string Drink;
+    public void DeliverCoffee(string Drink) //Button
     {
         if(questionOrAnswer == true)
         {
+            this.Drink = Drink;
             WriteQuestionOrAnswer();
         }
     }
@@ -79,7 +79,7 @@ public class CliantManager : MonoBehaviour
     private void AnalyseDrink()
     {
         //Leve this inside the cliant so there is a bigger change between characters
-        dialogueSystem.dialogueData = currentCliant.Answers[0];
+        dialogueSystem.dialogueData = currentCliant.AnalyseBeverege(Drink);
     }    
 
 
@@ -90,12 +90,14 @@ public class CliantManager : MonoBehaviour
         if (cliants.Count > intCurrentCliant)
         {
             currentCliant = cliants[intCurrentCliant];
+            currentCliant.InitiateCliant();
             Debug.LogWarning("clientChanged");
         }
         else
         {
             intCurrentCliant = intCurrentCliant - 1;
-                                                                            //<= ADD Win Condition
+            currentCliant.InitiateCliant();
+            //<= ADD Win Condition
             Debug.LogWarning("Awaiting Win/End_Condition Code");
         }
         questionOrAnswer = false;
@@ -103,9 +105,9 @@ public class CliantManager : MonoBehaviour
 
 
 
+
     // Temporery Function
-
-
+    // Necessery for now Dialogue System, Changes the function call into a constant output
     public bool ButtonState = false;
     public void ChangeText()
     {
