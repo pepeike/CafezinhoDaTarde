@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 0f15a8b2d1f269f4caa81cefbb0060e3
+guid: 178884f5b83a2d44898b5d35b3b0d75c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -9149808880020146542
-    second: Cafeteira2_0
+      213: 5581991715131619769
+    second: CafeteiraAnimated26_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,7 +126,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Cafeteira2_0
+      name: CafeteiraAnimated26_0
       rect:
         serializedVersion: 2
         x: 7
@@ -134,15 +134,15 @@ TextureImporter:
         width: 66
         height: 66
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 38}
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2963fa72d49550180800000000000000
-      internalID: -9149808880020146542
+      spriteID: 9b9f797e3e7377d40800000000000000
+      internalID: 5581991715131619769
       vertices: []
       indices: 
       edges: []
@@ -151,7 +151,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 2ab7dbca920ccee4ebf1cf19b88298e0
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Cafeteira2_0: -9149808880020146542
+      CafeteiraAnimated26_0: 5581991715131619769
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
