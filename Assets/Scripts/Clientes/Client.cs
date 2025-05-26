@@ -1,22 +1,53 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 
-public class Cliant
+[CreateAssetMenu(fileName = "Cliant", menuName = "ScriptableObject/Cliant")]
+public class Cliant : ScriptableObject
 {
     //script para guardar as informações de cada cliente
-    public string[] DemandArray;
-    public List<string>[] Answers;
-    private string Coffie;
+    [HideInInspector] public string debugCliantName;[HideInInspector] public int tipeOfCliants;
+    public DialogueData Demand; public DialogueData CorrectAnswer; public DialogueData WrongAnswer;
+    public string[] aceptedBeverages;
+    public bool hasPatience; public int patience; public int pMultyplyer;
+    /*
+    private int TOC
+    {
+        get => TOC;
+        set => TOC = value >= 0 && value < 2
+            ? value
+            : throw new ArgumentOutOfRangeException("Clients/tipeOfCliant/" + debugCliantName);
+    }
+    public void InitiateCliant() //Selects the kind of Cliant (CurrentLy Unused)
+    {
+        TOC = tipeOfCliants;
+        switch (TOC)
+        {
+            case 0:
 
-    //Para criar este script é necessario as seguintes informações
-    public Cliant(string[] DemandArray, List<string>[] Answers /*Change to a diffrent Kind of Information*/)
-    {
-        this.DemandArray = DemandArray; //Pergunta do Cliente separada em partes
-        this.Answers = Answers; //
+                break;
+            case 1:
+                break;
+        }
     }
-    public override string ToString()       // Retorna o tipo de café que o Cliente quer
+    */
+    public DialogueData AnalyseBeverege(string Beverege)
     {
-        return Coffie;
+        bool isThere = false;
+        foreach (string name in aceptedBeverages)
+        {
+            if (Beverege == name)
+            {
+                isThere = true;
+            }
+        }
+        if (isThere == true)
+        {
+            return CorrectAnswer;
+        }
+        else
+        {
+            return WrongAnswer;
+        }
     }
+
 }

@@ -1,155 +1,156 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
 
 public class CliantManager : MonoBehaviour
 {
     // Cria e Manega os clientes e suas respostas.
 
-    public GameObject CliantSpeshObject;    // Objeto com o testo para as perguntas e respostas
-    public List<Cliant> cliants;    // Lista de Clientes
-    private TMP_Text Text;      // Componente de texto
-    bool cooldown;      // Status do timer de retorno do a pergunta
-
-    CliantConstructer CC;
-    private Cliant CurrentCliant;
-    private int IntCurrentCliant;
-    private int QuestionDialog, AnswerIn, AnswerDialog;
-
-    // Question is True, Answer is false
-    private bool QuestionOrAnswer;
-
-    public FinalProductProcessing finalProduct;
-    public GameObject initialProductPrefab;
-    private int[] ingredients;
-    [SerializeField] Vector3 initCoffeePos;
-
-
+    public List<Cliant> cliants; /* Lista de Clientes */ private Cliant currentCliant; /* Separates Current Cliant */ private int intCurrentCliant; // Position of current Cliant in List
+    private bool questionOrAnswer; // Flip Flop in between Question And Answer // Question is /*false*/, Answer is /*true*/
+    public FinalProductProcessing finalProduct; // Used to Reset FinalProduct
+    public DialogueSystem dialogueSystem;
+    private string Drink;
     private void Start()
     {
-        this.Text = CliantSpeshObject.GetComponent<TMP_Text>();
-        cliants = new List<Cliant>();
-        cooldown = true;
-
-        
-        IntCurrentCliant = 0;
-
-        //  <= Start Cliant
-        CC = new CliantConstructer();
-        cliants = CC.ReturnCliants();
-
-        CurrentCliant = cliants[0];
-        ReedQuestionStart();
+        questionOrAnswer = false;
+        //cliants = new List<Cliant>();
+        intCurrentCliant = 0; //Num Of current Cliant
+        currentCliant = cliants[0]; //Current Cliant
+        //currentCliant.InitiateCliant(); //start for cliant
+        WriteQuestionOrAnswer();//Remove Once to activat
     }
+    public void DeliverCoffee(string Drink) //Button
+    {
+        if (questionOrAnswer == true)
+        {
+            this.Drink = Drink;
+            WriteQuestionOrAnswer();
+        }
+    }
+    private void WriteQuestionOrAnswer() //Selects question or answer and calls the text writer
+    {
+        if (questionOrAnswer == false) //Question
+        {
+            dialogueSystem.dialogueData = currentCliant.Demand;
+            dialogueSystem.Wting();//Call Writer
+        }
+        else if (questionOrAnswer == true) //Answer
+        {
+            /*Redue THIS, ONce IT IS Ready*/
+            AnalyseDrink();
+            dialogueSystem.Wting();//Call Writer
+        }
+
+        if (DelegateCallLockInteractions != null)  //Lock other inputs
+        {
+            DelegateCallLockInteractions();
+        }
+    }
+    public void InvertQuestionOrAnswer()
+    {
+        if (questionOrAnswer)
+        {
+            questionOrAnswer = false;
+        }
+        else if (questionOrAnswer == false)
+        {
+            questionOrAnswer = true;
+            if (currentCliant.hasPatience == true)
+            {
+                StartCoroutine(CliantPatience(currentCliant.patience, currentCliant.pMultyplyer));
+            }
+        }
+    }
+    public delegate void LockInteraction();
+    LockInteraction DelegateCallLockInteractions;
+    public delegate void UnLockInteraction();
+    UnLockInteraction DelegateCallUnLockInteractions;
+
+    public void UnlockOtherInput()
+    {
+        if (DelegateCallUnLockInteractions != null)
+        {
+            DelegateCallUnLockInteractions();
+        }
+    }
+
     // Doce+ Amargo- // Energetico+ Relachante-
-
-
-    public void DeliverCoffee()
+    private void AnalyseDrink()
     {
-        finalProduct.UpdateProduct();
-        ingredients = finalProduct.productProperties;
-        ResetCoffee();
-        if (QuestionOrAnswer == false)
-        {
-            ReedAnswerStart();
-        }
+        //Leve this inside the cliant so there is a bigger change between characters
+        dialogueSystem.dialogueData = currentCliant.AnalyseBeverege(Drink);
     }
 
-    // Muda o cliente atual para o procimo Cliente
-    void ChangeCliant()
-    {
-        IntCurrentCliant++;
-        if (cliants.Count > IntCurrentCliant)
-        {
-            CurrentCliant = cliants[IntCurrentCliant];
-            Debug.LogWarning("clientChanged");
-            ReedQuestionStart();
-        }
-        else
-        {
-            IntCurrentCliant = IntCurrentCliant - 1;
-            // //////////////////////////////////////// <= ADD Win Condition
-            Debug.LogError("Awaiting Win/End_Condition Code");
-            Text.text = "Dialogo Necessario";
-        }
-    }
 
-    private void ReedQuestionStart() { QuestionDialog = 0; ReedQuestion(); QuestionOrAnswer = false; }
-
-    public void ReedQuestion()
-    {
-        //int A = CurrentCliant.DemandArray.Length;
-        //int B = QuestionDialog;
-        if (QuestionOrAnswer == false)
-        {
-            if (QuestionDialog <= CurrentCliant.DemandArray.Length - 1)
-            {
-                Text.text = CurrentCliant.DemandArray[QuestionDialog];
-                QuestionDialog++;
-            }
-        }
-    }
-
-    // Doce+ Amargo- // Energetico+ Relachante-
-    private void ReedAnswerStart()
-    {
-        QuestionOrAnswer = true;
-        AnswerDialog = 0;
-        if (ingredients[0] >= 0 && ingredients[1] >= 0)
-        {
-            // doce e energetico
-            AnswerIn = 0;
-        }
-        else if(ingredients[0] >= 0 && ingredients[1] < 0)
-        {
-            // doce e Relachante
-            AnswerIn = 1;
-        }
-        else if (ingredients[0] < 0 && ingredients[1] >= 0)
-        {
-            // Amargo e energetico
-            AnswerIn = 2;
-        }
-        else
-        {
-            // Amargo e Relachante
-            AnswerIn = 3;
-        }
-        ReedAnswer();
-    }
-    public void ReedAnswer()
-    {
-        if (QuestionOrAnswer == true)
-        {
-            if (AnswerDialog <= CurrentCliant.Answers[AnswerIn].Count - 1)
-            {
-                Text.text = CurrentCliant.Answers[AnswerIn][AnswerDialog];
-                AnswerDialog++;
-            }
-            else
-            {
-                QuestionOrAnswer = false;
-                Debug.LogWarning("ChangeTheCliant");
-                ChangeCliant();
-            }
-        }
-    }
-
-    public void ResetCoffee()
-    {
-        Destroy(finalProduct.gameObject);
-        finalProduct = Instantiate(initialProductPrefab, initCoffeePos, Quaternion.identity).GetComponent<FinalProductProcessing>();
-    }
-
-    /// <summary> Debug
-    /// ///////////////////////////////////////////////////////////////////////////////////////////////////////
+    /// <summary>
+    /// /////////////////////////////////////////////////////////////////////////////////////
     /// </summary>
-    private void DebugAnswer(List<string> ListStr, string DebugSection)
+    // Muda o cliente atual para o procimo Cliente
+    public void ChangeCliant()
     {
-        foreach (string I in ListStr)
+        intCurrentCliant++;
+        if (cliants.Count > intCurrentCliant)
         {
-            Debug.Log(DebugSection + " String = " + I);
+            currentCliant = cliants[intCurrentCliant];
+            questionOrAnswer = false;
+            //currentCliant.InitiateCliant();
+            Debug.LogWarning("clientChanged");
+            WriteQuestionOrAnswer();
         }
+        else
+        {
+            intCurrentCliant = intCurrentCliant - 1;
+            //currentCliant.InitiateCliant();
+            //<= ADD Win Condition
+            Debug.LogWarning("Awaiting Win/End_Condition Code");
+        }
+
+    } /* And sets The text select Back to question */
+
+    /// <summary>
+    /// /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    /// </summary>
+    /// < name="CliantPatience"></>
+    IEnumerator CliantPatience(float TimeBeforeReturn, int multyplier)
+    {
+        if (multyplier < 0)
+        {
+            multyplier = multyplier * (-1);
+        }
+        //  {////}                                     {////}
+        if (multyplier <= 0)
+        {
+            yield return new WaitForSeconds(TimeBeforeReturn);
+            // Acabou a Paciencia
+            ChangeCliant();
+        }
+        else
+        {
+            int V = 0;
+            for (int i = 0; i <= multyplier; i++) // this for can be used for the display of timer
+            {
+                V++;
+                yield return new WaitForSeconds(TimeBeforeReturn);
+                Debug.Log("Patience Level = " + V);
+                //MudarAnimação
+            }
+            //Acabou a Paciencia
+            ChangeCliant();
+        }
+    }
+
+    // Temporery Function
+    // Necessery for now Dialogue System, Changes the function call into a constant output
+    [HideInInspector] public bool ButtonState = false;
+    public void ChangeText()
+    {
+        StartCoroutine(DelayState(0.1f));
+    }
+    IEnumerator DelayState(float a)
+    {
+        ButtonState = true;
+        yield return new WaitForSeconds(a);
+        ButtonState = false;
     }
 }

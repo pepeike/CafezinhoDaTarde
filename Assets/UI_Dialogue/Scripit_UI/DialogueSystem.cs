@@ -14,6 +14,7 @@ public class DialogueSystem : MonoBehaviour
     int currentText = 0;
     bool finished = false;
 
+    public CliantManager CM;
     TypeTextAnimation typeText;
     DialogueUI dialogueUI;
 
@@ -77,20 +78,27 @@ public class DialogueSystem : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.K))
         {
-            if (!finished)
-            {
-                Next();
-            }
-            else
-            {
-                dialogueUI.Disable();
-                state = STATE.DISABLED;
-                currentText = 0;
-                finished = false;
-            }
-
+            Wting();
         }
 
+    }
+    public void Wting() //RLH107
+    {
+        // Not RLH107
+        // {
+        if (!finished)
+        {
+            Next();
+        }
+        else
+        {
+            dialogueUI.Disable();
+            state = STATE.DISABLED;
+            currentText = 0;
+            finished = false;
+            CM.InvertQuestionOrAnswer();
+        }
+        // }
     }
     // configurar o botão de input de k, para toque;
     void Typing()
