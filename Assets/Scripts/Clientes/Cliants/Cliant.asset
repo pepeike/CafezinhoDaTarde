@@ -12,7 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0743f96f3849ff442a4bee12da2effcf, type: 3}
   m_Name: Cliant
   m_EditorClassIdentifier: 
-  cliantName: Plato
-  Demand: {fileID: 11400000, guid: bf0d51d323ffd3a40932bba839eff461, type: 2}
-  Answers:
-  - {fileID: 11400000, guid: b209e67386ce7df4094c4b536f4c6e25, type: 2}
+  debugCliantName: qwee
+  tipeOfCliants: 0
+  Demand: {fileID: 11400000, guid: f9867cfd4f9ef194ca9de796be8813d2, type: 2}
+  CorrectAnswer: {fileID: 11400000, guid: 4e22550dab61f7b49a7cc955e44a1e14, type: 2}
+  WrongAnswer: {fileID: 11400000, guid: dd744eaae9403014d97ed5fd95ac83b7, type: 2}
+  aceptedBeverages:
+  - C
+  hasPatience: 1
+  patience: 2
+  pMultyplyer: 3

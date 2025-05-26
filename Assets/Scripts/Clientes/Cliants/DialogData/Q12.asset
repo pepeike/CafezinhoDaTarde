@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: Q12
   m_EditorClassIdentifier: 
   talkScript:
-  - name: QS1
+  - name: DS1
     text: 1
-  - name: QS2
+  - name: DS2
     text: 2
-  - name: QS3
+  - name: DS3
     text: 3
-  - name: QS4
+  - name: DS4
     text: 4

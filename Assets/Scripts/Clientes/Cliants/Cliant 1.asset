@@ -13,7 +13,12 @@ MonoBehaviour:
   m_Name: Cliant 1
   m_EditorClassIdentifier: 
   debugCliantName: Cliant 1
-  Demand: {fileID: 11400000, guid: f9e9fa1ceb39ded4b9e7f3b796fea934, type: 2}
-  aceptedBeverages: []
-  CorrectAnswer: {fileID: 0}
-  WrongAnswer: {fileID: 0}
+  tipeOfCliants: 0
+  Demand: {fileID: 11400000, guid: b47b71c6dcca35e40b6b6f99ea04aa0c, type: 2}
+  CorrectAnswer: {fileID: 11400000, guid: d0a35314ae5d94d4a853e7cfcd15c9c4, type: 2}
+  WrongAnswer: {fileID: 11400000, guid: 0a137c93e0f9c234ea1967eb2a305cee, type: 2}
+  aceptedBeverages:
+  - A
+  hasPatience: 1
+  patience: 3
+  pMultyplyer: 3

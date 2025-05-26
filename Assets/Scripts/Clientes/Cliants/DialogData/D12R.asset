@@ -10,8 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5a7276e88c3b4634486f89d1533ee889, type: 3}
-  m_Name: DialogueData 1
+  m_Name: D12R
   m_EditorClassIdentifier: 
   talkScript:
-  - name: Q
-    text: as??????
+  - name: DSR
+    text: 1
+  - name: DSR
+    text: 2

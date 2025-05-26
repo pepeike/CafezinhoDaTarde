@@ -10,14 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5a7276e88c3b4634486f89d1533ee889, type: 3}
-  m_Name: Q12
+  m_Name: Q1
   m_EditorClassIdentifier: 
   talkScript:
-  - name: QS1
+  - name: qw
     text: 1
-  - name: QS2
+  - name: qe
     text: 2
-  - name: QS3
+  - name: qr
     text: 3
-  - name: QS4
+  - name: qt
     text: 4
+  - name: qy
+    text: 5

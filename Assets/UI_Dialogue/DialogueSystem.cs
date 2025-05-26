@@ -84,6 +84,7 @@ public class DialogueSystem : MonoBehaviour
 
     public void Wting() //RLH107
     {
+        // Not RLH107 {
         if (!finished)
         {
             Next();
@@ -96,6 +97,7 @@ public class DialogueSystem : MonoBehaviour
             finished = false;
             CM.InvertQuestionOrAnswer();
         }
+        // }
     }
 
     // configurar o botão de input de k, para toque;

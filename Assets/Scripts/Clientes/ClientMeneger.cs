@@ -6,22 +6,20 @@ public class CliantManager : MonoBehaviour
 {
     // Cria e Manega os clientes e suas respostas.
 
-    public List<Cliant> cliants;    /* Lista de Clientes */    private Cliant currentCliant;   /* Separates Current Cliant */ private int intCurrentCliant;   // Position of current Cliant in List
+    public List<Cliant> cliants; /* Lista de Clientes */ private Cliant currentCliant; /* Separates Current Cliant */ private int intCurrentCliant; // Position of current Cliant in List
     private bool questionOrAnswer; // Flip Flop in between Question And Answer // Question is /*false*/, Answer is /*true*/
     public FinalProductProcessing finalProduct; // Used to Reset FinalProduct
     public DialogueSystem dialogueSystem;
-
+    private string Drink;
     private void Start()
     {
         questionOrAnswer = false;
         //cliants = new List<Cliant>();
         intCurrentCliant = 0; //Num Of current Cliant
         currentCliant = cliants[0]; //Current Cliant
-        currentCliant.InitiateCliant(); //start for cliant
+        //currentCliant.InitiateCliant(); //start for cliant
         WriteQuestionOrAnswer();//Remove Once to activat
     }
-
-    private string Drink;
     public void DeliverCoffee(string Drink) //Button
     {
         if(questionOrAnswer == true)
@@ -30,7 +28,6 @@ public class CliantManager : MonoBehaviour
             WriteQuestionOrAnswer();
         }
     }
-
     private void WriteQuestionOrAnswer() //Selects question or answer and calls the text writer
     {
         if (questionOrAnswer == false) //Question
@@ -59,9 +56,12 @@ public class CliantManager : MonoBehaviour
         else if(questionOrAnswer == false)
         {
             questionOrAnswer = true;
+            if(currentCliant.hasPatience == true)
+            {
+                StartCoroutine(CliantPatience(currentCliant.patience, currentCliant.pMultyplyer));
+            }
         }
     }
-
     public delegate void LockInteraction();
     LockInteraction DelegateCallLockInteractions;
     public delegate void UnLockInteraction();
@@ -80,9 +80,12 @@ public class CliantManager : MonoBehaviour
     {
         //Leve this inside the cliant so there is a bigger change between characters
         dialogueSystem.dialogueData = currentCliant.AnalyseBeverege(Drink);
-    }    
+    }
 
 
+    /// <summary>
+    /// /////////////////////////////////////////////////////////////////////////////////////
+    /// </summary>
     // Muda o cliente atual para o procimo Cliente
     public void ChangeCliant()
     {
@@ -90,30 +93,92 @@ public class CliantManager : MonoBehaviour
         if (cliants.Count > intCurrentCliant)
         {
             currentCliant = cliants[intCurrentCliant];
-            currentCliant.InitiateCliant();
+            questionOrAnswer = false;
+            //currentCliant.InitiateCliant();
             Debug.LogWarning("clientChanged");
+            WriteQuestionOrAnswer();
         }
         else
         {
             intCurrentCliant = intCurrentCliant - 1;
-            currentCliant.InitiateCliant();
+            //currentCliant.InitiateCliant();
             //<= ADD Win Condition
             Debug.LogWarning("Awaiting Win/End_Condition Code");
         }
-        questionOrAnswer = false;
+        
     } /* And sets The text select Back to question */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /// <summary>
+    /// /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    /// </summary>
+    /// < name="CliantPatience"></>
+    IEnumerator CliantPatience(float TimeBeforeReturn, int multyplier)
+    {
+        if (multyplier < 0)
+        {
+            multyplier = multyplier * (-1);
+        }
+        //  {////}                                     {////}
+        if (multyplier <= 0)
+        {
+            yield return new WaitForSeconds(TimeBeforeReturn);
+            // Acabou a Paciencia
+            ChangeCliant();
+        }
+        else
+        {
+            int V = 0;
+            for (int i = 0; i <= multyplier; i++) // this for can be used for the display of timer
+            {
+                V++;
+                yield return new WaitForSeconds(TimeBeforeReturn);
+                Debug.Log("Patience Level = " + V);
+                //MudarAnimação
+            }
+            //Acabou a Paciencia
+            ChangeCliant();
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 
     // Temporery Function
     // Necessery for now Dialogue System, Changes the function call into a constant output
-    public bool ButtonState = false;
+    [HideInInspector] public bool ButtonState = false;
     public void ChangeText()
     {
         StartCoroutine(DelayState(0.1f));
     }
-
     IEnumerator DelayState(float a)
     {
         ButtonState = true;
