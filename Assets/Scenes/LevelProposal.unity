@@ -2317,6 +2317,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ff96c5663f723b44bef7cf630482553, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  imgtoScroll: {fileID: 0}
+  _x: 0
+  _y: 0
 --- !u!114 &946671260
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4360,51 +4363,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1774671716}
   m_CullTransparentMesh: 1
---- !u!1 &1857767868
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1857767870}
-  - component: {fileID: 1857767869}
-  m_Layer: 0
-  m_Name: S_NPCInteract
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1857767869
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1857767868}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8dfbd631bb31e194c8fe0c7273ff13d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogueSystem: {fileID: 0}
---- !u!4 &1857767870
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1857767868}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.694614, y: 1.2172406, z: -0.05418293}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1877109670
 GameObject:
   m_ObjectHideFlags: 0
@@ -5592,7 +5550,6 @@ SceneRoots:
   - {fileID: 1461287908}
   - {fileID: 482556118}
   - {fileID: 210754072}
-  - {fileID: 1857767870}
   - {fileID: 835211412}
   - {fileID: 1004411371}
   - {fileID: 1621033465}
