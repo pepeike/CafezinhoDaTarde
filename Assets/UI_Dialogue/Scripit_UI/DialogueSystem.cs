@@ -96,7 +96,7 @@ public class DialogueSystem : MonoBehaviour
             state = STATE.DISABLED;
             currentText = 0;
             finished = false;
-            CM.InvertQuestionOrAnswer();
+            CM.InvertQuestionOrAnswer(); //RLH107
         }
         // }
     }

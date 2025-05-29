@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "Cliant", menuName = "ScriptableObject/Cliant")]
@@ -8,7 +7,10 @@ public class Cliant : ScriptableObject
     [HideInInspector] public string debugCliantName;[HideInInspector] public int tipeOfCliants;
     public DialogueData Demand; public DialogueData CorrectAnswer; public DialogueData WrongAnswer;
     public string[] aceptedBeverages;
-    public bool hasPatience; public int patience; public int pMultyplyer;
+
+    public int pMultyplyer { get; private set; } = 3;
+    public bool hasPatience;
+    [Tooltip("O Tempo entre os estagions de paciencia; Multiplique o valos colocado por x3 para saber o valor Real")] public int patience;
     /*
     private int TOC
     {

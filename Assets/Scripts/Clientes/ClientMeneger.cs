@@ -8,7 +8,6 @@ public class CliantManager : MonoBehaviour
 
     public List<Cliant> cliants; /* Lista de Clientes */ private Cliant currentCliant; /* Separates Current Cliant */ private int intCurrentCliant; // Position of current Cliant in List
     private bool questionOrAnswer; // Flip Flop in between Question And Answer // Question is /*false*/, Answer is /*true*/
-    public FinalProductProcessing finalProduct; // Used to Reset FinalProduct
     public DialogueSystem dialogueSystem;
     private string Drink;
     private void Start()
@@ -75,10 +74,8 @@ public class CliantManager : MonoBehaviour
         }
     }
 
-    // Doce+ Amargo- // Energetico+ Relachante-
     private void AnalyseDrink()
     {
-        //Leve this inside the cliant so there is a bigger change between characters
         dialogueSystem.dialogueData = currentCliant.AnalyseBeverege(Drink);
     }
 
