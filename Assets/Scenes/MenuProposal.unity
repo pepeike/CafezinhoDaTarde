@@ -1792,15 +1792,15 @@ GameObject:
   - component: {fileID: 599435968}
   - component: {fileID: 599435966}
   - component: {fileID: 599435969}
-  - component: {fileID: 599435971}
   - component: {fileID: 599435970}
+  - component: {fileID: 599435971}
   m_Layer: 5
   m_Name: closeintransition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &599435965
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1888,7 +1888,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: c6f0ef187d72d8442a4ba8b61d3b95be, type: 3}
+  m_Texture: {fileID: 2800000, guid: a00f5fed373f4ed47a6e973636ddea5b, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -1904,10 +1904,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 599435964}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ff96c5663f723b44bef7cf630482553, type: 3}
+  m_Script: {fileID: 11500000, guid: 0f97cf514d9df9b48b7db915c97052a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  imgtoScroll: {fileID: 599435970}
+  imgtoscroll: {fileID: 599435970}
   _x: 0.3
   _y: 0.3
 --- !u!1 &617784468
