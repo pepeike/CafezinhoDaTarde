@@ -26,6 +26,7 @@ public class CliantManager : MonoBehaviour
             this.Drink = Drink;
             WriteQuestionOrAnswer();
         }
+        //Debug.Log("Drink " + Drink);
     }
     private void WriteQuestionOrAnswer() //Selects question or answer and calls the text writer
     {

@@ -21,6 +21,8 @@ public class Interaction : MonoBehaviour {
     // WaitForFixedUpdate fixo para as corotinas nao precisarem criar novas instancias
     WaitForFixedUpdate waitForFixedUpdate = new WaitForFixedUpdate();
 
+    // Referencia ao CliantMeneger
+    [SerializeField] private CliantManager CM;
     // Posição na tela para que objetos movidos acompanhem o dedo do jogador
     public Vector3 cursorPos;
 
@@ -144,6 +146,12 @@ public class Interaction : MonoBehaviour {
             if (hit.transform.CompareTag("Brewer")) {
                 hit.transform.GetComponent<CoffeeBrewer>().OnDropCup(obj.GetComponent<FinalProductProcessing>());
                 obj.transform.position = hit.transform.position;
+            }
+            else if (hit.transform.CompareTag("Deliverer"))
+            {
+                obj.GetComponent<FinalProductProcessing>().UpdateProduct();
+                string Drink = obj.GetComponent<FinalProductProcessing>().productName;
+                CM.DeliverCoffee(Drink);
             }
         }
     }

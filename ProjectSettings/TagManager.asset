@@ -4,15 +4,11 @@
 TagManager:
   serializedVersion: 3
   tags:
-  - Object
   - Product
-  - Coffie
-  - Process
-  - CloseAnim
-  - Ingredient
   - Brewer
   - Grinder
   - Milk
+  - Deliverer
   layers:
   - Default
   - TransparentFX

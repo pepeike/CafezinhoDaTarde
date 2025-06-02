@@ -11,27 +11,7 @@ public class Cliant : ScriptableObject
     public int pMultyplyer { get; private set; } = 3;
     public bool hasPatience;
     [Tooltip("O Tempo entre os estagions de paciencia; Multiplique o valos colocado por x3 para saber o valor Real")] public int patience;
-    /*
-    private int TOC
-    {
-        get => TOC;
-        set => TOC = value >= 0 && value < 2
-            ? value
-            : throw new ArgumentOutOfRangeException("Clients/tipeOfCliant/" + debugCliantName);
-    }
-    public void InitiateCliant() //Selects the kind of Cliant (CurrentLy Unused)
-    {
-        TOC = tipeOfCliants;
-        switch (TOC)
-        {
-            case 0:
 
-                break;
-            case 1:
-                break;
-        }
-    }
-    */
     public DialogueData AnalyseBeverege(string Beverege)
     {
         bool isThere = false;

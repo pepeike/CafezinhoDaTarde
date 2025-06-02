@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0743f96f3849ff442a4bee12da2effcf, type: 3}
-  m_Name: Cliant Nha nahanah nah nah nah na
+  m_Name: Sun_TzuCObj
   m_EditorClassIdentifier: 
   debugCliantName: 
   tipeOfCliants: 0
-  Demand: {fileID: 0}
-  CorrectAnswer: {fileID: 0}
-  WrongAnswer: {fileID: 0}
+  Demand: {fileID: 11400000, guid: f90a30b5ec670794c87f7cedddbf095c, type: 2}
+  CorrectAnswer: {fileID: 11400000, guid: e40cd35e6594ede40978de9c8396dce5, type: 2}
+  WrongAnswer: {fileID: 11400000, guid: c041316634450264ea1a633400b092d4, type: 2}
   aceptedBeverages: []
   hasPatience: 0
   patience: 0
