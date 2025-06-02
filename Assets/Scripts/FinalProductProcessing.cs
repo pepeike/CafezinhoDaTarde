@@ -11,15 +11,8 @@ public class FinalProductProcessing : MonoBehaviour
 
     // Dicionario que determina o nome do produto final com base nos ingredientes e processos utilizados
     public Dictionary<string, string> coffeeDict = new Dictionary<string, string> {
-        {"0,0", "café puro"},
-        {"1,0", "café com açúcar"},
-        {"2,0", "café com canela"},
-        {"3,0", "café com leite"},
-        {"4,0", "cappuccino"},
-        {"0,1", "chá preto"},
-        {"1,1", "chá com açúcar"},
-        {"2,1", "chá com canela"},
-        {"3,1", "chá latte"},
+        {"1,1,0,0,0", "caféA"},
+        {"1,2,0,0,0", "caféB"}
     };
 
     public bool occupied = false;
@@ -27,13 +20,59 @@ public class FinalProductProcessing : MonoBehaviour
     // Ingredientes colocados no produto, determinam o nome do produto
     int taste = 0;
     int effect = 0;
+    
+
+    // Processos feitos no produto, tambem determinam o nome (até o momento inutilizados)
+    public bool processA = false;
+    public bool processB = false;
+    public bool processC = false;
 
     // Metodo chamado quando um ingrediente é adicionado
-    public void OnPourDrink(int taste, int effect)
+    public void OnDropIngredient(IngredientCarrier drop)
     {
-        this.taste = taste; // Atribui o gosto do ingrediente
-        this.effect = effect; // Atribui o efeito do ingrediente
-        
+
+        IngredientType dropIngredient = drop.type;
+
+        switch (dropIngredient)
+        {                           // Switch pra determinar qual ingrediente deve ser adicionado
+            case IngredientType.LavaShroom:
+                taste--;
+
+                //Debug.Log($"IngredientA: {ingredientA} " +
+                //    $"\nIngredientB: {ingredientB} " +
+                //    $"\nIngredientC: {ingredientC}");
+
+                break;
+
+            case IngredientType.NethSucralose:
+                taste++;
+
+                //Debug.Log($"IngredientA: {ingredientA} " +
+                //    $"\nIngredientB: {ingredientB} " +
+                //    $"\nIngredientC: {ingredientC}");
+
+                break;
+
+            case IngredientType.SkullTwig:
+                effect--;
+
+                //Debug.Log($"IngredientA: {ingredientA} " +
+                //    $"\nIngredientB: {ingredientB} " +
+                //    $"\nIngredientC: {ingredientC}");
+
+                break;
+
+            case IngredientType.SourTree:
+                effect++;
+
+                //Debug.Log($"IngredientA: {ingredientA} " +
+                //    $"\nIngredientB: {ingredientB} " +
+                //    $"\nIngredientC: {ingredientC}");
+
+                break;
+        }
+
+        //UpdateProduct();
 
     }
 
@@ -46,7 +85,7 @@ public class FinalProductProcessing : MonoBehaviour
     public void UpdateProduct()
     {
         int[] _ingreds = { taste, effect };                                          // Junta os ingredientes
-                                                                                   //       e processos em 1 array (bools viram 1 ou 0)
+                           //processA ? 1 : 0, processB ? 1 : 0, processC ? 1 : 0 }; //       e processos em 1 array (bools viram 1 ou 0)
         string _key = string.Join(",", _ingreds);                                  // Transforma o array em string pra ser usado com o dicionario
         if (coffeeDict.TryGetValue(_key, out string _name))                        // Ve se a combinação existe no dicionario
         {
@@ -60,7 +99,6 @@ public class FinalProductProcessing : MonoBehaviour
 
         Debug.Log(_key);
         Debug.Log(productName);
-        Debug.Log(productProperties[0] + ", " + productProperties[1]);
     }
 
 }

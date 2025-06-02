@@ -75,22 +75,17 @@ public class Interaction : MonoBehaviour
     }
 
     // Metodo pra determinar que objeto foi detectado primeiro pelo raycast
-    private void SelectParser(RaycastHit2D hit) {
-        if (hit.collider.GetComponent<IngredientSpawner>()) {               // Para Ingredientes
-            hit.collider.GetComponent<IngredientSpawner>().OnClicked();
-        } else if (hit.collider.CompareTag("Liquid")) {
-            StartCoroutine(DragIngredient(hit.transform.gameObject)); // Para ingredientes líquidos (água, leite, etc.)
-        } else if (hit.collider.CompareTag("Product")) {             // Para o produto final (Café)
-            if (hit.transform.GetComponent<FinalProductProcessing>().occupied == false) {
+    private void SelectParser(RaycastHit2D hit)
+    {
+        if (hit.collider.GetComponent<Ingredient>())
+        {               // Para Ingredientes
+            hit.collider.GetComponent<Ingredient>().OnClicked();
+        }
+        else if (hit.collider.CompareTag("Product"))
+        {             // Para o produto final (Café)
+            if (hit.transform.GetComponent<FinalProductProcessing>().occupied == false)
+            {
                 StartCoroutine(DragProduct(hit.transform.gameObject));
-            }
-        } else if (hit.collider.CompareTag("Grinder")) {
-            if (hit.transform.GetComponent<CoffeeGrinder>().currentState == CoffeeGrinder.GrinderState.Finished) {
-                StartCoroutine(DragIngredient(hit.transform.GetComponent<CoffeeGrinder>().SpawnGroundIngred()));
-            }
-        } else if (hit.collider.CompareTag("Ingredient")) {
-            if (hit.transform.GetComponent<IngredientCarrier>().isVisible == true) {
-                StartCoroutine(DragIngredient(hit.transform.gameObject)); // Para ingredientes que podem ser arrastados
             }
         }
     }
@@ -107,30 +102,14 @@ public class Interaction : MonoBehaviour
         if (touchAction.ReadValue<float>() == 0)
         {
             RaycastHit2D[] hits = Physics2D.RaycastAll(cursorPos, Vector2.zero);
-            DragToParser(hits, obj); // Chama o metodo que verifica onde o ingrediente foi largado
-            //Destroy(obj);
-        }
-    }
-
-    void DragToParser(RaycastHit2D[] hits, GameObject obj) {
-        foreach (RaycastHit2D hit in hits) {
-            //if (hit.transform.CompareTag("Product")) {
-            //    hit.transform.GetComponent<FinalProductProcessing>().OnDropIngredient(obj.GetComponent<Ingredient>());
-            //} else
-
-            if (hit.transform.CompareTag("Grinder")) {
-                if (hit.transform.GetComponent<CoffeeGrinder>().currentState == CoffeeGrinder.GrinderState.Idle) {
-                    hit.transform.GetComponent<CoffeeGrinder>().StartGrinding(obj.GetComponent<IngredientCarrier>().ingred, obj.GetComponent<IngredientCarrier>());
-                }
-            } else if (hit.transform.CompareTag("Brewer")) {
-                hit.transform.GetComponent<CoffeeBrewer>().OnDropIngred(obj.GetComponent<IngredientCarrier>().ingred, obj.GetComponent<IngredientCarrier>());
-            }
-
-            if (hits.Length == 0) {
-                if (obj.GetComponent<IngredientCarrier>().ingred.isLiquid == false) {
-                    Destroy(obj); // Se o ingrediente não for liquido, destrói o objeto
+            foreach (RaycastHit2D hit in hits)
+            {
+                if (hit.transform.CompareTag("Product"))
+                {
+                    hit.transform.GetComponent<FinalProductProcessing>().OnDropIngredient(obj.GetComponent<IngredientCarrier>());
                 }
             }
+            Destroy(obj);
         }
     }
 
@@ -146,15 +125,13 @@ public class Interaction : MonoBehaviour
         if (touchAction.ReadValue<float>() == 0)
         {
             RaycastHit2D[] hits = Physics2D.RaycastAll(cursorPos, Vector2.zero);
-            DragProductToParser(obj, hits);
-        }
-    }
-
-    private void DragProductToParser(GameObject obj, RaycastHit2D[] hits) {
-        foreach (RaycastHit2D hit in hits) {
-            if (hit.transform.CompareTag("Brewer")) {
-                hit.transform.GetComponent<CoffeeBrewer>().OnDropCup(obj.GetComponent<FinalProductProcessing>());
-                obj.transform.position = hit.transform.position;
+            foreach (RaycastHit2D hit in hits)
+            {
+                if (hit.transform.CompareTag("Process"))
+                {
+                    hit.transform.GetComponent<CoffeeProcess>().OnDropProduct(obj.GetComponent<FinalProductProcessing>());
+                    obj.transform.position = hit.transform.position;
+                }
             }
         }
     }
