@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: d612c221b8b3917479f7cd01aeddd877
+guid: deac610eff2796340958de46885eed20
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4871280043898270998
-    second: imagem_2025-05-27_225110719_0
+      213: 5184802078568429279
+    second: Moedor_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,12 +46,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 8
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -100,12 +100,12 @@ TextureImporter:
     buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 50
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
-    overridden: 0
+    overridden: 1
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: imagem_2025-05-27_225110719_0
+      name: Moedor_0
       rect:
         serializedVersion: 2
-        x: 72
-        y: 42
-        width: 305
-        height: 146
+        x: 5
+        y: 0
+        width: 51
+        height: 63
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: aea8ef5fb9cb56cb0800000000000000
-      internalID: -4871280043898270998
+      spriteID: fd637cb250e14f740800000000000000
+      internalID: 5184802078568429279
       vertices: []
       indices: 
       edges: []
@@ -151,7 +151,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      imagem_2025-05-27_225110719_0: -4871280043898270998
+      Moedor_0: 5184802078568429279
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
