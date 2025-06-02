@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a7276e88c3b4634486f89d1533ee889, type: 3}
+  m_Name: Sun Tzu 2 - Caso o jogador acerte
+  m_EditorClassIdentifier: 
+  talkScript:
+  - name: Sun Tzu
+    text: "Nasci em um imp\xE9rio t\xE3o antigo quanto os ventos do norte, vivenciei
+      batalhas e momentos que ecoaram para sempre na hist\xF3ria, e diante meus \xFAltimos
+      dias, ap\xF3s conhecer centenas de mestres nesta arte, achei ter compreendido
+      a maestria. Fui tolo, suas m\xE3os precisas me demonstraram sabores que nunca
+      sequer imaginei ser poss\xEDvel. Obrigado, poderei ent\xE3o encontrar minha
+      futuras vidas.\r\n"
+  - name: Atendente
+    text: "N\xE3o existe necessidade de me agradecer, afinal, somente o fato de poder
+      conversar com uma figura como o senhor, j\xE1  \xE9 muito mais do que eu posso
+      lhe oferecer. \n"

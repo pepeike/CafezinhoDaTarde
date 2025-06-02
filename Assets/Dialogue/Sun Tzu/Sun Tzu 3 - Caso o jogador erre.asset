@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a7276e88c3b4634486f89d1533ee889, type: 3}
+  m_Name: Sun Tzu 3 - Caso o jogador erre
+  m_EditorClassIdentifier: 
+  talkScript:
+  - name: Sun Tzu
+    text: "De todo amargor que j\xE1 presenciei, este ch\xE1 foi definitivamente
+      o pior, n\xE3o imaginava tamanho desconhecimento de uma t\xE9cnica t\xE3o delicada
+      da sua parte. Um desperd\xEDcio, apenas seguirei meu caminho, avisando-te que
+      seus erros s\xE3o portas abertas  aos seus inimigos.\r\n\r\n"
+  - name: Atendente
+    text: "Infelizmente n\xE3o fui capaz de fazer um ch\xE1 que seja digno de seu
+      gosto, me esfor\xE7arei, para que na pr\xF3xima vez, eu seja capaz de ter \xEAxito.
+      \n"
