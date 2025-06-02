@@ -4,33 +4,64 @@ public enum IngredientType {        // Enum pra facilitar a computação de cada i
     LavaShroom,                    // Nomes provisórios, mudar depois!!
     NethSucralose,
     SkullTwig,
-    SourTree
+    SourTree,
+    Water,
+    Milk
 }
-public class Ingredient : MonoBehaviour
+
+
+public class Ingredient
 {
-    // ===============================================================================
-    // || Esse script fica no CONTAINER dos ingredientes, que ao clicados (tocados) ||
-    // || instanciam um ingrediente a ser adicionado no produto                     ||
-    // ===============================================================================
+    IngredientType type;        // Tipo do ingrediente
+    public bool groundable;        // Se o ingrediente pode ser moído ou não
+    bool isGround;            // Se o ingrediente foi moído ou não
+    public bool isBean;            // true = café, false = chá
+    int effect;           // Efeito do ingrediente
 
-    [SerializeField]
-    IngredientType ingredientType;
+    public bool isLiquid; // Se o ingrediente é líquido (agua ou leite)
+    public bool isWater; // Se o ingrediente é água
 
-    // Prefab do ingrediente a ser instanciado
-    public GameObject ingredientPrefab;
-
-    // Referencia ao script de interação
-    Interaction interaction;
-
-    private void Awake() {
-        interaction = GameObject.Find("S_Manager").GetComponent<Interaction>();                          // Busca o script de interação
+    public Ingredient(IngredientType type, bool groundable, bool isBean, int effect) {
+        this.type = type;
+        this.groundable = groundable;
+        isGround = false;
+        this.isBean = isBean;
+        this.effect = effect;
+        this.isLiquid = false;
+        this.isWater = false;
     }
 
-    // Metodo chamado em Interaction quando o jogador clica (toca) no container de ingredientes
-    public void OnClicked() {
-        GameObject inst = Instantiate(ingredientPrefab, interaction.cursorPos, Quaternion.identity);   // Cria a instancia
-        inst.transform.GetChild(0).GetComponent<SpriteRenderer>().sortingOrder = 2;                    // Faz o sprite ser renderizado por cima do container
-        interaction.StartCoroutine(interaction.DragIngredient(inst));                                  // Chama a corrotina em Interaction
+    public Ingredient(IngredientType type, int effect, bool isLiquid, bool isWater) { // Construtor para ingredientes líquidos (água ou leite)
+        this.type = type;
+        this.groundable = false; // Ingredientes líquidos não são moíveis
+        isGround = false;
+        this.isBean = false; // Ingredientes líquidos não são grãos
+        this.effect = effect;
+        this.isLiquid = isLiquid;
+        this.isWater = isWater;
     }
+
+
+public void Grind() {
+        isGround = true;
+    }
+
+    public Ingredient CopyIngredient(Ingredient ingredient) {
+        return new Ingredient(ingredient.type, ingredient.groundable, ingredient.isBean, ingredient.effect);
+    }
+
+    public IngredientType GetIngredType() {
+        return type;
+    }
+
+    public bool GetGround() {
+        return isGround;
+    }
+
+    public int GetEffect() {
+        return effect;
+    }
+
+    
 
 }
