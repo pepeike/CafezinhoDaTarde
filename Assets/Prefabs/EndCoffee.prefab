@@ -176,12 +176,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1698392375014522185}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d0bd60972fad964cb6cec975b500dc8, type: 3}
+  m_Script: {fileID: 11500000, guid: 3ed5c33d05ebda1459597b66dfa64fca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   productName: 
   productProperties: 
   occupied: 0
-  processA: 0
-  processB: 0
-  processC: 0

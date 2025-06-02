@@ -9,6 +9,10 @@ TagManager:
   - Coffie
   - Process
   - CloseAnim
+  - Ingredient
+  - Brewer
+  - Grinder
+  - Milk
   layers:
   - Default
   - TransparentFX

@@ -99,7 +99,7 @@ GameObject:
   - component: {fileID: 8141826283257953938}
   m_Layer: 0
   m_Name: SourTree_Ingred
-  m_TagString: Object
+  m_TagString: Ingredient
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -113,7 +113,7 @@ Transform:
   m_GameObject: {fileID: 4444077787631074780}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.53, y: -0.47, z: 0.04022535}
+  m_LocalPosition: {x: -1.53, y: -0.47, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -129,7 +129,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 4444077787631074780}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 977d0ed793dbb024488bb80f61846e4c, type: 3}
+  m_Script: {fileID: 11500000, guid: 48f2155831a27c64eb6cf1e05dba2e54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 3
+  ingredCarrierType: 3
+  isVisible: 1
