@@ -5,17 +5,6 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 using static UnityEngine.Rendering.DebugUI;
 
-/// <RLH107>
-/// /////////////////////////////////////////////////////////////////////////////
-/// Este Codigo Foi feito para prototipar o menu. Ele Não interage alem dos Botões TEXTMeshPro (No Canvas)
-/// Então Podem Modificar-lo como quiserem.
-/// Ele serve Somente para Diser Quais paineis Estão Ativos e Inativos
-/// Tambem possui Uma transição de cena joguei isso ai lá no inicio do projeto somente para prototipar/testar algo e acabou ficando ;D
-/// </>
-
-
-
-
 public class PanelChanger : MonoBehaviour
 {
     public List<int> StartingPanel;     //List For The Panels in PanelList That Are Visible at the start of the scene

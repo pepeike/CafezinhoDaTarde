@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 9c773e6e6b891a940b7ab6defe216dd6
+guid: bf0193a1e449b144b9e71a55cc3549b8
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3676499185516608977
-    second: UPArrow_0
+      213: -7547364437027120990
+    second: Cafeteira_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,12 +46,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: UPArrow_0
+      name: Cafeteira_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 64
-        height: 64
+        x: 6
+        y: 3
+        width: 71
+        height: 73
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1ddfab1c78c850330800000000000000
-      internalID: 3676499185516608977
+      spriteID: 2a8159c3800624790800000000000000
+      internalID: -7547364437027120990
       vertices: []
       indices: 
       edges: []
@@ -151,7 +151,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      UPArrow_0: 3676499185516608977
+      Cafeteira_0: -7547364437027120990
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

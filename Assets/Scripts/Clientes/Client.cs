@@ -1,55 +1,22 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Cliant", menuName = "ScriptableObject/Cliant")]
-public class Cliant : ScriptableObject
+public class Cliant
 {
     //script para guardar as informações de cada cliente
-    [HideInInspector] public string debugCliantName;[HideInInspector] public int tipeOfCliants;
-    public DialogueData Demand; public DialogueData CorrectAnswer; public DialogueData WrongAnswer;
-    public string[] aceptedBeverages;
+    public string[] DemandArray;
+    public List<string>[] Answers;
+    private string Coffie;
 
-    public int pMultyplyer { get; private set; } = 3;
-    public bool hasPatience;
-    [Tooltip("O Tempo entre os estagions de paciencia; Multiplique o valos colocado por x3 para saber o valor Real")] public int patience;
-    /*
-    private int TOC
+    //Para criar este script é necessario as seguintes informações
+    public Cliant(string[] DemandArray, List<string>[] Answers /*Change to a diffrent Kind of Information*/)
     {
-        get => TOC;
-        set => TOC = value >= 0 && value < 2
-            ? value
-            : throw new ArgumentOutOfRangeException("Clients/tipeOfCliant/" + debugCliantName);
+        this.DemandArray = DemandArray; //Pergunta do Cliente separada em partes
+        this.Answers = Answers; //
     }
-    public void InitiateCliant() //Selects the kind of Cliant (CurrentLy Unused)
+    public override string ToString()       // Retorna o tipo de café que o Cliente quer
     {
-        TOC = tipeOfCliants;
-        switch (TOC)
-        {
-            case 0:
-
-                break;
-            case 1:
-                break;
-        }
+        return Coffie;
     }
-    */
-    public DialogueData AnalyseBeverege(string Beverege)
-    {
-        bool isThere = false;
-        foreach (string name in aceptedBeverages)
-        {
-            if (Beverege == name)
-            {
-                isThere = true;
-            }
-        }
-        if (isThere == true)
-        {
-            return CorrectAnswer;
-        }
-        else
-        {
-            return WrongAnswer;
-        }
-    }
-
 }
