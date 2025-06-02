@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: e682fe5199a30404ab67ea4c6704cc8a
+guid: a9e1057238520b4409e0a1718be4e0ab
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4831947107598115198
-    second: ToolTable_0
+      213: -8435573454064308467
+    second: "Bot\xE3o de pause (canto inferior direito!!!)_0"
+  - first:
+      213: 1446128747604203282
+    second: "Bot\xE3o de pause (canto inferior direito!!!)_1"
+  - first:
+      213: -7441463522043659545
+    second: "Bot\xE3o de pause (canto inferior direito!!!)_2"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,13 +132,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ToolTable_0
+      name: "Bot\xE3o de pause (canto inferior direito!!!)_0"
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 600
-        height: 265
+        x: 4
+        y: 2
+        width: 13
+        height: 13
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +147,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e71acd92b468e0340800000000000000
-      internalID: 4831947107598115198
+      spriteID: d0f28c913a2deea80800000000000000
+      internalID: -8435573454064308467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Bot\xE3o de pause (canto inferior direito!!!)_1"
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 2
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 217dd6c1f6ea11410800000000000000
+      internalID: 1446128747604203282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Bot\xE3o de pause (canto inferior direito!!!)_2"
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 2
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ea7f8f6a5c9ab890800000000000000
+      internalID: -7441463522043659545
       vertices: []
       indices: 
       edges: []
@@ -161,7 +211,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      ToolTable_0: 4831947107598115198
+      "Bot\xE3o de pause (canto inferior direito!!!)_0": -8435573454064308467
+      "Bot\xE3o de pause (canto inferior direito!!!)_1": 1446128747604203282
+      "Bot\xE3o de pause (canto inferior direito!!!)_2": -7441463522043659545
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -6,25 +6,33 @@ using UnityEngine.Rendering;
 
 public class ASyncManager : MonoBehaviour
 {
+
+   
     public void StartLoad(string leveltoLoad)
     {
-
+        StartCoroutine(LoadLevelASync(leveltoLoad));
+        Time.timeScale = 1f;
     }
     public void Start()
     {
         StartLoad("LevelProposal");
-        StartCoroutine(LoadLevelASync("LevelProposal"));
+        
     }
 
      IEnumerator LoadLevelASync(string leveltoload)
     {
-        AsyncOperation loadOperation = SceneManager.LoadSceneAsync("LevelProposal");
-            if(loadOperation.isDone == true)
+
+        AsyncOperation loadOperation = SceneManager.LoadSceneAsync(leveltoload);
+        loadOperation.allowSceneActivation = false;
+        while (loadOperation.progress < 0.9f)
         {
-            SceneManager.LoadScene("LevelProposal");
             yield return null;
         }
-        
+
+        loadOperation.allowSceneActivation = true;
+
+
+
     }
 
     
