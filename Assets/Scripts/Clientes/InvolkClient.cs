@@ -3,30 +3,36 @@ using System.Collections.Generic;
 
 public class SpawnerController : MonoBehaviour
 {
-    [SerializeField] private List<GameObject> prefabsToSpawn; // Lista de prefabs no Inspector
-    [SerializeField] private float spawnInterval = 20f; // Tempo entre spawns (20 segundos)
-    [SerializeField] private Transform spawnTransform;
+    [SerializeField] private List<GameObject> prefabsToSpawn; // Lista de prefabs
+    [SerializeField] private float spawnInterval = 20f; // Tempo entre spawns
+    [SerializeField] private AudioClip spawnSound; // Som a ser tocado ao spawnar (arraste um AudioClip aqui no Inspector)
 
-    private GameObject lastSpawnedObject; // Referência ao último objeto instanciado
-    private float timer; // Contador de tempo
+    private GameObject lastSpawnedObject;
+    private float timer;
+    private AudioSource audioSource; // Referência para o AudioSource
 
     private void Start()
     {
-        timer = spawnInterval; // Inicia o timer para o primeiro spawn
+        timer = spawnInterval;
+        audioSource = GetComponent<AudioSource>(); // Pega o AudioSource do GameObject
+
+        // Se não houver AudioSource, adiciona um automaticamente
+        if (audioSource == null)
+        {
+            audioSource = gameObject.AddComponent<AudioSource>();
+        }
     }
 
     private void Update()
     {
-        // Se não há um objeto instanciado OU o último foi destruído
         if (lastSpawnedObject == null)
         {
-            timer -= Time.deltaTime; // Decrementa o timer
+            timer -= Time.deltaTime;
 
-            // Se o timer chegou a zero, spawna um novo objeto
             if (timer <= 0f)
             {
                 SpawnRandomPrefab();
-                timer = spawnInterval; // Reseta o timer
+                timer = spawnInterval;
             }
         }
     }
@@ -39,12 +45,15 @@ public class SpawnerController : MonoBehaviour
             return;
         }
 
-        // Escolhe um prefab aleatório da lista
         int randomIndex = Random.Range(0, prefabsToSpawn.Count);
         GameObject prefab = prefabsToSpawn[randomIndex];
+        lastSpawnedObject = Instantiate(prefab, transform.position, Quaternion.identity);
 
-        // Instancia o objeto na posição do Spawner (ou personalize)
-        lastSpawnedObject = Instantiate(prefab, spawnTransform.position, Quaternion.identity);
+        // Toca o som de spawn (se existir)
+        if (spawnSound != null)
+        {
+            audioSource.PlayOneShot(spawnSound); // Toca o som sem interromper outros áudios
+        }
 
         Debug.Log("Novo objeto spawnado: " + lastSpawnedObject.name);
     }

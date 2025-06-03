@@ -9,6 +9,9 @@ TagManager:
   - Grinder
   - Milk
   - Deliverer
+  - Ingredient
+  - Transportable
+  - TeleportArea
   layers:
   - Default
   - TransparentFX
@@ -16,7 +19,7 @@ TagManager:
   - UIBTN
   - Water
   - UI
-  - 
+  - TeleportArea
   - 
   - 
   - 
