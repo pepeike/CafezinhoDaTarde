@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 9c773e6e6b891a940b7ab6defe216dd6
+guid: 4450a929dce7c1d49bd5019bebdc16c9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3676499185516608977
-    second: UPArrow_0
+      213: 3530932986423735340
+    second: AfterLatteFaseCompletaBase_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: UPArrow_0
+      name: AfterLatteFaseCompletaBase_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 64
-        height: 64
+        width: 600
+        height: 300
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1ddfab1c78c850330800000000000000
-      internalID: 3676499185516608977
+      spriteID: c24fe7de7d4600130800000000000000
+      internalID: 3530932986423735340
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      UPArrow_0: 3676499185516608977
+      AfterLatteFaseCompletaBase_0: 3530932986423735340
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

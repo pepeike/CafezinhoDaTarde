@@ -10,14 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0743f96f3849ff442a4bee12da2effcf, type: 3}
-  m_Name: "Plat\xE3oCObj"
+  m_Name: Cliant
   m_EditorClassIdentifier: 
   debugCliantName: 
   tipeOfCliants: 0
-  Demand: {fileID: 11400000, guid: 4bfb1cef5778fed4c9ba364914d75d00, type: 2}
-  CorrectAnswer: {fileID: 11400000, guid: 74c897a877c0fc448a345fb80b0a0d81, type: 2}
-  WrongAnswer: {fileID: 11400000, guid: 6bb2b2ad84f57164e81c83685e57830d, type: 2}
-  aceptedBeverages:
-  - capuccino
+  Demand: {fileID: 11400000, guid: 353fb7374a565a44baa966b7da47b180, type: 2}
+  CorrectAnswer: {fileID: 0}
+  WrongAnswer: {fileID: 0}
+  aceptedBeverages: []
   hasPatience: 0
   patience: 0

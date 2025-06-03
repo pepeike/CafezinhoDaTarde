@@ -1,28 +1,34 @@
 fileFormatVersion: 2
-guid: dc8b14d0b8df41c488f1684ebf05e41e
+guid: 8bfcb17a0db9b1d47b64faaedd450c4f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1871435401641674748
-    second: iniciar_0
+      213: 2929601762197041216
+    second: dia final_0
   - first:
-      213: 2299963561389176247
-    second: iniciar_1
+      213: 4013232425300924785
+    second: dia final_1
   - first:
-      213: 5327272747523184815
-    second: iniciar_2
+      213: -1430613753701503601
+    second: dia final_2
   - first:
-      213: -6672313258546455314
-    second: iniciar_3
+      213: 3448867470099724950
+    second: dia final_3
   - first:
-      213: 7005921116604540255
-    second: iniciar_4
+      213: 1024249559676432099
+    second: dia final_4
   - first:
-      213: -8867203885733695859
-    second: iniciar_5
+      213: -5669972026803877182
+    second: dia final_5
   - first:
-      213: 5235625657105307342
-    second: iniciar_6
+      213: 2229534700869406971
+    second: dia final_6
+  - first:
+      213: -7926937326086457303
+    second: dia final_7
+  - first:
+      213: -7189032114956554205
+    second: dia final_8
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -144,13 +150,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: iniciar_0
+      name: dia final_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 7
-        width: 11
-        height: 16
+        x: 0
+        y: 52
+        width: 9
+        height: 10
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -159,20 +165,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 408be01ea635706e0800000000000000
-      internalID: -1871435401641674748
+      spriteID: 040fc11f74908a820800000000000000
+      internalID: 2929601762197041216
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: iniciar_1
+      name: dia final_1
       rect:
         serializedVersion: 2
-        x: 20
-        y: 7
-        width: 16
-        height: 16
+        x: 10
+        y: 52
+        width: 7
+        height: 10
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -181,20 +187,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7b5b1f06cac1bef10800000000000000
-      internalID: 2299963561389176247
+      spriteID: 1791427b0add1b730800000000000000
+      internalID: 4013232425300924785
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: iniciar_2
+      name: dia final_2
       rect:
         serializedVersion: 2
-        x: 40
-        y: 7
-        width: 11
-        height: 16
+        x: 19
+        y: 52
+        width: 10
+        height: 10
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -203,20 +209,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fa81db9b6564ee940800000000000000
-      internalID: 5327272747523184815
+      spriteID: f8d65d7ee50752ce0800000000000000
+      internalID: -1430613753701503601
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: iniciar_3
+      name: dia final_3
       rect:
         serializedVersion: 2
-        x: 56
-        y: 7
-        width: 16
-        height: 16
+        x: 34
+        y: 52
+        width: 10
+        height: 10
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -225,20 +231,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: eec953a517e2763a0800000000000000
-      internalID: -6672313258546455314
+      spriteID: 69ab1b0f0b6dcdf20800000000000000
+      internalID: 3448867470099724950
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: iniciar_4
+      name: dia final_4
       rect:
         serializedVersion: 2
-        x: 76
-        y: 7
-        width: 11
-        height: 16
+        x: 45
+        y: 52
+        width: 7
+        height: 10
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -247,20 +253,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f552f97f2280a3160800000000000000
-      internalID: 7005921116604540255
+      spriteID: 3ee2ddd3c8dd63e00800000000000000
+      internalID: 1024249559676432099
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: iniciar_5
+      name: dia final_5
       rect:
         serializedVersion: 2
-        x: 92
-        y: 7
-        width: 16
-        height: 16
+        x: 54
+        y: 52
+        width: 10
+        height: 10
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -269,20 +275,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d8e21efdb0d51f480800000000000000
-      internalID: -8867203885733695859
+      spriteID: 2ca04ff7b763051b0800000000000000
+      internalID: -5669972026803877182
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: iniciar_6
+      name: dia final_6
       rect:
         serializedVersion: 2
-        x: 110
-        y: 7
-        width: 16
-        height: 16
+        x: 64
+        y: 52
+        width: 10
+        height: 10
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -291,8 +297,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ec6deacabcda8a840800000000000000
-      internalID: 5235625657105307342
+      spriteID: bf05ab37ff5e0fe10800000000000000
+      internalID: 2229534700869406971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dia final_7
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 52
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 928f4d9208cddf190800000000000000
+      internalID: -7926937326086457303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dia final_8
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 4
+        width: 50
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 320b32d616d6b3c90800000000000000
+      internalID: -7189032114956554205
       vertices: []
       indices: 
       edges: []
@@ -311,13 +361,15 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      iniciar_0: -1871435401641674748
-      iniciar_1: 2299963561389176247
-      iniciar_2: 5327272747523184815
-      iniciar_3: -6672313258546455314
-      iniciar_4: 7005921116604540255
-      iniciar_5: -8867203885733695859
-      iniciar_6: 5235625657105307342
+      dia final_0: 2929601762197041216
+      dia final_1: 4013232425300924785
+      dia final_2: -1430613753701503601
+      dia final_3: 3448867470099724950
+      dia final_4: 1024249559676432099
+      dia final_5: -5669972026803877182
+      dia final_6: 2229534700869406971
+      dia final_7: -7926937326086457303
+      dia final_8: -7189032114956554205
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

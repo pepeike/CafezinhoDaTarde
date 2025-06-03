@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 9c773e6e6b891a940b7ab6defe216dd6
+guid: 1384e94dee0dae641a3357b96ec4ba86
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3676499185516608977
-    second: UPArrow_0
+      213: 5717281602652787833
+    second: "AfterLatteSele\xE7\xE3oFaseFundo_0"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: UPArrow_0
+      name: "AfterLatteSele\xE7\xE3oFaseFundo_0"
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 64
-        height: 64
+        width: 600
+        height: 300
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1ddfab1c78c850330800000000000000
-      internalID: 3676499185516608977
+      spriteID: 974defe735dd75f40800000000000000
+      internalID: 5717281602652787833
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      UPArrow_0: 3676499185516608977
+      "AfterLatteSele\xE7\xE3oFaseFundo_0": 5717281602652787833
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
