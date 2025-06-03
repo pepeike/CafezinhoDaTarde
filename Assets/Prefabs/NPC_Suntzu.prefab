@@ -119,6 +119,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueData: {fileID: 11400000, guid: a163fb934bdbd09409cb699370a7e834, type: 2}
+  CM: {fileID: 0}
 --- !u!61 &3331728505087753981
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -173,7 +174,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4145911294251755699}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: a04b12e0fa3bb814997650b768843698, type: 2}
   m_CullingMode: 0
