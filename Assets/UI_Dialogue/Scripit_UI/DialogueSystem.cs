@@ -1,4 +1,6 @@
+using System.Collections;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public enum STATE
 {
@@ -8,11 +10,15 @@ public enum STATE
 }
 public class DialogueSystem : MonoBehaviour
 {
-
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    const int Z_Absolut_SC_POS = 0;
+    PlayerInput playerInput; InputAction touchAction;
+    /// /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     public DialogueData dialogueData;//pega o objeto de fala!
 
     int currentText = 0;
     bool finished = false;
+    bool Stopper = false;
 
     public CliantManager CM;
     TypeTextAnimation typeText;
@@ -22,17 +28,41 @@ public class DialogueSystem : MonoBehaviour
 
     void Awake()
     {
-        typeText = Object.FindFirstObjectByType<TypeTextAnimation>();
-        
-        dialogueUI = Object.FindFirstObjectByType<DialogueUI>();
+        playerInput = GetComponent<PlayerInput>();
+        touchAction = playerInput.actions["TouchPress"];
 
+        typeText = Object.FindFirstObjectByType<TypeTextAnimation>();
+        dialogueUI = Object.FindFirstObjectByType<DialogueUI>();
         typeText.typeFinished = OnTypeFinishe;
     }
+
+    private void OnEnable()
+    {
+        touchAction.Enable();
+        touchAction.performed += tochPressed;
+    }
+    private void OnDisable()
+    {
+        touchAction.performed -= tochPressed;
+        touchAction.Disable();
+    }
+    private void tochPressed(InputAction.CallbackContext context) { StartCoroutine(DelayState(0.1f)); }
+    private bool ELongateState = false;
+    private IEnumerator DelayState(float a)
+    {
+        ELongateState = true;
+        yield return new WaitForSeconds(a);
+        ELongateState = false;
+        Stopper = false;
+    }
+
+
+
+
     void Start()
     {
        state = STATE.DISABLED;
     }
-
     void Update()
     {
         if(state == STATE.DISABLED)  return;
@@ -76,11 +106,11 @@ public class DialogueSystem : MonoBehaviour
     // configurar o botão de input de k, para toque;
     void Waiting()
     {
-        if (Input.GetKeyDown(KeyCode.K))
+        if (Input.GetKeyDown(KeyCode.K) || ELongateState == true && Stopper == false)
         {
+            Stopper = true;
             Wting();
         }
-
     }
     public void Wting() //RLH107
     {
@@ -103,8 +133,9 @@ public class DialogueSystem : MonoBehaviour
     // configurar o botão de input de k, para toque;
     void Typing()
     {
-        if (Input.GetKeyDown(KeyCode.K))
+        if (Input.GetKeyDown(KeyCode.K) || ELongateState == true && Stopper == false)
         {
+            Stopper = true;
             typeText.Skip();
             state = STATE.WAITING;
         }

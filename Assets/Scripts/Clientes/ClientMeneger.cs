@@ -17,8 +17,9 @@ public class CliantManager : MonoBehaviour
         intCurrentCliant = 0; //Num Of current Cliant
         currentCliant = cliants[0]; //Current Cliant
         //currentCliant.InitiateCliant(); //start for cliant
-        WriteQuestionOrAnswer();//Remove Once to activat
+        WriteQuestionOrAnswer();
     }
+
     public void DeliverCoffee(string Drink) //Button
     {
         if (questionOrAnswer == true)
@@ -92,15 +93,13 @@ public class CliantManager : MonoBehaviour
         {
             currentCliant = cliants[intCurrentCliant];
             questionOrAnswer = false;
-            //currentCliant.InitiateCliant();
             Debug.LogWarning("clientChanged");
             WriteQuestionOrAnswer();
         }
         else
         {
             intCurrentCliant = intCurrentCliant - 1;
-            //currentCliant.InitiateCliant();
-            //<= ADD Win Condition
+            /////////////////////////////////////////////////////////////      <= ADD Win Condition
             Debug.LogWarning("Awaiting Win/End_Condition Code");
         }
 
