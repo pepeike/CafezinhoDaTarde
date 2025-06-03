@@ -19,7 +19,7 @@ public class Ingredient
     int effect;           // Efeito do ingrediente
 
     public bool isLiquid; // Se o ingrediente é líquido (agua ou leite)
-    public bool isWater; // Se o ingrediente é água
+    
 
     public Ingredient(IngredientType type, bool groundable, bool isBean, int effect) {
         this.type = type;
@@ -28,17 +28,17 @@ public class Ingredient
         this.isBean = isBean;
         this.effect = effect;
         this.isLiquid = false;
-        this.isWater = false;
+        
     }
 
-    public Ingredient(IngredientType type, int effect, bool isLiquid, bool isWater) { // Construtor para ingredientes líquidos (água ou leite)
+    public Ingredient(IngredientType type, int effect, bool isLiquid) { // Construtor para ingredientes líquidos (água ou leite)
         this.type = type;
         this.groundable = false; // Ingredientes líquidos não são moíveis
         isGround = false;
         this.isBean = false; // Ingredientes líquidos não são grãos
         this.effect = effect;
         this.isLiquid = isLiquid;
-        this.isWater = isWater;
+        
     }
 
 
@@ -47,6 +47,9 @@ public void Grind() {
     }
 
     public Ingredient CopyIngredient(Ingredient ingredient) {
+        if (ingredient.isLiquid) {
+            return new Ingredient(ingredient.type, ingredient.effect, ingredient.isLiquid);
+        }
         return new Ingredient(ingredient.type, ingredient.groundable, ingredient.isBean, ingredient.effect);
     }
 

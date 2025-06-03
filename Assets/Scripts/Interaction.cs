@@ -75,6 +75,7 @@ public class Interaction : MonoBehaviour {
             hit.collider.GetComponent<IngredientSpawner>().OnClicked();
             return;
         } else if (hit.collider.CompareTag("Milk")) {
+            hit.collider.enabled = false; // Desativa o collider do leite para evitar múltiplos toques
             StartCoroutine(DragIngredient(hit.transform.gameObject)); // Para ingredientes líquidos (água, leite, etc.)
         } else if (hit.collider.CompareTag("Product")) {             // Para o produto final (Café)
             if (hit.transform.GetComponent<FinalProductProcessing>().occupied == false) {
@@ -100,6 +101,7 @@ public class Interaction : MonoBehaviour {
         }
         if (touchAction.ReadValue<float>() == 0) {
             RaycastHit2D[] hits = Physics2D.RaycastAll(cursorPos, Vector2.zero);
+
             DragToParser(hits, obj); // Chama o metodo que verifica onde o ingrediente foi largado
             //Destroy(obj);
         }
@@ -107,9 +109,7 @@ public class Interaction : MonoBehaviour {
 
     void DragToParser(RaycastHit2D[] hits, GameObject obj) {
         foreach (RaycastHit2D hit in hits) {
-            //if (hit.transform.CompareTag("Product")) {
-            //    hit.transform.GetComponent<FinalProductProcessing>().OnDropIngredient(obj.GetComponent<Ingredient>());
-            //} else
+
             Debug.Log(hit.transform.name + " - " + hit.transform.tag);
 
             if (hit.transform.CompareTag("Grinder")) {
@@ -117,13 +117,14 @@ public class Interaction : MonoBehaviour {
                     hit.transform.GetComponent<CoffeeGrinder>().StartGrinding(obj.GetComponent<IngredientCarrier>().ingred, obj.GetComponent<IngredientCarrier>());
                 }
             } else if (hit.transform.CompareTag("Brewer")) {
+                //CoffeeBrewer brewer = hit.transform.GetComponent<CoffeeBrewer>();
+                
                 hit.transform.GetComponent<CoffeeBrewer>().OnDropIngred(obj.GetComponent<IngredientCarrier>().ingred, obj.GetComponent<IngredientCarrier>());
-            }
-
-            if (hits.Length == 0) {
-                if (obj.GetComponent<IngredientCarrier>().ingred.isLiquid == false) {
-                    Destroy(obj); // Se o ingrediente não for liquido, destrói o objeto
+                if (obj.CompareTag("Milk")) {
+                    obj.GetComponent<Collider2D>().enabled = true;
+                    obj.GetComponent<IngredientCarrier>().ResetPos();
                 }
+
             }
         }
     }
@@ -146,9 +147,7 @@ public class Interaction : MonoBehaviour {
             if (hit.transform.CompareTag("Brewer")) {
                 hit.transform.GetComponent<CoffeeBrewer>().OnDropCup(obj.GetComponent<FinalProductProcessing>());
                 obj.transform.position = hit.transform.position;
-            }
-            else if (hit.transform.CompareTag("Deliverer"))
-            {
+            } else if (hit.transform.CompareTag("Deliverer")) {
                 obj.GetComponent<FinalProductProcessing>().UpdateProduct();
                 string Drink = obj.GetComponent<FinalProductProcessing>().productName;
                 CM.DeliverCoffee(Drink);
