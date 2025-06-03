@@ -17,6 +17,7 @@ MonoBehaviour:
   Demand: {fileID: 11400000, guid: f90a30b5ec670794c87f7cedddbf095c, type: 2}
   CorrectAnswer: {fileID: 11400000, guid: e40cd35e6594ede40978de9c8396dce5, type: 2}
   WrongAnswer: {fileID: 11400000, guid: c041316634450264ea1a633400b092d4, type: 2}
-  aceptedBeverages: []
+  aceptedBeverages:
+  - "caf\xE9 puro"
   hasPatience: 0
   patience: 0

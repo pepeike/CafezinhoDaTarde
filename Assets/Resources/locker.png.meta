@@ -1,22 +1,10 @@
 fileFormatVersion: 2
-guid: 8a74080225388a24d817ca2148fe74d4
+guid: 0104f8baacd5333418e3f385ec25a27b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5655894092442513928
-    second: "sal\xE3o rosinha moveis_0"
-  - first:
-      213: -5972454350681282746
-    second: "sal\xE3o rosinha moveis_1"
-  - first:
-      213: 6388771531040199786
-    second: "sal\xE3o rosinha moveis_2"
-  - first:
-      213: -4699860189919862089
-    second: "sal\xE3o rosinha moveis_3"
-  - first:
-      213: -8170529561743658833
-    second: "sal\xE3o rosinha moveis_4"
+      213: 198538158556077393
+    second: locker_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -49,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -58,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -125,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "sal\xE3o rosinha moveis_0"
+      name: locker_0
       rect:
         serializedVersion: 2
-        x: 253
-        y: 194
-        width: 95
-        height: 13
+        x: 83
+        y: 0
+        width: 346
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,96 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 802344bf5b5cd7e40800000000000000
-      internalID: 5655894092442513928
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "sal\xE3o rosinha moveis_1"
-      rect:
-        serializedVersion: 2
-        x: 452
-        y: 114
-        width: 72
-        height: 81
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 647e76659649d1da0800000000000000
-      internalID: -5972454350681282746
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "sal\xE3o rosinha moveis_2"
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 71
-        width: 185
-        height: 117
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a6497cabbd979a850800000000000000
-      internalID: 6388771531040199786
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "sal\xE3o rosinha moveis_3"
-      rect:
-        serializedVersion: 2
-        x: 108
-        y: 81
-        width: 99
-        height: 87
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7b2a3d5ee0eb6ceb0800000000000000
-      internalID: -4699860189919862089
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "sal\xE3o rosinha moveis_4"
-      rect:
-        serializedVersion: 2
-        x: 242
-        y: 29
-        width: 236
-        height: 115
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: fa0f07527a27c9e80800000000000000
-      internalID: -8170529561743658833
+      spriteID: 15d581f376951c200800000000000000
+      internalID: 198538158556077393
       vertices: []
       indices: 
       edges: []
@@ -238,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -248,11 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      "sal\xE3o rosinha moveis_0": 5655894092442513928
-      "sal\xE3o rosinha moveis_1": -5972454350681282746
-      "sal\xE3o rosinha moveis_2": 6388771531040199786
-      "sal\xE3o rosinha moveis_3": -4699860189919862089
-      "sal\xE3o rosinha moveis_4": -8170529561743658833
+      locker_0: 198538158556077393
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,22 +1,19 @@
 fileFormatVersion: 2
-guid: 8a74080225388a24d817ca2148fe74d4
+guid: 378651fcbee0e7f42ab71f4ffd9dc030
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5655894092442513928
-    second: "sal\xE3o rosinha moveis_0"
+      213: 8695549458442052039
+    second: "AfterLatteMenuPauseBot\xE3oSair_0"
   - first:
-      213: -5972454350681282746
-    second: "sal\xE3o rosinha moveis_1"
+      213: -6578078318029205423
+    second: "AfterLatteMenuPauseBot\xE3oSair_1"
   - first:
-      213: 6388771531040199786
-    second: "sal\xE3o rosinha moveis_2"
+      213: 4731328849657869901
+    second: "AfterLatteMenuPauseBot\xE3oSair_2"
   - first:
-      213: -4699860189919862089
-    second: "sal\xE3o rosinha moveis_3"
-  - first:
-      213: -8170529561743658833
-    second: "sal\xE3o rosinha moveis_4"
+      213: -1287353351273508619
+    second: "AfterLatteMenuPauseBot\xE3oSair_3"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -49,7 +46,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -58,7 +55,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -125,13 +122,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "sal\xE3o rosinha moveis_0"
+      name: "AfterLatteMenuPauseBot\xE3oSair_0"
       rect:
         serializedVersion: 2
-        x: 253
-        y: 194
-        width: 95
-        height: 13
+        x: 117
+        y: 49
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 802344bf5b5cd7e40800000000000000
-      internalID: 5655894092442513928
+      spriteID: 7c16745592ccca870800000000000000
+      internalID: 8695549458442052039
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "sal\xE3o rosinha moveis_1"
+      name: "AfterLatteMenuPauseBot\xE3oSair_1"
       rect:
         serializedVersion: 2
-        x: 452
-        y: 114
-        width: 72
-        height: 81
+        x: 135
+        y: 49
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -162,20 +159,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 647e76659649d1da0800000000000000
-      internalID: -5972454350681282746
+      spriteID: 1509b253f98f5b4a0800000000000000
+      internalID: -6578078318029205423
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "sal\xE3o rosinha moveis_2"
+      name: "AfterLatteMenuPauseBot\xE3oSair_2"
       rect:
         serializedVersion: 2
-        x: 0
-        y: 71
-        width: 185
-        height: 117
+        x: 155
+        y: 49
+        width: 11
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -184,20 +181,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a6497cabbd979a850800000000000000
-      internalID: 6388771531040199786
+      spriteID: d463a67658e09a140800000000000000
+      internalID: 4731328849657869901
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "sal\xE3o rosinha moveis_3"
+      name: "AfterLatteMenuPauseBot\xE3oSair_3"
       rect:
         serializedVersion: 2
-        x: 108
-        y: 81
-        width: 99
-        height: 87
+        x: 171
+        y: 49
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -206,30 +203,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7b2a3d5ee0eb6ceb0800000000000000
-      internalID: -4699860189919862089
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "sal\xE3o rosinha moveis_4"
-      rect:
-        serializedVersion: 2
-        x: 242
-        y: 29
-        width: 236
-        height: 115
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: fa0f07527a27c9e80800000000000000
-      internalID: -8170529561743658833
+      spriteID: 5f01fec92f6622ee0800000000000000
+      internalID: -1287353351273508619
       vertices: []
       indices: 
       edges: []
@@ -238,7 +213,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -248,11 +223,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      "sal\xE3o rosinha moveis_0": 5655894092442513928
-      "sal\xE3o rosinha moveis_1": -5972454350681282746
-      "sal\xE3o rosinha moveis_2": 6388771531040199786
-      "sal\xE3o rosinha moveis_3": -4699860189919862089
-      "sal\xE3o rosinha moveis_4": -8170529561743658833
+      "AfterLatteMenuPauseBot\xE3oSair_0": 8695549458442052039
+      "AfterLatteMenuPauseBot\xE3oSair_1": -6578078318029205423
+      "AfterLatteMenuPauseBot\xE3oSair_2": 4731328849657869901
+      "AfterLatteMenuPauseBot\xE3oSair_3": -1287353351273508619
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

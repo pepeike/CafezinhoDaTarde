@@ -1,0 +1,364 @@
+fileFormatVersion: 2
+guid: 47962bbecad87674fa180ab7d2fa055d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -985110931008294499
+    second: "AfterLatteMenuPauseBot\xE3oContinue_0"
+  - first:
+      213: -1613108739685636608
+    second: "AfterLatteMenuPauseBot\xE3oContinue_1"
+  - first:
+      213: 5956063486567339282
+    second: "AfterLatteMenuPauseBot\xE3oContinue_2"
+  - first:
+      213: -2544507207971278946
+    second: "AfterLatteMenuPauseBot\xE3oContinue_3"
+  - first:
+      213: 2242872714641022546
+    second: "AfterLatteMenuPauseBot\xE3oContinue_4"
+  - first:
+      213: -1593460286956000566
+    second: "AfterLatteMenuPauseBot\xE3oContinue_5"
+  - first:
+      213: 765107911407529220
+    second: "AfterLatteMenuPauseBot\xE3oContinue_6"
+  - first:
+      213: -4443113508037686903
+    second: "AfterLatteMenuPauseBot\xE3oContinue_7"
+  - first:
+      213: 2593826566016049765
+    second: "AfterLatteMenuPauseBot\xE3oContinue_8"
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: "AfterLatteMenuPauseBot\xE3oContinue_0"
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 89
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9175ecd3de2452f0800000000000000
+      internalID: -985110931008294499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "AfterLatteMenuPauseBot\xE3oContinue_1"
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 89
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 006a5fad5261d99e0800000000000000
+      internalID: -1613108739685636608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "AfterLatteMenuPauseBot\xE3oContinue_2"
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 89
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21555883f2038a250800000000000000
+      internalID: 5956063486567339282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "AfterLatteMenuPauseBot\xE3oContinue_3"
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 89
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9f637cfc2810bcd0800000000000000
+      internalID: -2544507207971278946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "AfterLatteMenuPauseBot\xE3oContinue_4"
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 89
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25e1898c9d8402f10800000000000000
+      internalID: 2242872714641022546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "AfterLatteMenuPauseBot\xE3oContinue_5"
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 89
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: acaab40cf44e2e9e0800000000000000
+      internalID: -1593460286956000566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "AfterLatteMenuPauseBot\xE3oContinue_6"
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 89
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40d694a77953e9a00800000000000000
+      internalID: 765107911407529220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "AfterLatteMenuPauseBot\xE3oContinue_7"
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 89
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9898ca81ec3e652c0800000000000000
+      internalID: -4443113508037686903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "AfterLatteMenuPauseBot\xE3oContinue_8"
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 89
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 562ab54e48f1ff320800000000000000
+      internalID: 2593826566016049765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      "AfterLatteMenuPauseBot\xE3oContinue_0": -985110931008294499
+      "AfterLatteMenuPauseBot\xE3oContinue_1": -1613108739685636608
+      "AfterLatteMenuPauseBot\xE3oContinue_2": 5956063486567339282
+      "AfterLatteMenuPauseBot\xE3oContinue_3": -2544507207971278946
+      "AfterLatteMenuPauseBot\xE3oContinue_4": 2242872714641022546
+      "AfterLatteMenuPauseBot\xE3oContinue_5": -1593460286956000566
+      "AfterLatteMenuPauseBot\xE3oContinue_6": 765107911407529220
+      "AfterLatteMenuPauseBot\xE3oContinue_7": -4443113508037686903
+      "AfterLatteMenuPauseBot\xE3oContinue_8": 2593826566016049765
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
