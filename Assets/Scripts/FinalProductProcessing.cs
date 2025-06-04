@@ -26,8 +26,9 @@ public class FinalProductProcessing : MonoBehaviour
     public bool occupied = false;
 
     // Ingredientes colocados no produto, determinam o nome do produto
-    int taste = 0;
-    int effect = 0;
+
+    [SerializeField] int taste = 0;
+    [SerializeField] int effect = 0;
 
     // Metodo chamado quando um ingrediente é adicionado
     public void OnPourDrink(int taste, int effect)

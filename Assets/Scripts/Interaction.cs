@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -63,45 +64,64 @@ public class Interaction : MonoBehaviour {
     // Metodo chamado quando o jogo recebe o input de toque na tela
     private void touchPressed(InputAction.CallbackContext context) {
         UpdateCursorPosition();
-        RaycastHit2D hit = Physics2D.Raycast(cursorPos, Vector2.zero); // Raycast pra detectar objetos
-        if (hit.collider != null) {
-            SelectParser(hit);
+        RaycastHit2D[] hits = Physics2D.RaycastAll(cursorPos, Vector2.zero); // Raycast pra detectar objetos
+        if (hits.Length > 0) {
+            SelectParser(hits);
         }
     }
 
     // Metodo pra determinar que objeto foi detectado primeiro pelo raycast
-    private void SelectParser(RaycastHit2D hit) {
-        if (hit.collider.GetComponent<IngredientSpawner>()) {               // Para Ingredientes
-            hit.collider.GetComponent<IngredientSpawner>().OnClicked();
-            return;
-        }
-        
-        if (hit.collider.CompareTag("Milk")) {
-            hit.collider.enabled = false; // Desativa o collider do leite para evitar múltiplos toques
-            StartCoroutine(DragProduct(hit.transform.gameObject)); // Para ingredientes líquidos (água, leite, etc.)
-            return;
-        }
-        
-        if (hit.collider.CompareTag("Product")) {             // Para o produto final (Café)
-            if (hit.transform.GetComponent<FinalProductProcessing>().occupied == false) {
-                StartCoroutine(DragProduct(hit.transform.gameObject));
-                return;
+    private void SelectParser(RaycastHit2D[] hits) {
+        foreach (RaycastHit2D hit in hits) {
+            if (hit.collider.CompareTag("Product")) {
+                if (hits.Any(h => h.collider.CompareTag("Brewer"))) {
+                    // Se o produto for clicado e houver um Brewer, arrasta o produto e reseta o copo do Brewer
+                    StartCoroutine(DragProduct(hit.transform.gameObject));
+                    hits[hits.ToList().FindIndex(h => h.collider.CompareTag("Brewer"))].collider.GetComponent<CoffeeBrewer>().ResetCup();
+                    return;
+                } else {
+                    // Se o produto for clicado mas não houver Brewer, apenas arrasta o produto
+                    break;
+                }
             }
         }
-        
-        if (hit.collider.CompareTag("Grinder")) {
-            if (hit.transform.GetComponent<CoffeeGrinder>().currentState == CoffeeGrinder.GrinderState.Finished) {
-                StartCoroutine(DragIngredient(hit.transform.GetComponent<CoffeeGrinder>().SpawnGroundIngred()));
+
+        if (hits.Length == 1) {
+            RaycastHit2D hit = hits[0];
+            if (hit.collider.GetComponent<IngredientSpawner>()) {               // Para Ingredientes
+                hit.collider.GetComponent<IngredientSpawner>().OnClicked();
                 return;
             }
-        }
-        
-        if (hit.collider.CompareTag("Ingredient")) {
-            if (hit.transform.GetComponent<IngredientCarrier>().isVisible == true) {
-                StartCoroutine(DragIngredient(hit.transform.gameObject)); // Para ingredientes que podem ser arrastados
+
+            if (hit.collider.CompareTag("Milk")) {
+                //hit.collider.enabled = false; // Desativa o collider do leite para evitar múltiplos toques
+                StartCoroutine(DragIngredient(hit.transform.gameObject)); // Para ingredientes líquidos (água, leite, etc.)
                 return;
             }
+
+            if (hit.collider.CompareTag("Product")) {             // Para o produto final (Café)
+                if (hit.transform.GetComponent<FinalProductProcessing>().occupied == false) {
+                    StartCoroutine(DragProduct(hit.transform.gameObject));
+                    return;
+                }
+            }
+
+            if (hit.collider.CompareTag("Grinder")) {
+                if (hit.transform.GetComponent<CoffeeGrinder>().currentState == CoffeeGrinder.GrinderState.Finished) {
+                    StartCoroutine(DragIngredient(hit.transform.GetComponent<CoffeeGrinder>().SpawnGroundIngred()));
+                    return;
+                }
+            }
+
+            if (hit.collider.CompareTag("Ingredient")) {
+                if (hit.transform.GetComponent<IngredientCarrier>().isVisible == true) {
+                    StartCoroutine(DragIngredient(hit.transform.gameObject)); // Para ingredientes que podem ser arrastados
+                    return;
+                }
+            }
         }
+
+        
     }
 
     // Corrotina pra arrastar ingredientes pela tela
@@ -115,14 +135,15 @@ public class Interaction : MonoBehaviour {
             RaycastHit2D[] hits = Physics2D.RaycastAll(cursorPos, Vector2.zero);
             Debug.Log(hits.Length);
             DragToParser(hits, obj); // Chama o metodo que verifica onde o ingrediente foi largado
-            
+
         }
     }
 
-    
+
 
     void DragToParser(RaycastHit2D[] hits, GameObject obj) {
         if (hits.Length > 0) {
+            
             foreach (RaycastHit2D hit in hits) {
 
                 Debug.Log(hit.transform.name + " - " + hit.transform.tag);
@@ -139,18 +160,22 @@ public class Interaction : MonoBehaviour {
 
                     hit.transform.GetComponent<CoffeeBrewer>().OnDropIngred(obj.GetComponent<IngredientCarrier>().ingred, obj.GetComponent<IngredientCarrier>());
                     if (obj.CompareTag("Milk")) {
-                        obj.GetComponent<Collider2D>().enabled = true;
                         obj.GetComponent<IngredientCarrier>().ResetPos();
-                        return;
                     }
                 }
 
-                if (!hit.transform.CompareTag("Grinder") && !hit.transform.CompareTag("Brewer")) {
+
+
+                if (!hit.transform.CompareTag("Grinder") && !hit.transform.CompareTag("Brewer") && !obj.transform.CompareTag("Milk")) {
                     Destroy(obj);
                 }
             }
-        }
-        else {
+        } else if (obj.transform.CompareTag("Milk") == true) {
+
+            obj.GetComponent<IngredientCarrier>().ResetPos(); // Reposiciona o leite na posição inicial
+            return;
+
+        } else {
             Destroy(obj);
         }
     }

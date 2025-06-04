@@ -29,7 +29,7 @@ public class IngredientCarrier : MonoBehaviour {
     public void Start() {
         if (ingredCarrierType == IngredientType.Milk) {
             ingred = IngredientSpawner.Milk; // Seta o ingrediente como leite
-            Debug.Log(ingred.GetIngredType());
+            //Debug.Log(ingred.GetIngredType());
             milkPos = transform.position; // Armazena a posição inicial do leite
         }
     }
