@@ -1,16 +1,16 @@
 fileFormatVersion: 2
-guid: b762494c7d0f2c244a90070dce4408c4
+guid: ea418928b6003554c86524032fd290a8
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4456497772272959051
-    second: personagem raiva-Sheet_0
+      213: 7592135023361787645
+    second: personagem feliz-Sheet_0
   - first:
-      213: -2779077108470320453
-    second: personagem raiva-Sheet_1
+      213: -4505131646167728916
+    second: personagem feliz-Sheet_1
   - first:
-      213: -3962399122921939298
-    second: personagem raiva-Sheet_2
+      213: 2755835750457609390
+    second: personagem feliz-Sheet_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -115,98 +115,15 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: iOS
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WindowsStoreApps
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: personagem raiva-Sheet_0
+      name: personagem feliz-Sheet_0
       rect:
         serializedVersion: 2
-        x: 37
-        y: 13
-        width: 146
-        height: 257
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5b1c95d33e65722c0800000000000000
-      internalID: -4456497772272959051
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: personagem raiva-Sheet_1
-      rect:
-        serializedVersion: 2
-        x: 119
-        y: 241
-        width: 22
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: bb2f432181cbe69d0800000000000000
-      internalID: -2779077108470320453
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: personagem raiva-Sheet_2
-      rect:
-        serializedVersion: 2
-        x: 249
-        y: 15
+        x: 22
+        y: 65
         width: 146
         height: 255
       alignment: 0
@@ -217,8 +134,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e9e1bebcdfab209c0800000000000000
-      internalID: -3962399122921939298
+      spriteID: df60842349eac5960800000000000000
+      internalID: 7592135023361787645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: personagem feliz-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 65
+        width: 146
+        height: 254
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cec3dc313ae8a71c0800000000000000
+      internalID: -4505131646167728916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: personagem feliz-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 290
+        width: 30
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eac09559302be3620800000000000000
+      internalID: 2755835750457609390
       vertices: []
       indices: 
       edges: []
@@ -237,9 +198,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      personagem raiva-Sheet_0: -4456497772272959051
-      personagem raiva-Sheet_1: -2779077108470320453
-      personagem raiva-Sheet_2: -3962399122921939298
+      personagem feliz-Sheet_0: 7592135023361787645
+      personagem feliz-Sheet_1: -4505131646167728916
+      personagem feliz-Sheet_2: 2755835750457609390
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
