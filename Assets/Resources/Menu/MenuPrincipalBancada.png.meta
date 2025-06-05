@@ -1,22 +1,10 @@
 fileFormatVersion: 2
-guid: 12857fa34ee246a49b400edc75b905d7
+guid: 83f4396711cb6044db37500b461daa30
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3289391523872189117
-    second: dia 3_0
-  - first:
-      213: 7054511166897392489
-    second: dia 3_1
-  - first:
-      213: -6066588039431959888
-    second: dia 3_2
-  - first:
-      213: 9021588106593526481
-    second: dia 3_3
-  - first:
-      213: 892238853727514831
-    second: dia 3_4
+      213: 7371603274386245321
+    second: MenuPrincipalBancada_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -121,118 +109,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: iOS
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: dia 3_0
+      name: MenuPrincipalBancada_0
       rect:
         serializedVersion: 2
-        x: 10
-        y: 49
-        width: 10
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 345da6446dbb952d0800000000000000
-      internalID: -3289391523872189117
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: dia 3_1
-      rect:
-        serializedVersion: 2
-        x: 21
-        y: 49
-        width: 7
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 96b02f6a788a6e160800000000000000
-      internalID: 7054511166897392489
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: dia 3_2
-      rect:
-        serializedVersion: 2
-        x: 30
-        y: 49
-        width: 10
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0ba460ff1562fcba0800000000000000
-      internalID: -6066588039431959888
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: dia 3_3
-      rect:
-        serializedVersion: 2
-        x: 45
-        y: 49
-        width: 10
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1d26563a59e133d70800000000000000
-      internalID: 9021588106593526481
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: dia 3_4
-      rect:
-        serializedVersion: 2
-        x: 8
+        x: 0
         y: 0
-        width: 50
-        height: 41
+        width: 800
+        height: 109
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -241,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fc0fa3b928ed16c00800000000000000
-      internalID: 892238853727514831
+      spriteID: 9c606e22f123d4660800000000000000
+      internalID: 7371603274386245321
       vertices: []
       indices: 
       edges: []
@@ -261,11 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      dia 3_0: -3289391523872189117
-      dia 3_1: 7054511166897392489
-      dia 3_2: -6066588039431959888
-      dia 3_3: 9021588106593526481
-      dia 3_4: 892238853727514831
+      MenuPrincipalBancada_0: 7371603274386245321
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

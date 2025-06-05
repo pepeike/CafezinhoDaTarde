@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: ecfdee64e280c9448adb61ecc08cf1c2
+guid: 0123e089b28111445907eae3c8abd571
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7924557823035862796
-    second: dia bloqueado_0
+      213: -2729886565863726658
+    second: MenuPrincipalBackground_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -109,30 +109,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: iOS
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: dia bloqueado_0
+      name: MenuPrincipalBackground_0
       rect:
         serializedVersion: 2
-        x: 2
-        y: 1
-        width: 50
-        height: 41
+        x: 0
+        y: 101
+        width: 800
+        height: 199
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c0f681c9a5fa9fd60800000000000000
-      internalID: 7924557823035862796
+      spriteID: eb1e494c1ae7d1ad0800000000000000
+      internalID: -2729886565863726658
       vertices: []
       indices: 
       edges: []
@@ -161,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      dia bloqueado_0: 7924557823035862796
+      MenuPrincipalBackground_0: -2729886565863726658
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

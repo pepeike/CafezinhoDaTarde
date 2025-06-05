@@ -1,34 +1,22 @@
 fileFormatVersion: 2
-guid: 8bfcb17a0db9b1d47b64faaedd450c4f
+guid: 2acc40ea376dd954a9e360c02a5c260c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2929601762197041216
-    second: dia final_0
+      213: 2801351710138820081
+    second: FaseCompletaVinhas_0
   - first:
-      213: 4013232425300924785
-    second: dia final_1
+      213: 6892350316058097967
+    second: FaseCompletaVinhas_1
   - first:
-      213: -1430613753701503601
-    second: dia final_2
+      213: 4612256284528134
+    second: FaseCompletaVinhas_2
   - first:
-      213: 3448867470099724950
-    second: dia final_3
+      213: -2915341220686982950
+    second: FaseCompletaVinhas_3
   - first:
-      213: 1024249559676432099
-    second: dia final_4
-  - first:
-      213: -5669972026803877182
-    second: dia final_5
-  - first:
-      213: 2229534700869406971
-    second: dia final_6
-  - first:
-      213: -7926937326086457303
-    second: dia final_7
-  - first:
-      213: -7189032114956554205
-    second: dia final_8
+      213: -106155502239431912
+    second: FaseCompletaVinhas_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -133,30 +121,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: iOS
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: dia final_0
+      name: FaseCompletaVinhas_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 52
-        width: 9
-        height: 10
+        x: 24
+        y: 19
+        width: 207
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -165,20 +140,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 040fc11f74908a820800000000000000
-      internalID: 2929601762197041216
+      spriteID: 1f5e1c5c98660e620800000000000000
+      internalID: 2801351710138820081
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dia final_1
+      name: FaseCompletaVinhas_1
       rect:
         serializedVersion: 2
-        x: 10
-        y: 52
-        width: 7
-        height: 10
+        x: 250
+        y: 241
+        width: 59
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,20 +162,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1791427b0add1b730800000000000000
-      internalID: 4013232425300924785
+      spriteID: f29b130681c86af50800000000000000
+      internalID: 6892350316058097967
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dia final_2
+      name: FaseCompletaVinhas_2
       rect:
         serializedVersion: 2
-        x: 19
-        y: 52
-        width: 10
-        height: 10
+        x: 420
+        y: 128
+        width: 115
+        height: 129
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -209,20 +184,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f8d65d7ee50752ce0800000000000000
-      internalID: -1430613753701503601
+      spriteID: 60ec37992d2601000800000000000000
+      internalID: 4612256284528134
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dia final_3
+      name: FaseCompletaVinhas_3
       rect:
         serializedVersion: 2
-        x: 34
-        y: 52
-        width: 10
-        height: 10
+        x: 445
+        y: 23
+        width: 129
+        height: 253
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -231,20 +206,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 69ab1b0f0b6dcdf20800000000000000
-      internalID: 3448867470099724950
+      spriteID: ad016ed1b90aa87d0800000000000000
+      internalID: -2915341220686982950
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dia final_4
+      name: FaseCompletaVinhas_4
       rect:
         serializedVersion: 2
-        x: 45
-        y: 52
-        width: 7
-        height: 10
+        x: 308
+        y: 23
+        width: 98
+        height: 122
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -253,96 +228,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3ee2ddd3c8dd63e00800000000000000
-      internalID: 1024249559676432099
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: dia final_5
-      rect:
-        serializedVersion: 2
-        x: 54
-        y: 52
-        width: 10
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2ca04ff7b763051b0800000000000000
-      internalID: -5669972026803877182
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: dia final_6
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 52
-        width: 10
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: bf05ab37ff5e0fe10800000000000000
-      internalID: 2229534700869406971
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: dia final_7
-      rect:
-        serializedVersion: 2
-        x: 74
-        y: 52
-        width: 7
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 928f4d9208cddf190800000000000000
-      internalID: -7926937326086457303
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: dia final_8
-      rect:
-        serializedVersion: 2
-        x: 15
-        y: 4
-        width: 50
-        height: 41
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 320b32d616d6b3c90800000000000000
-      internalID: -7189032114956554205
+      spriteID: 813c016122cd68ef0800000000000000
+      internalID: -106155502239431912
       vertices: []
       indices: 
       edges: []
@@ -361,15 +248,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      dia final_0: 2929601762197041216
-      dia final_1: 4013232425300924785
-      dia final_2: -1430613753701503601
-      dia final_3: 3448867470099724950
-      dia final_4: 1024249559676432099
-      dia final_5: -5669972026803877182
-      dia final_6: 2229534700869406971
-      dia final_7: -7926937326086457303
-      dia final_8: -7189032114956554205
+      FaseCompletaVinhas_0: 2801351710138820081
+      FaseCompletaVinhas_1: 6892350316058097967
+      FaseCompletaVinhas_2: 4612256284528134
+      FaseCompletaVinhas_3: -2915341220686982950
+      FaseCompletaVinhas_4: -106155502239431912
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
