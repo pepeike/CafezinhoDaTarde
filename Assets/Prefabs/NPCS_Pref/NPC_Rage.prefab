@@ -12,8 +12,6 @@ GameObject:
   - component: {fileID: 8508447751487075375}
   - component: {fileID: 3644744775990322579}
   - component: {fileID: 8340297255846189246}
-  - component: {fileID: 4648799408719044176}
-  - component: {fileID: 758663082656468107}
   m_Layer: 0
   m_Name: personagem raiva-Sheet_0
   m_TagString: Untagged
@@ -159,35 +157,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.46, y: 2.57}
   m_EdgeRadius: 0
---- !u!114 &4648799408719044176
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5167476486876284453}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01f42986bcd7c4b449817f9dcd7eca7d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogueData: {fileID: 0}
-  CM: {fileID: 0}
---- !u!114 &758663082656468107
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5167476486876284453}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5808e29b34961a40b4bd19bfc7fb433, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  typeDelay: 0.07
-  textObject: {fileID: 0}
-  fullText: 
 --- !u!1 &7418605109102956384
 GameObject:
   m_ObjectHideFlags: 0

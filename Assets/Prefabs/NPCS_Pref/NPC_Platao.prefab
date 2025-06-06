@@ -10,8 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5763305329136895099}
   - component: {fileID: 2132122838788663824}
-  - component: {fileID: 8245500760114549931}
-  - component: {fileID: 1367374989883843178}
   - component: {fileID: 2237473847676532698}
   - component: {fileID: 4754169080243621169}
   m_Layer: 0
@@ -91,35 +89,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8245500760114549931
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4071200885854241143}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5808e29b34961a40b4bd19bfc7fb433, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  typeDelay: 0.05
-  textObject: {fileID: 0}
-  fullText: 
---- !u!114 &1367374989883843178
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4071200885854241143}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01f42986bcd7c4b449817f9dcd7eca7d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogueData: {fileID: 11400000, guid: a163fb934bdbd09409cb699370a7e834, type: 2}
-  CM: {fileID: 0}
 --- !u!61 &2237473847676532698
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -44,8 +44,6 @@ GameObject:
   - component: {fileID: 2623733139347530618}
   - component: {fileID: 2473010752496312683}
   - component: {fileID: 3044289071046556617}
-  - component: {fileID: 5483283456794894673}
-  - component: {fileID: 4936418477905808921}
   m_Layer: 0
   m_Name: Fun_guy
   m_TagString: Untagged
@@ -191,32 +189,3 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.46, y: 2.57}
   m_EdgeRadius: 0
---- !u!114 &5483283456794894673
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8064909207112088407}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01f42986bcd7c4b449817f9dcd7eca7d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogueData: {fileID: 0}
-  CM: {fileID: 0}
---- !u!114 &4936418477905808921
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8064909207112088407}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5808e29b34961a40b4bd19bfc7fb433, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  typeDelay: 0.07
-  textObject: {fileID: 0}
-  fullText: 
