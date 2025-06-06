@@ -17,8 +17,11 @@ public class CliantManager : MonoBehaviour
         intCurrentCliant = 0; //Num Of current Cliant
         currentCliant = cliants[0]; //Current Cliant
         //currentCliant.InitiateCliant(); //start for cliant
+        dialogueSystem.ChangeStateEnable();
         WriteQuestionOrAnswer();
     }
+
+    //Call The first write question
 
     public void DeliverCoffee(string Drink) //Button
     {
@@ -34,13 +37,13 @@ public class CliantManager : MonoBehaviour
         if (questionOrAnswer == false) //Question
         {
             dialogueSystem.dialogueData = currentCliant.Demand;
-            dialogueSystem.Wting();//Call Writer
+            dialogueSystem.CallChangeText();//Call Writer
         }
         else if (questionOrAnswer == true) //Answer
         {
             /*Redue THIS, ONce IT IS Ready*/
             AnalyseDrink();
-            dialogueSystem.Wting();//Call Writer
+            dialogueSystem.CallChangeText();//Call Writer
         }
 
         if (DelegateCallLockInteractions != null)  //Lock other inputs

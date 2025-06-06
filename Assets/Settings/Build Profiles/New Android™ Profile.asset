@@ -165,10 +165,6 @@ MonoBehaviour:
     - line: '|   tvOSBundleVersion: 1.0'
     - line: '|   bundleVersion: 1.0'
     - line: '|   preloadedAssets:'
-    - line: '|   - {fileID: -6541102277595567817, guid: 0c7a70d0d4805ac4893f0a919975132b,
-        type: 2}'
-    - line: '|   - {fileID: 11400000, guid: 817a6318fe5ac624e8ba62679dfa8f1a, type:
-        2}'
     - line: '|   - {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100,
         type: 3}'
     - line: '|   metroInputSource: 0'
@@ -844,7 +840,7 @@ MonoBehaviour:
     - line: '|   qnxGraphicConfPath: '
     - line: '|   apiCompatibilityLevel: 6'
     - line: '|   captureStartupLogs: {}'
-    - line: '|   activeInputHandler: 2'
+    - line: '|   activeInputHandler: 1'
     - line: '|   windowsGamepadBackendHint: 0'
     - line: '|   cloudProjectId: '
     - line: '|   framebufferDepthMemorylessMode: 0'
