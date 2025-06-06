@@ -119,6 +119,14 @@ public class Interaction : MonoBehaviour {
                     return;
                 }
             }
+
+            if (hit.collider.CompareTag("Brewer")) {
+                if (hit.transform.GetComponent<CoffeeBrewer>().currentState == CoffeeBrewer.BrewerState.Idle) {
+                    hit.transform.GetComponent<CoffeeBrewer>().OnPress(); // Se o Brewer estiver ocioso, chama o método OnPress
+                    return;
+                }
+            }
+
         }
 
         
