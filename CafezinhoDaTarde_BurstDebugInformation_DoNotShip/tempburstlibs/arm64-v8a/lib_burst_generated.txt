@@ -9,7 +9,6 @@ Library: C:\GamesDev\CafezinhoDaTarde\Temp\BurstOutput\tempburstlibs\arm64-v8a\l
 --target-framework=NetFramework
 --generate-link-xml=Temp\burst.link.xml
 --temp-folder=C:\GamesDev\CafezinhoDaTarde\Temp\Burst
---debug=Full
 --key-folder=C:/Program Files/Unity/Hub/Editor/6000.0.35f1/Editor/Data/PlaybackEngines/AndroidPlayer
 --decode-folder=C:\GamesDev\CafezinhoDaTarde\Library\Burst
 --output=C:\GamesDev\CafezinhoDaTarde\Temp\BurstOutput\tempburstlibs\arm64-v8a\lib_burst_generated
@@ -125,7 +124,6 @@ Library: C:\GamesDev\CafezinhoDaTarde\Temp\BurstOutput\tempburstlibs\arm64-v8a\l
 --target-framework=NetFramework
 --generate-link-xml=Temp\burst.link.xml
 --temp-folder=C:\GamesDev\CafezinhoDaTarde\Temp\Burst
---debug=Full
 --key-folder=C:/Program Files/Unity/Hub/Editor/6000.0.35f1/Editor/Data/PlaybackEngines/AndroidPlayer
 --decode-folder=C:\GamesDev\CafezinhoDaTarde\Library\Burst
 --output=C:\GamesDev\CafezinhoDaTarde\Temp\BurstOutput\tempburstlibs\arm64-v8a\lib_burst_generated
@@ -149,7 +147,6 @@ Library: C:\GamesDev\CafezinhoDaTarde\Temp\BurstOutput\tempburstlibs\arm64-v8a\l
 --float-mode=Fast
 --generate-link-xml=Temp\burst.link.xml
 --temp-folder=C:\GamesDev\CafezinhoDaTarde\Temp\Burst
---debug=Full
 --key-folder=C:/Program Files/Unity/Hub/Editor/6000.0.35f1/Editor/Data/PlaybackEngines/AndroidPlayer
 --decode-folder=C:\GamesDev\CafezinhoDaTarde\Library\Burst
 --output=C:\GamesDev\CafezinhoDaTarde\Temp\BurstOutput\tempburstlibs\arm64-v8a\lib_burst_generated

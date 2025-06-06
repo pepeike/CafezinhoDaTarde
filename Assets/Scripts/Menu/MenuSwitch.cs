@@ -1,90 +1,98 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using Unity.VisualScripting;
 
+[RequireComponent(typeof(AudioSource))]
 public class MenuSwitch : MonoBehaviour
 {
+    [System.Serializable]
+    public class DayStatus
+    {
+        public bool completed;
+        public string levelName;
+        public Image lockIcon;
+    }
+
+    [Header("Configuração de Paineis")]
     [SerializeField] private GameObject levelSet;
     [SerializeField] private GameObject optionsSet;
     [SerializeField] private GameObject creditos;
     [SerializeField] private GameObject shoppingSet;
+    [Space]
 
-    [SerializeField] private Image icon01;
-    [SerializeField] private Image icon02;
-    [SerializeField] private Image icon03;
-    [SerializeField] private Image icon04;
+    [Header("Configuração de dias")]
+    [Tooltip("Completando os dias libera leveis para os jogadores")]
+    [SerializeField] private DayStatus[] days;
+    [Space]
 
-    [SerializeField, HideInInspector] private bool Dia01 = true;
-    [SerializeField, HideInInspector] private bool Dia02 = false;
-    [SerializeField, HideInInspector] private bool Dia03 = false;
-    [SerializeField, HideInInspector] private bool Dia04 = false;
+    [Header("Configuração de Áudio")]
+    [SerializeField] private AudioClip panelOpenSound;
+    [SerializeField] private AudioClip panelCloseSound;
+    [SerializeField][Range(0, 1)] private float volume = 0.7f;
 
+    private AudioSource audioSource;
 
-
-
-
-    public void Start()
+    void Awake()
     {
-        LockedBTN();
-        
+        audioSource = GetComponent<AudioSource>();
+        UpdateLockIcons();
     }
-    public void Update()
+
+    public void ShowPanel(GameObject panel)
     {
-        LockedBTN();
-
+        panel.SetActive(true);
+        PlaySound(panelOpenSound);
     }
 
-    public void LevelSet()
+    public void HidePanel(GameObject panel)
     {
-        levelSet.SetActive(true);
+        panel.SetActive(false);
+        PlaySound(panelCloseSound);
     }
 
-    public void OptionsSet() 
-    { 
-        optionsSet.SetActive(true);
-    }
-
-    public void Creditos()
+    public void LoadLevel(string level)
     {
-        creditos.SetActive(true);
-    }
-
-    public void ShoppingSet() 
-    { 
-        shoppingSet.SetActive(true);
-    }
-    public void iniciar(string level) 
-    {
-        SceneManager.LoadScene(level);
-    }
-
-    public void LockedBTN()
-    {
-        if (!Dia01)
+        foreach (var day in days)
         {
-            icon01.gameObject.SetActive(true);
+            if (day.completed && day.levelName == level)
+            {
+                SceneManager.LoadScene(level);
+               
+                return;
+            }
         }
-        else 
-        { 
-            icon01.gameObject.SetActive(false);
-        }
+    }
 
+    public void UpdateLockIcons()
+    {
+        foreach (var day in days)
+        {
+            if (day.lockIcon != null)
+            {
+                day.lockIcon.gameObject.SetActive(!day.completed);
+            }
+        }
     }
 
     public void Return()
     {
-       
-            levelSet.SetActive(false);
-              
-            optionsSet.SetActive(false);    
-       
-            creditos.SetActive(false);    
-       
-            shoppingSet.SetActive(false);
-        
-
+        HidePanel(levelSet);
+        HidePanel(optionsSet);
+        HidePanel(creditos);
+        HidePanel(shoppingSet);
     }
 
-   
+    private void PlaySound(AudioClip clip)
+    {
+        if (clip != null && audioSource != null)
+        {
+            audioSource.PlayOneShot(clip, volume);
+        }
+    }
+
+    // Métodos simplificados para os botões da UI
+    public void LevelSet() => ShowPanel(levelSet) ;
+    public void OptionsSet() => ShowPanel(optionsSet);
+    public void Creditos() => ShowPanel(creditos);
+    public void ShoppingSet() => ShowPanel(shoppingSet);
 }
