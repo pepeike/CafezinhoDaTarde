@@ -3,21 +3,49 @@ using UnityEngine.UI;
 
 public class PaperPause : MonoBehaviour
 {
+    [SerializeField] private GameObject pause;
+    [SerializeField] private GameObject BtnPause;
+    [SerializeField] private GameObject setting;
+
     public Animator Paper;
     public Button pausebutton;
 
-    public void ActivatePaper()
+
+    /*
+        public void ActivatePaper()
+        {
+            Paper.SetBool("On", true);
+
+
+
+        }
+
+        public void WithdrawPaper()
+        {
+            Paper.SetBool("On", false);
+
+        }
+    */
+    public void SetPause()
     {
-        Paper.SetBool("On", true);
-        
-        
-       
+        pause.SetActive(true);
+        BtnPause.SetActive(false);
+
     }
 
-    public void WithdrawPaper()
+    public void Reset()
     {
-        Paper.SetBool("On", false);
-       
+        pause.SetActive(false);
+        BtnPause.SetActive(true);
+    }
+
+    public void Setting()
+    {
+        setting.SetActive(true);
+    }
+    public void Return()
+    {
+        setting.SetActive(false);
     }
 }
 
