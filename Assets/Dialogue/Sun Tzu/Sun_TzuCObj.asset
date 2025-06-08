@@ -19,5 +19,6 @@ MonoBehaviour:
   WrongAnswer: {fileID: 11400000, guid: c041316634450264ea1a633400b092d4, type: 2}
   aceptedBeverages:
   - "caf\xE9 puro"
+  CliantPrefab: {fileID: 4591964480897176087, guid: 8e0d3700e04c76144884b22d24b16e2e, type: 3}
   hasPatience: 0
   patience: 0

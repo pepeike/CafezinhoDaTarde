@@ -217,6 +217,17 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &30724944 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5605182300984596810, guid: 2e7565a2f1dd7414ca4da5926a12c7b3, type: 3}
+  m_PrefabInstance: {fileID: 7687276175515101087}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82e158617e42de14ab832ad429532f34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &81454628
 GameObject:
   m_ObjectHideFlags: 0
@@ -1530,7 +1541,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 4ae5ba7767768254f85495f06f427539, type: 2}
   - {fileID: 11400000, guid: 379ee4f4529da724fb101dc3fd80a1b6, type: 2}
   dialogueSystem: {fileID: 614919498}
-  ButtonState: 0
+  spawnerController: {fileID: 30724944}
 --- !u!114 &614919498
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4405,7 +4416,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1934427359
 RectTransform:
   m_ObjectHideFlags: 0

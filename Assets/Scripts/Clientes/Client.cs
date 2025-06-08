@@ -7,6 +7,7 @@ public class Cliant : ScriptableObject
     [HideInInspector] public string debugCliantName;[HideInInspector] public int tipeOfCliants;
     public DialogueData Demand; public DialogueData CorrectAnswer; public DialogueData WrongAnswer;
     public string[] aceptedBeverages;
+    public GameObject CliantPrefab;
 
     public int pMultyplyer { get; private set; } = 3;
     public bool hasPatience;

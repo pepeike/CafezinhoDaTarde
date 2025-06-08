@@ -9,6 +9,7 @@ public class CliantManager : MonoBehaviour
     public List<Cliant> cliants; /* Lista de Clientes */ private Cliant currentCliant; /* Separates Current Cliant */ private int intCurrentCliant; // Position of current Cliant in List
     private bool questionOrAnswer; // Flip Flop in between Question And Answer // Question is /*false*/, Answer is /*true*/
     public DialogueSystem dialogueSystem;
+    public SpawnerController spawnerController;
     private string Drink;
     private void Start()
     {
@@ -17,8 +18,7 @@ public class CliantManager : MonoBehaviour
         intCurrentCliant = 0; //Num Of current Cliant
         currentCliant = cliants[0]; //Current Cliant
         //currentCliant.InitiateCliant(); //start for cliant
-        dialogueSystem.ChangeStateEnable();
-        WriteQuestionOrAnswer();
+        StartCoroutine(DelaySpawn(1.5f));
     }
 
     //Call The first write question
@@ -43,6 +43,7 @@ public class CliantManager : MonoBehaviour
         {
             /*Redue THIS, ONce IT IS Ready*/
             AnalyseDrink();
+            dialogueSystem.ChangeStateEnable();
             dialogueSystem.CallChangeText();//Call Writer
         }
 
@@ -56,6 +57,8 @@ public class CliantManager : MonoBehaviour
         if (questionOrAnswer)
         {
             questionOrAnswer = false;
+            UnlockOtherInput();
+            ChangeCliant();
         }
         else if (questionOrAnswer == false)
         {
@@ -96,8 +99,8 @@ public class CliantManager : MonoBehaviour
         {
             currentCliant = cliants[intCurrentCliant];
             questionOrAnswer = false;
-            Debug.LogWarning("clientChanged");
-            WriteQuestionOrAnswer();
+            StartCoroutine(DelayDeSpawn(1f));
+            StartCoroutine(DelaySpawn(2f));
         }
         else
         {
@@ -142,15 +145,17 @@ public class CliantManager : MonoBehaviour
 
     // Temporery Function
     // Necessery for now Dialogue System, Changes the function call into a constant output
-    [HideInInspector] public bool ButtonState = false;
-    public void ChangeText()
+   
+    IEnumerator DelaySpawn(float a)
     {
-        StartCoroutine(DelayState(0.1f));
-    }
-    IEnumerator DelayState(float a)
-    {
-        ButtonState = true;
         yield return new WaitForSeconds(a);
-        ButtonState = false;
+        spawnerController.SpawnCliant(currentCliant);
+        dialogueSystem.ChangeStateEnable();
+        WriteQuestionOrAnswer();
+    }
+    IEnumerator DelayDeSpawn(float a)
+    {
+        yield return new WaitForSeconds(a);
+        spawnerController.DeSpawnCliant();
     }
 }

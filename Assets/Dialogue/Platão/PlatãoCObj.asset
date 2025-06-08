@@ -19,5 +19,6 @@ MonoBehaviour:
   WrongAnswer: {fileID: 11400000, guid: 6bb2b2ad84f57164e81c83685e57830d, type: 2}
   aceptedBeverages:
   - capuccino
+  CliantPrefab: {fileID: 5682326698612710783, guid: aff122aebef46584ebbeb7434e571e11, type: 3}
   hasPatience: 0
   patience: 0
