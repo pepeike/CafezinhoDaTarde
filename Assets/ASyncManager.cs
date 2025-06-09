@@ -7,39 +7,65 @@ using UnityEngine.Rendering;
 public class ASyncManager : MonoBehaviour
 {
 
-   
-    public void StartLoad(string leveltoLoad)
+    [Header("References")]
+    [SerializeField] private SceneData sceneData;
+    [SerializeField] private GameObject loadingScreen;
+    [SerializeField] private Slider progressBar;
+    [SerializeField] private float minLoadTime = 1f;
+
+    private void Start()
     {
-        StartCoroutine(LoadLevelASync(leveltoLoad));
-        Time.timeScale = 1f;
-    }
-    public void Start()
-    {
-        StartLoad("LevelProposal");
-        
+        StartCoroutine(LoadLevelAsync(sceneData.selectedLevel));
     }
 
-     IEnumerator LoadLevelASync(string leveltoload)
+    private IEnumerator LoadLevelAsync(string levelToLoad)
     {
+        loadingScreen.SetActive(true);
+        AsyncOperation operation = SceneManager.LoadSceneAsync(levelToLoad);
+        operation.allowSceneActivation = false;
 
-        AsyncOperation loadOperation = SceneManager.LoadSceneAsync(leveltoload);
-        loadOperation.allowSceneActivation = false;
-        while (loadOperation.progress < 0.9f)
+        float timer = 0f;
+
+        while (!operation.isDone)
         {
+            timer += Time.deltaTime;
+            float progress = Mathf.Clamp01(operation.progress / 0.9f);
+
+            progressBar.value = progress;
+
+            if (timer >= minLoadTime && operation.progress >= 0.9f)
+            {
+                operation.allowSceneActivation = true;
+            }
+
             yield return null;
         }
-
-        loadOperation.allowSceneActivation = true;
-
-
-
     }
+    /*
 
-    
+        public void StartLoad(string leveltoLoad)
+        {
+            StartCoroutine(LoadLevelASync(leveltoLoad));
+            Time.timeScale = 1f;
+        }
+        public void Start()
+        {
+            StartLoad("Level_1");
 
+        }
 
-    
+         IEnumerator LoadLevelASync(string leveltoload)
+        {
 
+            AsyncOperation loadOperation = SceneManager.LoadSceneAsync(leveltoload);
+            loadOperation.allowSceneActivation = false;
+            while (loadOperation.progress < 0.9f)
+            {
+                yield return null;
+            }
 
-
+            loadOperation.allowSceneActivation = true;
+        }
+        */
 }
+

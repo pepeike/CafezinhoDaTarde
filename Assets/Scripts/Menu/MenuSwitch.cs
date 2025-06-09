@@ -31,7 +31,10 @@ public class MenuSwitch : MonoBehaviour
     [SerializeField][Range(0, 1)] private float volume = 0.7f;
 
     private AudioSource audioSource;
-
+    /*
+    public SceneData sceneData;
+    public string levelName;
+    */
     void Awake()
     {
         audioSource = GetComponent<AudioSource>();
@@ -56,8 +59,9 @@ public class MenuSwitch : MonoBehaviour
         {
             if (day.completed && day.levelName == level)
             {
+                
                 SceneManager.LoadScene(level);
-               
+
                 return;
             }
         }
@@ -96,3 +100,5 @@ public class MenuSwitch : MonoBehaviour
     public void Creditos() => ShowPanel(creditos);
     public void ShoppingSet() => ShowPanel(shoppingSet);
 }
+
+

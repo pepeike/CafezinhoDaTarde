@@ -11,6 +11,8 @@ public enum STATE
 }
 public class DialogueSystem : MonoBehaviour
 {
+
+    
     public DialogueData dialogueData;//pega o objeto de fala!
 
     int currentText = 0;
@@ -36,6 +38,7 @@ public class DialogueSystem : MonoBehaviour
         touchAction = playerInput.actions["TouchPress"];
         /////////////////////////////////////////////////////////////////////////////
     }
+    
 
 
 
@@ -87,6 +90,8 @@ public class DialogueSystem : MonoBehaviour
         if (!finished)
         {
             Next();
+           
+            
         }
         else
         {

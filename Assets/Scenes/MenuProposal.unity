@@ -931,20 +931,22 @@ MonoBehaviour:
   shoppingSet: {fileID: 0}
   days:
   - completed: 1
-    levelName: LevelProposal
+    levelName: Level_1
     lockIcon: {fileID: 1295188913}
   - completed: 0
-    levelName: Level02
+    levelName: Level_2
     lockIcon: {fileID: 1315259925}
   - completed: 0
-    levelName: Level03
+    levelName: Level_3
     lockIcon: {fileID: 300855448}
-  - completed: 0
-    levelName: Level04
+  - completed: 1
+    levelName: Level_4
     lockIcon: {fileID: 222093005}
   panelOpenSound: {fileID: 8300000, guid: f659e89c5425f8044b06569bf92fe846, type: 3}
   panelCloseSound: {fileID: 8300000, guid: f659e89c5425f8044b06569bf92fe846, type: 3}
   volume: 0.7
+  sceneData: {fileID: 0}
+  levelName: 
 --- !u!82 &728913130
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2248,6 +2250,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1765293999}
   m_CullTransparentMesh: 1
+--- !u!1 &1789616048 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 578102285313823730, guid: 1736e3eb1abdcf340ad74a8b453930a5, type: 3}
+  m_PrefabInstance: {fileID: 545104868003262884}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1789616053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1789616048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a744e8513bcc9049b6bf665843db876, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneData: {fileID: 11400000, guid: c129c3e2caff8fe4683810abda28cfb6, type: 2}
+  levelName: Level_1
 --- !u!1 &1861776599
 GameObject:
   m_ObjectHideFlags: 0
@@ -2633,10 +2654,18 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 728913129}
+    - target: {fileID: 1257555508496860092, guid: 1736e3eb1abdcf340ad74a8b453930a5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Level_3
+      objectReference: {fileID: 0}
     - target: {fileID: 1434308855773361593, guid: 1736e3eb1abdcf340ad74a8b453930a5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 728913129}
+    - target: {fileID: 1434308855773361593, guid: 1736e3eb1abdcf340ad74a8b453930a5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Level_1
+      objectReference: {fileID: 0}
     - target: {fileID: 2110460871447984242, guid: 1736e3eb1abdcf340ad74a8b453930a5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -2645,6 +2674,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 728913129}
+    - target: {fileID: 2921514299728713028, guid: 1736e3eb1abdcf340ad74a8b453930a5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Level_2
+      objectReference: {fileID: 0}
     - target: {fileID: 6282358693752486913, guid: 1736e3eb1abdcf340ad74a8b453930a5, type: 3}
       propertyPath: m_Name
       value: MenuLevel
@@ -2733,10 +2766,17 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 728913129}
+    - target: {fileID: 6624303572536803673, guid: 1736e3eb1abdcf340ad74a8b453930a5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Level_4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 578102285313823730, guid: 1736e3eb1abdcf340ad74a8b453930a5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1789616053}
   m_SourcePrefab: {fileID: 100100000, guid: 1736e3eb1abdcf340ad74a8b453930a5, type: 3}
 --- !u!1001 &1621302652528450939
 PrefabInstance:
@@ -2826,14 +2866,126 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2238209240320957697, guid: a75ecdd0bf44fbc4392bc8693591948c, type: 3}
+      propertyPath: m_text
+      value: 'Lucas Scott
+
+        Game Design
+
+        Programador'
+      objectReference: {fileID: 0}
+    - target: {fileID: 2238209240320957697, guid: a75ecdd0bf44fbc4392bc8693591948c, type: 3}
+      propertyPath: m_fontSize
+      value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 2238209240320957697, guid: a75ecdd0bf44fbc4392bc8693591948c, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 3857213274240191842, guid: a75ecdd0bf44fbc4392bc8693591948c, type: 3}
+      propertyPath: m_text
+      value: 'Pietro C.
+
+        Roteiro'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3857213274240191842, guid: a75ecdd0bf44fbc4392bc8693591948c, type: 3}
+      propertyPath: m_fontSize
+      value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 3857213274240191842, guid: a75ecdd0bf44fbc4392bc8693591948c, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 32
+      objectReference: {fileID: 0}
     - target: {fileID: 4033666088147736170, guid: a75ecdd0bf44fbc4392bc8693591948c, type: 3}
       propertyPath: m_Name
       value: Creditos
+      objectReference: {fileID: 0}
+    - target: {fileID: 4860414547288850712, guid: a75ecdd0bf44fbc4392bc8693591948c, type: 3}
+      propertyPath: m_text
+      value: 'Pedro M.
+
+        Arte 2d
+
+        animador'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4860414547288850712, guid: a75ecdd0bf44fbc4392bc8693591948c, type: 3}
+      propertyPath: m_fontSize
+      value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 4860414547288850712, guid: a75ecdd0bf44fbc4392bc8693591948c, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 5591418636174327757, guid: a75ecdd0bf44fbc4392bc8693591948c, type: 3}
+      propertyPath: m_text
+      value: 'Bruno
+
+        Roteiro'
+      objectReference: {fileID: 0}
+    - target: {fileID: 5591418636174327757, guid: a75ecdd0bf44fbc4392bc8693591948c, type: 3}
+      propertyPath: m_fontSize
+      value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 5591418636174327757, guid: a75ecdd0bf44fbc4392bc8693591948c, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 6275319441517886131, guid: a75ecdd0bf44fbc4392bc8693591948c, type: 3}
+      propertyPath: m_text
+      value: 'iSABEEL
+
+        Game Design
+
+        Arte 2d'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6275319441517886131, guid: a75ecdd0bf44fbc4392bc8693591948c, type: 3}
+      propertyPath: m_fontSize
+      value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 6275319441517886131, guid: a75ecdd0bf44fbc4392bc8693591948c, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 8271020348129313804, guid: a75ecdd0bf44fbc4392bc8693591948c, type: 3}
+      propertyPath: m_fontSize
+      value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 8271020348129313804, guid: a75ecdd0bf44fbc4392bc8693591948c, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 32
       objectReference: {fileID: 0}
     - target: {fileID: 8276593839850440719, guid: a75ecdd0bf44fbc4392bc8693591948c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 728913129}
+    - target: {fileID: 8417271377250193158, guid: a75ecdd0bf44fbc4392bc8693591948c, type: 3}
+      propertyPath: m_text
+      value: 'Gabriela
+
+        Game Design
+
+        Arte 2d'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8417271377250193158, guid: a75ecdd0bf44fbc4392bc8693591948c, type: 3}
+      propertyPath: m_fontSize
+      value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 8417271377250193158, guid: a75ecdd0bf44fbc4392bc8693591948c, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 8465242895300583206, guid: a75ecdd0bf44fbc4392bc8693591948c, type: 3}
+      propertyPath: m_text
+      value: "Luiz Gustavo\nPrograma\xE7\xE3o\nUI/UX"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8465242895300583206, guid: a75ecdd0bf44fbc4392bc8693591948c, type: 3}
+      propertyPath: m_fontSize
+      value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 8465242895300583206, guid: a75ecdd0bf44fbc4392bc8693591948c, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 32
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

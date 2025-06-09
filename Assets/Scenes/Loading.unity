@@ -603,6 +603,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f1bf36fcb8b3a642babf43d33b45220, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneData: {fileID: 11400000, guid: c129c3e2caff8fe4683810abda28cfb6, type: 2}
+  loadingScreen: {fileID: 1887595853}
+  progressBar: {fileID: 0}
+  minLoadTime: 1
 --- !u!1 &1887595853
 GameObject:
   m_ObjectHideFlags: 0
