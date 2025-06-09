@@ -13,22 +13,29 @@ MonoBehaviour:
   m_Name: "Virg\xEDlio"
   m_EditorClassIdentifier: 
   talkScript:
-  - name: Atendente
-    text: "O\u2026 o que? Que lugar \xE9 este?"
-  - name: Atendente
-    text: "O\u2026 o que? Que lugar \xE9 este?"
-  - name: "Virg\xEDlio "
-    text: "Ah, n\xE3o lhe derem as devidas explica\xE7\xF5es de sua situa\xE7\xE3o.\r\nSou
-      Virg\xEDlio Maro, primeiramente mando meus p\xEAsames e espero que sua passagem
-      do mundo material para este tenha sido amena."
-  - name: Atendente
-    text: " Como assim?  Eu\u2026 eu morri? Eu morri e estou em uma maldita cafeteria
-      conversando com o tema das minhas aulas de hist\xF3ria?\r\n"
+  - name: "virg\xEDlio"
+    text: " Ol\xE1, poderia me servir um caf\xE9 por gentileza meu amigo?"
+  - name: atendente
+    text: "O\u2026 o que? Que lugar \xE9 este?\r\n"
   - name: "Virg\xEDlio"
-    text: "\xC9 uma situa\xE7\xE3o dif\xEDcil de se assimilar, eu entendo, mas agora
-      voc\xEA precisa se manter firme. Sua penit\xEAncia pode n\xE3o ser algo terr\xEDvel,
-      por\xE9m \xE9 trabalhoso.\r\n"
+    text: "Ah, n\xE3o lhe derem as devidas explica\xE7\xF5es de sua situa\xE7\xE3o."
   - name: Atendente
-    text: "Penit\xEAncia? Em uma cafeteria?"
-  - name: "Virg\xEDlio"
-    text: Exatamente, vou lhe mostrar como faz...
+    text: "Como assim? e quem \xE9 voc\xEA?\r\n"
+  - name: "Virg\xEDio"
+    text: " Sou Virg\xEDlio Maro,  mando meus p\xEAsames."
+  - name: "Virg\xEDio"
+    text: ' Espero que sua passagem do mundo material para este tenha sido amena. '
+  - name: Atendente
+    text: "Eu\u2026 eu morri?"
+  - name: Atendente
+    text: "E estou em uma maldita cafeteria conversando com o tema das minhas aulas
+      de hist\xF3ria?"
+  - name: "Virg\xEDio"
+    text: ":\xC9 uma situa\xE7\xE3o dif\xEDcil de se assimilar, eu entendo,"
+  - name: "Virg\xEDio"
+    text: " mas agora voc\xEA precisa se manter firme. Sua penit\xEAncia pode n\xE3o
+      ser algo terr\xEDvel, por\xE9m \xE9 trabalhoso. "
+  - name: Atendente
+    text: "Penit\xEAncia? Em uma cafeteria? "
+  - name: "Virg\xEDio"
+    text: "Penit\xEAncia? Em uma cafeteria? "

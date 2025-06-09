@@ -14,13 +14,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   talkScript:
   - name: "Plat\xE3o"
-    text: "longe da realidade que me cercava, percebo o tamanho vazio que meu conhecimento
-      continha, jamais pensaria em algo t\xE3o saboroso vindo dos corredores agitados
-      daquela cidade.\r\n"
+    text: 'longe da realidade que me cercava, '
+  - name: "Plat\xE3o"
+    text: percebo o tamanho vazio que meu conhecimento continha,
+  - name: "Plat\xE3o"
+    text: "jamais pensaria em algo t\xE3o saboroso vindo dos corredores agitados
+      daquela cidade."
   - name: Atendente
     text: "Eu fico feliz que voc\xEA tenha apreciado meu trabalho,volte assim que
       desejar descobrir o resto de nossas receitas.\n"
   - name: "Plat\xE3o"
     text: "Seguirei meu caminho, acredito que em uma breviedade do tempo, minha energia
-      se tornar\xE1 parte deste universo. Agrade\xE7o seu trabalho, afinal, ele me
-      dar\xE1 for\xE7as pra continuar minha jornada."
+      se tornar\xE1 parte deste universo. "
+  - name: "Plat\xE3o"
+    text: "Agrade\xE7o seu trabalho, afinal, ele me dar\xE1 for\xE7as pra continuar
+      minha jornada."

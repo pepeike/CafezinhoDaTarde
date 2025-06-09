@@ -15,12 +15,10 @@ MonoBehaviour:
   talkScript:
   - name: Sun Tzu
     text: "Nasci em um imp\xE9rio t\xE3o antigo quanto os ventos do norte, vivenciei
-      batalhas e momentos que ecoaram para sempre na hist\xF3ria, e diante meus \xFAltimos
-      dias, ap\xF3s conhecer centenas de mestres nesta arte, achei ter compreendido
-      a maestria. Fui tolo, suas m\xE3os precisas me demonstraram sabores que nunca
-      sequer imaginei ser poss\xEDvel. Obrigado, poderei ent\xE3o encontrar minha
-      futuras vidas.\r\n"
-  - name: Atendente
-    text: "N\xE3o existe necessidade de me agradecer, afinal, somente o fato de poder
-      conversar com uma figura como o senhor, j\xE1  \xE9 muito mais do que eu posso
-      lhe oferecer. \n"
+      batalhas e momentos que ecoaram para sempre na hist\xF3ria,\r\n"
+  - name: Sun Tzu
+    text: "e diante meus \xFAltimos dias, ap\xF3s conhecer centenas de mestres nesta
+      arte, achei ter compreendido a maestria."
+  - name: Sun Tzu
+    text: "Fui tolo, suas m\xE3os precisas me demonstraram sabores que nunca sequer
+      imaginei ser poss\xEDvel. Lhe agrade\xE7o."
