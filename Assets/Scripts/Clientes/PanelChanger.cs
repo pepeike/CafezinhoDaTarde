@@ -12,9 +12,6 @@ using static UnityEngine.Rendering.DebugUI;
 /// Tambem possui Uma transição de cena joguei isso ai lá no inicio do projeto somente para prototipar/testar algo e acabou ficando ;D
 /// </>
 
-
-
-
 public class PanelChanger : MonoBehaviour
 {
     public List<int> StartingPanel;     //List For The Panels in PanelList That Are Visible at the start of the scene
@@ -23,6 +20,8 @@ public class PanelChanger : MonoBehaviour
     public Animator pausescreenReturn;
     public AudioSource interact;
     public GameObject closeinTransition;
+
+    private bool LockChange = true; // <= Unlocked if True / Locked if false :RLH107
 
     private void Start()
     {
@@ -41,19 +40,23 @@ public class PanelChanger : MonoBehaviour
             else { Debug.LogError("PanelStartOutsideOfRange"); }// <= Error if There is a Panel Set to be true that does not exist
         }
     }
-
+    public void ChangeLockChange(bool a) { LockChange = a; }
     public void SetPanelTrue(int Panel)// <= Sets panel true (Button)
     {
-        PanelList[Panel].SetActive(true);
- //       interact.Play();
-        
+        if (LockChange) // <= Here To Lock transition for when it is necessery :RLH107
+        {
+            PanelList[Panel].SetActive(true);
+            //       interact.Play();
+        }
     }
 
     public void SetPanelFalse(int Panel)// <= Sets panel false (Button)
     {
-
-        PanelList[Panel].SetActive(false);
-  //      interact.Play();
+        if (LockChange) // <= Here To Lock transition for when it is necessery :RLH107
+        {
+            PanelList[Panel].SetActive(false);
+            //      interact.Play();
+        }
     }
 
     public void Transition()

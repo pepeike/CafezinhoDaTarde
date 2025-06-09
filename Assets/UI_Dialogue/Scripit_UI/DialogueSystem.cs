@@ -120,4 +120,6 @@ public class DialogueSystem : MonoBehaviour
             typeText.Skip();
             state = STATE.WAITING;
     }
+
+    public void DebugString(string a){ Debug.LogWarning(a); } // For emergency ;p :RLH107
 }

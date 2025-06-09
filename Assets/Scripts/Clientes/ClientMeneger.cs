@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class CliantManager : MonoBehaviour
 {
@@ -8,8 +9,11 @@ public class CliantManager : MonoBehaviour
 
     public List<Cliant> cliants; /* Lista de Clientes */ private Cliant currentCliant; /* Separates Current Cliant */ private int intCurrentCliant; // Position of current Cliant in List
     private bool questionOrAnswer; // Flip Flop in between Question And Answer // Question is /*false*/, Answer is /*true*/
-    public DialogueSystem dialogueSystem;
-    public SpawnerController spawnerController;
+    public DialogueSystem dialogueSystem; public SpawnerController spawnerController;
+
+    public UnityEvent chengeCam; public UnityEvent LockInteraction; public UnityEvent UnLockInteraction;
+    
+
     private string Drink;
     private void Start()
     {
@@ -18,7 +22,7 @@ public class CliantManager : MonoBehaviour
         intCurrentCliant = 0; //Num Of current Cliant
         currentCliant = cliants[0]; //Current Cliant
         //currentCliant.InitiateCliant(); //start for cliant
-        StartCoroutine(DelaySpawn(1.5f));
+        StartCoroutine(DelaySpawn(2f));
     }
 
     //Call The first write question
@@ -28,6 +32,7 @@ public class CliantManager : MonoBehaviour
         if (questionOrAnswer == true)
         {
             this.Drink = Drink;
+            chengeCam?.Invoke();
             WriteQuestionOrAnswer();
         }
         //Debug.Log("Drink " + Drink);
@@ -41,23 +46,18 @@ public class CliantManager : MonoBehaviour
         }
         else if (questionOrAnswer == true) //Answer
         {
-            /*Redue THIS, ONce IT IS Ready*/
-            AnalyseDrink();
+            dialogueSystem.dialogueData = currentCliant.AnalyseBeverege(Drink);
             dialogueSystem.ChangeStateEnable();
             dialogueSystem.CallChangeText();//Call Writer
         }
 
-        if (DelegateCallLockInteractions != null)  //Lock other inputs
-        {
-            DelegateCallLockInteractions();
-        }
+        LockInteraction?.Invoke();      //Lock other inputs
     }
     public void InvertQuestionOrAnswer()
     {
         if (questionOrAnswer)
         {
             questionOrAnswer = false;
-            UnlockOtherInput();
             ChangeCliant();
         }
         else if (questionOrAnswer == false)
@@ -68,23 +68,7 @@ public class CliantManager : MonoBehaviour
                 StartCoroutine(CliantPatience(currentCliant.patience, currentCliant.pMultyplyer));
             }
         }
-    }
-    public delegate void LockInteraction();
-    LockInteraction DelegateCallLockInteractions;
-    public delegate void UnLockInteraction();
-    UnLockInteraction DelegateCallUnLockInteractions;
-
-    public void UnlockOtherInput()
-    {
-        if (DelegateCallUnLockInteractions != null)
-        {
-            DelegateCallUnLockInteractions();
-        }
-    }
-
-    private void AnalyseDrink()
-    {
-        dialogueSystem.dialogueData = currentCliant.AnalyseBeverege(Drink);
+        UnLockInteraction?.Invoke();
     }
 
 
@@ -151,7 +135,9 @@ public class CliantManager : MonoBehaviour
         yield return new WaitForSeconds(a);
         spawnerController.SpawnCliant(currentCliant);
         dialogueSystem.ChangeStateEnable();
+        yield return new WaitForSeconds(0.5f);
         WriteQuestionOrAnswer();
+        chengeCam?.Invoke();
     }
     IEnumerator DelayDeSpawn(float a)
     {
