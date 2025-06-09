@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a7276e88c3b4634486f89d1533ee889, type: 3}
+  m_Name: "Virg\xEDlio"
+  m_EditorClassIdentifier: 
+  talkScript:
+  - name: Atendente
+    text: "O\u2026 o que? Que lugar \xE9 este?"
+  - name: Atendente
+    text: "O\u2026 o que? Que lugar \xE9 este?"
+  - name: "Virg\xEDlio "
+    text: "Ah, n\xE3o lhe derem as devidas explica\xE7\xF5es de sua situa\xE7\xE3o.\r\nSou
+      Virg\xEDlio Maro, primeiramente mando meus p\xEAsames e espero que sua passagem
+      do mundo material para este tenha sido amena."
+  - name: Atendente
+    text: " Como assim?  Eu\u2026 eu morri? Eu morri e estou em uma maldita cafeteria
+      conversando com o tema das minhas aulas de hist\xF3ria?\r\n"
+  - name: "Virg\xEDlio"
+    text: "\xC9 uma situa\xE7\xE3o dif\xEDcil de se assimilar, eu entendo, mas agora
+      voc\xEA precisa se manter firme. Sua penit\xEAncia pode n\xE3o ser algo terr\xEDvel,
+      por\xE9m \xE9 trabalhoso.\r\n"
+  - name: Atendente
+    text: "Penit\xEAncia? Em uma cafeteria?"
+  - name: "Virg\xEDlio"
+    text: Exatamente, vou lhe mostrar como faz...

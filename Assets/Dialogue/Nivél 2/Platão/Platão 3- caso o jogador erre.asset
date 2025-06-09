@@ -13,11 +13,9 @@ MonoBehaviour:
   m_Name: "Plat\xE3o 3- caso o jogador erre"
   m_EditorClassIdentifier: 
   talkScript:
-  - name: "Plat\xE3o"
-    text: "Tinha certeza que havia alcan\xE7ado a quebra do mundo sens\xEDvel, que
-      me via envolto do mundo ideal que me aguardava fora da caverna. Agora, diante
-      desta bebida est\xE9ril e sem sabor, percebo a verdade, n\xE3o passo de uma
-      alma vazia, condenada a vagar eternamente pelos campos asf\xF3delos.\r\n\n"
+  - name: "Personagem gen\xE9rico 1 "
+    text: "\rOl\xE1 bom dia, hoje tive um dia extremamente cansativo no trabalho
+      ent\xE3o gostaria de beber algo que pudesse me relaxar.\n\n"
   - name: Atendente
     text: "Sinto muito por ter falhado senhor, talvez em uma pr\xF3xima eu consiga
       lhe entregar algo que lhe agrade.\n"
