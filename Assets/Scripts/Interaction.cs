@@ -201,6 +201,7 @@ public class Interaction : MonoBehaviour {
         }
     }
 
+    [SerializeField] private GameObject CoffiePREFAB;
     private void DragProductToParser(GameObject obj, RaycastHit2D[] hits) {
         foreach (RaycastHit2D hit in hits) {
             if (hit.transform.CompareTag("Brewer")) {
@@ -210,6 +211,8 @@ public class Interaction : MonoBehaviour {
                 obj.GetComponent<FinalProductProcessing>().UpdateProduct();
                 string Drink = obj.GetComponent<FinalProductProcessing>().productName;
                 CM.DeliverCoffee(Drink);
+                Destroy(obj);
+                Instantiate(CoffiePREFAB, new Vector3(-22.6f, -17.01f, 0f), Quaternion.identity);
             }
         }
     }

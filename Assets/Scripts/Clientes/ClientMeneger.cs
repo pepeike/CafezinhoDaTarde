@@ -136,8 +136,8 @@ public class CliantManager : MonoBehaviour
         spawnerController.SpawnCliant(currentCliant);
         dialogueSystem.ChangeStateEnable();
         yield return new WaitForSeconds(0.5f);
-        WriteQuestionOrAnswer();
         chengeCam?.Invoke();
+        WriteQuestionOrAnswer();
     }
     IEnumerator DelayDeSpawn(float a)
     {
