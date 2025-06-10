@@ -159,6 +159,7 @@ public class Interaction : MonoBehaviour {
                 if (hit.transform.CompareTag("Grinder")) {
                     if (hit.transform.GetComponent<CoffeeGrinder>().currentState == CoffeeGrinder.GrinderState.Idle) {
                         hit.transform.GetComponent<CoffeeGrinder>().StartGrinding(obj.GetComponent<IngredientCarrier>().ingred, obj.GetComponent<IngredientCarrier>());
+                        obj.GetComponent<IngredientCarrier>().UpdateSprite(); // Desativa a visibilidade do ingrediente enquanto está sendo processado
                         return;
                     }
                 }

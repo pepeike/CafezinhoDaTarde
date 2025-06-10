@@ -31,7 +31,7 @@ public class FinalProductProcessing : MonoBehaviour
     [SerializeField] int effect = 0;
 
     // Metodo chamado quando um ingrediente é adicionado
-    public void OnPourDrink(int taste, int effect)
+    public void OnPourDrink(int effect, int taste)
     {
         this.taste = taste; // Atribui o gosto do ingrediente
         this.effect += effect; // Atribui o efeito do ingrediente

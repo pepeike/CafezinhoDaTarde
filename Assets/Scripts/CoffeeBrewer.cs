@@ -20,7 +20,11 @@ public class CoffeeBrewer : MonoBehaviour {
     public FinalProductProcessing cup;
 
     public void OnDropIngred(Ingredient ingred, IngredientCarrier carry) {
-        if (ingred.isLiquid == false && ingred.GetGround()) {
+        if (ingred.groundable && !ingred.GetGround()) {
+            Destroy(carry.gameObject);
+            Debug.Log("Ingrediente precisa ser moído.");
+        }
+        if (ingred.isLiquid == false && (ingred.GetGround() || !ingred.groundable)) {
             processedIngredient = ingred;
             procIngreds.Add(ingred.GetEffect()); // Adiciona o efeito do ingrediente processado
             ingredCarriers.Add(carry); // Recebe o carrier do ingrediente
@@ -51,9 +55,9 @@ public class CoffeeBrewer : MonoBehaviour {
 
     public void OnPress() {
         if (currentState == BrewerState.Idle) {
-            if (processedIngredient == null || liquidIngredient == null) {
+            if (processedIngredient == null && liquidIngredient == null) {
                 Debug.Log("Aguardando ingredientes para iniciar o preparo.");
-            } else if (liquidIngredient != null) {
+            } else {
                 StartCoroutine(BrewingProcess());
                 Debug.Log(procIngreds.Count + " ingredientes processados.");
             }
@@ -72,20 +76,6 @@ public class CoffeeBrewer : MonoBehaviour {
         OnBrewingFinished();
     }
 
-    IEnumerator MilkProcess() {
-        currentState = BrewerState.Brewing;
-        yield return new WaitForSeconds(3f);
-        OnMilkFinished();
-    }
-
-    public void OnMilkFinished() {
-        currentState = BrewerState.Finished;
-        Debug.Log("Preparo Concluido");
-        if (cup != null) {
-            int outEffect = liquidIngredient.GetEffect();
-            cup.OnPourLiquid(outEffect);
-        }
-    }
 
     public void OnBrewingFinished() {
         currentState = BrewerState.Finished;

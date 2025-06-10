@@ -23,6 +23,7 @@ public class CoffeeGrinder : MonoBehaviour
         // ou simplesmente esperar um tempo e depois chamar o método OnGrindingFinished.
         if (ingred == null || ingred.groundable == false || ingred.GetGround()) { // Verifica se o ingrediente é válido e se pode ser moído
             Debug.Log("Ingrediente inválido ou não moível.");
+            Destroy(_carrier.gameObject); // Destrói o carrier se o ingrediente não for válido
             return;
         }
         Debug.Log("Iniciando moagem do ingrediente: " + ingred.GetIngredType());

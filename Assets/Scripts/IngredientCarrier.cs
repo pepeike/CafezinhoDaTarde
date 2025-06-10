@@ -9,10 +9,18 @@ public class IngredientCarrier : MonoBehaviour {
     public Ingredient ingred; // Referencia ao ingrediente que esta sendo carregado
     public bool isVisible = true; // Se o ingrediente esta visivel ou nao
     private Vector2 milkPos; // Posição do leite, usada para reposicionar o leite após o preparo
+    public Sprite groundSprite;
+    public SpriteRenderer spriteRenderer; // Referencia ao SpriteRenderer do ingrediente
 
     public void SetIngredient(Ingredient ingredient) {
         ingredCarrierType = ingredient.GetIngredType(); // Seta o tipo do ingrediente
         ingred = ingredient.CopyIngredient(ingredient);
+    }
+
+    public void UpdateSprite() {
+        if (ingredCarrierType != IngredientType.Milk && ingred.groundable) {
+            spriteRenderer.sprite = groundSprite;
+        }
     }
 
     public void ToggleVisible() {
