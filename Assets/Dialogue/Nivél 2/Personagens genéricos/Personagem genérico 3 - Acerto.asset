@@ -10,13 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5a7276e88c3b4634486f89d1533ee889, type: 3}
-  m_Name: "Personagem gen\xE9rico 3"
+  m_Name: "Personagem gen\xE9rico 3 - Acerto"
   m_EditorClassIdentifier: 
   talkScript:
-  - name: Alma penada
-    text: "como posso ajudalo o meu nobre pepepecador, estou sentindo gragrande em
-      voc\xEA!!!!"
-  - name: Pastor
-    text: "Vir aqui apenas para buscar caf\xE9. "
+  - name: 'Alma penada '
+    text: "Realmente a fama n\xE3o mentia, o que voc\xEA faz \xE9 m\xE1gico."
   - name: Atendente
-    text: 'Uma xicara de latte sem creme, esse aqui ja esta passado. '
+    text: "Ah n\xE3o \xE9 para tanto, eu s\xF3 fa\xE7o com amor."

@@ -31,11 +31,11 @@ MonoBehaviour:
     text: "E estou em uma maldita cafeteria conversando com o tema das minhas aulas
       de hist\xF3ria?"
   - name: "Virg\xEDio"
-    text: ":\xC9 uma situa\xE7\xE3o dif\xEDcil de se assimilar, eu entendo,"
+    text: "\xC9 uma situa\xE7\xE3o dif\xEDcil de se assimilar, eu entendo,"
   - name: "Virg\xEDio"
     text: " mas agora voc\xEA precisa se manter firme. Sua penit\xEAncia pode n\xE3o
       ser algo terr\xEDvel, por\xE9m \xE9 trabalhoso. "
   - name: Atendente
     text: "Penit\xEAncia? Em uma cafeteria? "
   - name: "Virg\xEDio"
-    text: "Penit\xEAncia? Em uma cafeteria? "
+    text: Infelizmente sim, mas vou lhe mostrar como se faz.

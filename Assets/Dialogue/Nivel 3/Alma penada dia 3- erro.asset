@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a7276e88c3b4634486f89d1533ee889, type: 3}
+  m_Name: Alma penada dia 3- erro
+  m_EditorClassIdentifier: 
+  talkScript:
+  - name: 'Alma penada '
+    text: "Isto ta horriv\xE9l meu filho, acho melhor voc\xEA praticar um pouco mais..."
+  - name: Atendente
+    text: "Eu sinto muito, eu devo ter errrado ou algo do tipo, \xE9 tudo t\xE3o
+      confuso."
+  - name: Alma penada
+    text: "Muitas almas passaram por seu lugar, eu entendo como pode ser dif\xEDcil,
+      mas treine bastante que jaj\xE1 estar\xE1 fora deste lugar."

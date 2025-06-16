@@ -10,9 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5a7276e88c3b4634486f89d1533ee889, type: 3}
-  m_Name: "Personagem gen\xE9rico 4"
+  m_Name: Fazendeiro - Ruim
   m_EditorClassIdentifier: 
   talkScript:
   - name: Fazendeiro
-    text: "Arr\xE1! Que cheirinho bom \xE9 esse, meu parceiro? Parece caf\xE9 fresquinho
-      da ro\xE7a!"
+    text: "Mas que trem horr\xEDvel \xE9 este homi. Xinga logo minha m\xE3e, mas
+      n\xE3 me servi uma porcaria desta!!"
+  - name: Atendente
+    text: "Sinto muito senhor, acho que devo ter falhado em mecher na m\xE1quina.
+      Na pr\xF3xima eu farei melhor."
+  - name: Fazendeiro
+    text: "\xC9 companheiro, tu aprende a mexer nesses treco a\xED."
