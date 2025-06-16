@@ -14,9 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   talkScript:
   - name: 'Alma penada '
-    text: " Ola bom dia, sua cafeteria e o caf\xE9 dela s\xE3o muito famosos por
-      aqui, mas n\xE3o sou muito f\xE3 do sabor do caf\xE9 puro, voc\xEA poder fazer
-      um caf\xE9 com leite para que eu pudesse provar da melhor maneira"
+    text: "Quem voc\xEA pagou para ter est\xE1 fama, isto aqui t\xE1 lamentav\xE9l."
   - name: Atendente
-    text: "Voc\xEA com certeza ir\xE1 adorar nosso caf\xE9 com leite, vou prepar\xE1-lo
-      da melhor forma o poss\xEDvel."
+    text: Eu devo ter errado em algum passo, fiquei nervoso, sinto muito.
+  - name: Alma penada
+    text: "Na pr\xF3xima tu acerta. "
