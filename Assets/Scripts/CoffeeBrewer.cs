@@ -99,6 +99,7 @@ public class CoffeeBrewer : MonoBehaviour {
             //int outTaste = processedIngredient.isBean ? 0 : 1; // Efeito do ingrediente processado
             
             cup.OnPourDrink(processedIngredient.isBean ? 0 : 1, outEffect);
+            cup.UpdateProduct();
 
             //cup.OnPourDrink(processedIngredient.isBean ? 0 : 1, processedIngredient.GetEffect());
             //carrier.ToggleVisible();

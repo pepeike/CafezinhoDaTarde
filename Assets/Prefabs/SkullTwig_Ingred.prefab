@@ -134,5 +134,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ingredCarrierType: 2
   isVisible: 1
-  groundSprite: {fileID: 21300000, guid: 0300869b70c199b4c889c790b581e13b, type: 3}
+  groundSprite: {fileID: 2353540984625731564, guid: 3566f811d807f1d46bf19268de34fbc9, type: 3}
   spriteRenderer: {fileID: 6017467030932590290}

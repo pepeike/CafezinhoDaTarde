@@ -207,9 +207,9 @@ public class Interaction : MonoBehaviour {
         foreach (RaycastHit2D hit in hits) {
             if (hit.transform.CompareTag("Brewer")) {
                 hit.transform.GetComponent<CoffeeBrewer>().OnDropCup(obj.GetComponent<FinalProductProcessing>());
-                obj.transform.position = hit.transform.position;
+                obj.transform.position = hit.transform.position + new Vector3(0, -0.6f);
             } else if (hit.transform.CompareTag("Deliverer")) {
-                obj.GetComponent<FinalProductProcessing>().UpdateProduct();
+                //obj.GetComponent<FinalProductProcessing>().UpdateProduct();
                 string Drink = obj.GetComponent<FinalProductProcessing>().productName;
                 CM.DeliverCoffee(Drink);
                 Destroy(obj);

@@ -184,3 +184,10 @@ MonoBehaviour:
   occupied: 0
   taste: 0
   effect: 0
+  productSprites:
+  - {fileID: 21300000, guid: 3e4d74e8006cb0241aafb2d6fd1789e4, type: 3}
+  - {fileID: 21300000, guid: 838d7ca54a407a944a2131395660403d, type: 3}
+  - {fileID: 21300000, guid: 7b30c843c6af68643b9c20859f58d146, type: 3}
+  - {fileID: 21300000, guid: 8366b404cc7002f47b26f75d18ee8baf, type: 3}
+  - {fileID: 21300000, guid: 4fa706a54b8891648a52c882dcfb2a68, type: 3}
+  spr: {fileID: 871109178476132019}
