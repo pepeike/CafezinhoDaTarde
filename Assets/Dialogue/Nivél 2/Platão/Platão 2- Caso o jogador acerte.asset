@@ -18,14 +18,22 @@ MonoBehaviour:
   - name: "Plat\xE3o"
     text: percebo o tamanho vazio que meu conhecimento continha,
   - name: "Plat\xE3o"
-    text: "jamais pensaria em algo t\xE3o saboroso vindo dos corredores agitados
-      daquela cidade."
+    text: "jamais pensaria em algo t\xE3o saboroso "
+  - name: "Plat\xE3o"
+    text: vindo dos corredores agitados daquela cidade.
   - name: Atendente
-    text: "Eu fico feliz que voc\xEA tenha apreciado meu trabalho,volte assim que
-      desejar descobrir o resto de nossas receitas.\n"
+    text: "Eu fico feliz que voc\xEA tenha apreciado meu trabalho,"
+  - name: Atendende
+    text: 'volte assim que desejar descobrir o resto de nossas receitas.
+
+'
   - name: "Plat\xE3o"
-    text: "Seguirei meu caminho, acredito que em uma breviedade do tempo, minha energia
-      se tornar\xE1 parte deste universo. "
+    text: Seguirei meu caminho,
   - name: "Plat\xE3o"
-    text: "Agrade\xE7o seu trabalho, afinal, ele me dar\xE1 for\xE7as pra continuar
-      minha jornada."
+    text: acredito que em uma breviedade do tempo
+  - name: "Plat\xE3o"
+    text: "minha energia se tornar\xE1 parte deste universo. "
+  - name: "Plat\xE3o"
+    text: "Agrade\xE7o seu trabalho, afinal, "
+  - name: "Plat\xE3o"
+    text: ", ele me dar\xE1 for\xE7as pra continuar minha jornada."

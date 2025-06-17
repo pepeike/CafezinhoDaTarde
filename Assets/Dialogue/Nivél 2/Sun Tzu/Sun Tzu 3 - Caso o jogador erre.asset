@@ -14,16 +14,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   talkScript:
   - name: Sun Tzu
-    text: "De todo amargor que j\xE1 presenciei, este ch\xE1 foi definitivamente
-      o pior, \r\n\r\n"
+    text: "De todo amargor que j\xE1 presenciei, \r\n\r\n"
   - name: Sun Tzu
-    text: "n\xE3o imaginava tamanho desconhecimento de uma t\xE9cnica t\xE3o delicada
-      da sua parte. "
+    text: "este ch\xE1 foi definitivamente o pior, \r\n\r\n\n"
   - name: Sun Tzu
-    text: "Um desperd\xEDcio, apenas seguirei meu caminho, avisando-te que seus erros
-      s\xE3o portas abertas  aos seus inimigos."
+    text: "n\xE3o imaginava tamanho desconhecimento "
+  - name: Sun Tzu
+    text: " de uma t\xE9cnica t\xE3o delicada da sua parte. "
+  - name: Sun Tzu
+    text: "Um desperd\xEDcio, apenas seguirei meu caminho, avisando-te"
+  - name: Sun Tzu
+    text: " que seus erros s\xE3o portas abertas  aos seus inimigos."
   - name: Atendente
-    text: "Infelizmente n\xE3o fui capaz de fazer um ch\xE1 que seja digno de seu
-      gosto, me esfor\xE7arei,\n"
+    text: "Infelizmente n\xE3o fui capaz de fazer "
+  - name: Atendente
+    text: " um ch\xE1 que seja digno de seu gosto, me esfor\xE7arei,\n"
   - name: Atendente
     text: "para que na pr\xF3xima vez, eu seja capaz de ter \xEAxito. \n\n"

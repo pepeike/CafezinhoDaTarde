@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   talkScript:
   - name: 'Alma penada '
-    text: "como posso ajuda-lo o meu nobre pepecador, estou sentindo grande energia
-      em voc\xEA em voc\xEA!!!!"
+    text: 'como posso ajuda-lo o meu nobre pepecador, '
+  - name: Alma penada
+    text: "estou sentindo grande energia em voc\xEA em voc\xEA!!!!"
   - name: Atendente
     text: Estou apenas trabalhando senhor, mas posso lhe servir algo?
   - name: Alma penada

@@ -24,17 +24,21 @@ MonoBehaviour:
   - name: "Virg\xEDio"
     text: " Sou Virg\xEDlio Maro,  mando meus p\xEAsames."
   - name: "Virg\xEDio"
-    text: ' Espero que sua passagem do mundo material para este tenha sido amena. '
+    text: ' Espero que sua passagem do mundo material '
+  - name: "Virg\xEDio"
+    text: 'para este tenha sido amena. '
   - name: Atendente
     text: "Eu\u2026 eu morri?"
   - name: Atendente
-    text: "E estou em uma maldita cafeteria conversando com o tema das minhas aulas
-      de hist\xF3ria?"
+    text: 'E estou em uma maldita cafeteria conversando com '
+  - name: 'Antendente '
+    text: "com o tema das minhas aulas de hist\xF3ria?"
   - name: "Virg\xEDio"
     text: "\xC9 uma situa\xE7\xE3o dif\xEDcil de se assimilar, eu entendo,"
   - name: "Virg\xEDio"
-    text: " mas agora voc\xEA precisa se manter firme. Sua penit\xEAncia pode n\xE3o
-      ser algo terr\xEDvel, por\xE9m \xE9 trabalhoso. "
+    text: " mas agora voc\xEA precisa se manter firme. "
+  - name: "Virg\xEDio"
+    text: "Sua penit\xEAncia pode n\xE3o ser algo terr\xEDvel, por\xE9m \xE9 trabalhoso. "
   - name: Atendente
     text: "Penit\xEAncia? Em uma cafeteria? "
   - name: "Virg\xEDio"

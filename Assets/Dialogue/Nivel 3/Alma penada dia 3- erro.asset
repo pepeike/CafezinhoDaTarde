@@ -15,9 +15,13 @@ MonoBehaviour:
   talkScript:
   - name: 'Alma penada '
     text: "Isto ta horriv\xE9l meu filho, acho melhor voc\xEA praticar um pouco mais..."
-  - name: Atendente
-    text: "Eu sinto muito, eu devo ter errrado ou algo do tipo, \xE9 tudo t\xE3o
-      confuso."
   - name: Alma penada
-    text: "Muitas almas passaram por seu lugar, eu entendo como pode ser dif\xEDcil,
-      mas treine bastante que jaj\xE1 estar\xE1 fora deste lugar."
+    text: ' praticar um pouco mais...'
+  - name: Atendente
+    text: 'Eu sinto muito, eu devo ter errrado ou algo do tipo, '
+  - name: Atendente
+    text: "\xE9 tudo t\xE3o confuso."
+  - name: Alma penada
+    text: 'Muitas almas passaram por seu lugar, eu entendo como pode ser '
+  - name: Alma penada
+    text: "dif\xEDcil, mas treine bastante que jaj\xE1 estar\xE1 fora deste lugar."

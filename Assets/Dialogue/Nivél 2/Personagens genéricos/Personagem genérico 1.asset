@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   talkScript:
   - name: 'Alma penada '
-    text: "Ola bom dia, hoje tive um dia extremamente cansativo no trabalho ent\xE3o
-      gostaria de beber algo que pudesse me relaxar"
+    text: 'Ola bom dia, hoje tive um dia extremamente cansativo no '
+  - name: Alma penada
+    text: "trabalho ent\xE3o gostaria de beber algo que pudesse me relaxar"
   - name: Atendente
     text: "\xC9 pra j\xE1 senhor. \n"

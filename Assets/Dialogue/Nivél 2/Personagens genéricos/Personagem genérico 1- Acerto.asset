@@ -14,12 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   talkScript:
   - name: 'Alma penada '
-    text: "Voc\xEA faz milagres nesta cafeteria sabia? O coisa boa, muitas pessoas
-      no seu lugar n\xE3o sabiam o que estavam fazendo."
+    text: "Voc\xEA faz milagres nesta cafeteria sabia? "
+  - name: Alma penada
+    text: "O coisa boa, muitas pessoas no seu lugar n\xE3o sabiam o que "
+  - name: Alma penada
+    text: estavam fazendo.
   - name: Atendente
     text: Fico feliz, mas teve muitos no meu lugar?
   - name: Alma penada
     text: "Centenas, tu n\xE3o faz ideia. Antes de voc\xEA tava horrivel, "
   - name: Alma penada
-    text: "o Genghis Khan era interressante de conversar, mas n\xE3o sabia o que
-      tava fazendo. "
+    text: o Genghis Khan era interressante de conversar,
+  - name: Alma penada
+    text: "mas n\xE3o sabia o que tava fazendo. "

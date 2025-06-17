@@ -14,17 +14,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   talkScript:
   - name: Sun Tzu
-    text: "A vit\xF3ria \xE9 alcan\xE7ada por aqueles que conhecem profundamente
-      seus inimigos, e obviamente, a si mesmos. "
+    text: "A vit\xF3ria \xE9 alcan\xE7ada por aqueles que conhecem "
   - name: Sun Tzu
-    text: "Uma batalha jamais ser\xE1 vencida sem tal conhecimento. h\xE1 muito 
-      os ventos do inverno me ensinaram isto,"
+    text: ' profundamente seus inimigos, e obviamente, a si mesmos. '
   - name: Sun Tzu
-    text: "entretanto, meus conhecimentos apenas s\xE3o acompanhantes da longa jornada
-      ao p\xF3s vida."
+    text: "Uma batalha jamais ser\xE1 vencida sem tal conhecimento,"
+  - name: Sun Tzu
+    text: "h\xE1 muito  os ventos do inverno me ensinaram isto,"
+  - name: Sun Tzu
+    text: 'entretanto, meus conhecimentos apenas '
+  - name: Sun Tzu
+    text: " s\xE3o acompanhantes da longa jornada ao p\xF3s vida.                                                                                                                                                                                                                            "
   - name: Atendente
-    text: "\xC9 uma honra te-lo nesta cafeteria general, tenho certeza que nossos
-      ch\xE1s seram de seu agrado.\n"
+    text: "\xC9 uma honra te-lo nesta cafeteria general, \n"
+  - name: Atendente
+    text: "tenho certeza que nossos ch\xE1s seram de seu agrado."
   - name: Sun Tzu
-    text: Me traz enorme alegria ver um trabalhador que aprecia meu trabalho, esperarei
-      ansiosamente vosso retorno.
+    text: 'Me traz enorme alegria ver um trabalhador que aprecia meu '
+  - name: Sun Tzu
+    text: trabalho, esperarei ansiosamente vosso retorno.

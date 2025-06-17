@@ -14,7 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   talkScript:
   - name: 'Alma penada '
-    text: "Pela paci\xEAncia do dharma, isto parece uma bomba de energia, era exatamente
-      o que eu precisava. Obrigado"
+    text: "Pela paci\xEAncia do dharma,"
+  - name: 'Alma penada '
+    text: ' isto parece uma bomba de energia,'
+  - name: 'Alma penada '
+    text: era exatamente o que eu precisava. Obrigado
   - name: Atendente
     text: Fico imensamente feliz meu amigo.

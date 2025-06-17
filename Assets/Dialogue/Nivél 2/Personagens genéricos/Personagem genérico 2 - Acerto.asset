@@ -14,7 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   talkScript:
   - name: 'Alma penada '
-    text: "Eu n\xE3o sabia o qu\xE3o cruel a roda de samsara ia ser, at\xE9 provar
-      seu caf\xE9, sinto que por este sofrimento, irei trilhar meu caminho."
+    text: "Eu n\xE3o sabia o qu\xE3o cruel a roda de samsara ia ser, "
+  - name: Alma penada
+    text: "at\xE9 provar seu caf\xE9, sinto que por este sofrimento,"
+  - name: Alma penada
+    text: irei trilhar meu caminho.
   - name: Atendente
     text: "Eu n\xE3o sei  o que responder..."

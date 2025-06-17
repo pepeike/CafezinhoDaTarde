@@ -14,22 +14,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   talkScript:
   - name: "Plat\xE3o"
-    text: "Sempre soube que o mundo sens\xEDvel n\xE3o se passava das sombras do
-      verdadeiro ideal, "
+    text: "Sempre soube que o mundo sens\xEDvel "
   - name: "Plat\xE3o"
-    text: "no auge dos debates em Atenas, busquei a completude da sabedoria, Arist\xF3teles
-      que o diga."
+    text: "n\xE3o se passava das sombras do verdadeiro ideal, "
+  - name: "Plat\xE3o"
+    text: 'no auge dos debates em Atenas, '
+  - name: "Plat\xE3o"
+    text: "busquei a completude da sabedoria, Arist\xF3teles que o diga."
   - name: Atendente
     text: 'Eu imagino senhor Aristocles, como eu poderia ajuda-lo?
 
 '
   - name: "Plat\xE3o"
-    text: "N\xE3o h\xE1 necessidade de tanta formalidade meu amigo, e agora aqui, "
+    text: "N\xE3o h\xE1 necessidade de tanta formalidade meu amigo, "
   - name: "Plat\xE3o"
-    text: "me indago da verdadeira sensa\xE7\xE3o de uma bebida reconfortante"
+    text: ' e agora aqui, '
   - name: "Plat\xE3o"
-    text: 'por gentileza,  me mostre o sabor que somente uma bebida complexa pode
-      fornecer nesta realidade ideial. '
+    text: " indago da verdadeira sensa\xE7\xE3o de uma bebida reconfortante"
+  - name: "Plat\xE3o"
+    text: por gentileza,  me mostre o sabor que somente
+  - name: "Plat\xE3o"
+    text: 'uma bebida complexa pode fornecer nesta realidade ideial. '
   - name: Atendente
-    text: Ahhhh claro, tenho certeza que lhe darei uma experincia que seja condizente
-      com sua pessoa.
+    text: 'Ahhhh claro, tenho certeza que lhe darei '
+  - name: Atendente
+    text: ' uma experincia que seja condizente com sua pessoa.'

@@ -16,19 +16,28 @@ MonoBehaviour:
   - name: "Plat\xE3o "
     text: "Tinha certeza que havia alcan\xE7ado a quebra do mundo sens\xEDvel, "
   - name: "Plat\xE3o"
-    text: que me via envolto do mundo ideal que me aguardava fora da caverna.
+    text: 'que me via envolto do mundo ideal '
   - name: "Plat\xE3o"
-    text: " Agora, diante desta bebida est\xE9ril e sem sabor, percebo a verdade,\r\n"
+    text: ' que me aguardava fora da caverna.'
   - name: "Plat\xE3o"
-    text: "n\xE3o passo de uma alma vazia, condenada a vagar eternamente pelos campos
-      asf\xF3delos.\r\n"
+    text: " Agora, diante desta bebida est\xE9ril e sem sabor, "
+  - name: "Plat\xE3o"
+    text: percebo a verdade,
+  - name: "Plat\xE3o"
+    text: "n\xE3o passo de uma alma vazia, \r\n"
+  - name: "Plat\xE3o"
+    text: "condenada a vagar eternamente pelos campos asf\xF3delos.\r\n"
   - name: Atendente
-    text: "Sinto muito por ter falhado senhor, talvez em uma pr\xF3xima eu consiga
-      lhe entregar algo que lhe agrade.\n"
+    text: "Sinto muito por ter falhado senhor, \n"
+  - name: Atendente
+    text: "talvez na pr\xF3xima eu consiga lhe entregar algo que lhe agrade."
   - name: "Plat\xE3o"
     text: Seguirei meu caminho,
   - name: "Plat\xE3o"
-    text: "sabendo que certas hablidades s\xE3o provenientes de um dom adquerido
-      no nascimento,"
+    text: "sabendo que certas hablidades s\xE3o provenientes "
+  - name: "Plat\xE3o"
+    text: de um dom adquerido no nascimento,
+  - name: "Plat\xE3o"
+    text: "\xE9 uma pena que voc\xEA n\xE3o teve tal sorte."
   - name: "Plat\xE3o"
     text: "\xE9 uma pena que voc\xEA n\xE3o teve tal sorte."
