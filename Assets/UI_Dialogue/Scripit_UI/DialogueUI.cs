@@ -7,6 +7,8 @@ using TMPro;
 public class DialogueUI : MonoBehaviour
 {
     Image backGround;
+    [SerializeField]Image tname;
+    [SerializeField]Image btag;
     TextMeshProUGUI nameText;
     TextMeshProUGUI talkText;
     
@@ -26,11 +28,15 @@ public class DialogueUI : MonoBehaviour
     {if (open)
         {
             backGround.fillAmount = Mathf.Lerp(backGround.fillAmount, 1, speed * Time.deltaTime);
+            tname.fillAmount = Mathf.Lerp(backGround.fillAmount, 1, speed * Time.deltaTime);
+            btag.fillAmount = Mathf.Lerp(backGround.fillAmount, 1, speed * Time.deltaTime);
 
         }
         else
         {
             backGround.fillAmount = Mathf.Lerp(backGround.fillAmount,0, speed * Time.deltaTime);
+            tname.fillAmount = Mathf.Lerp(backGround.fillAmount,0, speed * Time.deltaTime);
+            btag.fillAmount = Mathf.Lerp(backGround.fillAmount,0, speed * Time.deltaTime);
         }
         
     }

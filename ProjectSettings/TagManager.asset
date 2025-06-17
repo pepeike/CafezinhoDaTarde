@@ -12,6 +12,7 @@ TagManager:
   - Ingredient
   - Transportable
   - TeleportArea
+  - Process
   layers:
   - Default
   - TransparentFX
@@ -20,7 +21,7 @@ TagManager:
   - Water
   - UI
   - TeleportArea
-  - 
+  - LiquidEffect
   - 
   - 
   - 
