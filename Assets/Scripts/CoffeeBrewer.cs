@@ -119,8 +119,10 @@ public class CoffeeBrewer : MonoBehaviour {
         for (int i = 0; i < ingredCarriers.Count; i++) {
             if (ingredCarriers[i] != null) {
                 Destroy(ingredCarriers[i]);
+                
             }
         }
+        procIngreds.Clear(); // Limpa a lista de efeitos dos ingredientes processados
         ingredCarriers.Clear(); // Limpa a lista de carriers
         currentState = BrewerState.Idle;
         processedIngredient = null;

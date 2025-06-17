@@ -16,7 +16,7 @@ public class IngredientSpawner : MonoBehaviour
     public static Ingredient SkullTwig = new Ingredient(IngredientType.SkullTwig, true, false, 1);        // Ingrediente do tipo SkullTwig
     public static Ingredient SourTree = new Ingredient(IngredientType.SourTree, true, true, 1);           // Ingrediente do tipo SourTree
     public static Ingredient NethSucralose = new Ingredient(IngredientType.NethSucralose, false, false, 1);// Ingrediente do tipo NethSucralose
-    public static Ingredient Milk = new Ingredient(IngredientType.Milk, 2, true);                    // Ingrediente do tipo Milk (leite)
+    public static Ingredient Milk = new Ingredient(IngredientType.Milk, 3, true);                    // Ingrediente do tipo Milk (leite)
 
     public Ingredient ingred;        // Ingrediente a ser instanciado
 

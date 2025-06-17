@@ -12,15 +12,16 @@ public class FinalProductProcessing : MonoBehaviour
 
     // Dicionario que determina o nome do produto final com base nos ingredientes e processos utilizados
     public Dictionary<string, string> coffeeDict = new Dictionary<string, string> {
-        {"0,0", "café puro"},
-        {"1,0", "café com açúcar"},
-        {"2,0", "café com canela"},
-        {"3,0", "café com leite"},
-        {"4,0", "cappuccino"},
-        {"0,1", "chá preto"},
-        {"1,1", "chá com açúcar"},
-        {"2,1", "chá com canela"},
-        {"3,1", "chá latte"},
+        {"0,0", "nada" },
+        {"1,0", "café puro"},
+        {"2,0", "café com açúcar"},
+        {"3,0", "café com canela"},
+        {"4,0", "café com leite"},
+        {"5,0", "cappuccino"},
+        {"1,1", "chá preto"},
+        {"2,1", "chá com açúcar"},
+        {"3,1", "chá com canela"},
+        {"4,1", "chá latte"},
     };
 
     public bool occupied = false;
