@@ -1639,11 +1639,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c522c9da9c8a684f84cf125935d2c82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cliants:
-  - {fileID: 11400000, guid: 4ae5ba7767768254f85495f06f427539, type: 2}
-  - {fileID: 11400000, guid: 379ee4f4529da724fb101dc3fd80a1b6, type: 2}
   dialogueSystem: {fileID: 614919498}
   spawnerController: {fileID: 30724944}
+  Virgilio_Tutorial: 1
+  Virgilio_tutorial: {fileID: 11400000, guid: 8b4d24a4a517cb34f80011334b4af043, type: 2}
+  cliants:
+  - {fileID: 11400000, guid: 213a22c346c22b042adf7bf4d534bed5, type: 2}
+  - {fileID: 11400000, guid: 3de48388676f13b419b3042298749415, type: 2}
   chengeCam:
     m_PersistentCalls:
       m_Calls:

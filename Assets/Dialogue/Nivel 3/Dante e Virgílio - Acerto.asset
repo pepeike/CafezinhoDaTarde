@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a7276e88c3b4634486f89d1533ee889, type: 3}
+  m_Name: "Dante e Virg\xEDlio - Acerto"
+  m_EditorClassIdentifier: 
+  talkScript:
+  - name: Dante
+    text: "O sabor desta bebida me conforta, me traz de volta as tarde de ver\xE3o
+      na rep\xFAblica florentina, "
+  - name: Dante
+    text: "Uma sensa\xE7\xE3o que transcende a mem\xF3ria, de fato, as dimens\xF5es
+      destes reinos \xE9 algo grandioso."
+  - name: "Virg\xEDlio"
+    text: "Agora meu caro Dante, nossa jornada ter\xE1 que se inciar. Obrigado jovem
+      atentende, at\xE9 nosso proximo encontro."
+  - name: 'Atendente '
+    text: "At\xE9 a proxima meus amigos"

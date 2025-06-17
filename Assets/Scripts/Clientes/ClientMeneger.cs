@@ -6,15 +6,15 @@ using UnityEngine.Events;
 public class CliantManager : MonoBehaviour
 {
     // Cria e Manega os clientes e suas respostas.
-
-    public List<Cliant> cliants; /* Lista de Clientes */ private Cliant currentCliant; /* Separates Current Cliant */ private int intCurrentCliant; // Position of current Cliant in List
-    private bool questionOrAnswer; // Flip Flop in between Question And Answer // Question is /*false*/, Answer is /*true*/
     public DialogueSystem dialogueSystem; public SpawnerController spawnerController;
+
+    public bool Virgilio_Tutorial;  public DialogueData Virgilio_tutorial;
+    public List<Cliant> cliants; /* Lista de Clientes */ private Cliant currentCliant; /* Separates Current Cliant */ private int intCurrentCliant; // Position of current Cliant in List
 
     public UnityEvent chengeCam; public UnityEvent LockInteraction; public UnityEvent UnLockInteraction;
     
+    private bool questionOrAnswer; /* Flip Flop in between Question And Answer // Question is [false], Answer is [true] */  private string Drink;
 
-    private string Drink;
     private void Start()
     {
         questionOrAnswer = false;
@@ -22,7 +22,14 @@ public class CliantManager : MonoBehaviour
         intCurrentCliant = 0; //Num Of current Cliant
         currentCliant = cliants[0]; //Current Cliant
         //currentCliant.InitiateCliant(); //start for cliant
-        StartCoroutine(DelaySpawn(2f));
+        if (Virgilio_Tutorial)
+        {
+            WriteQuestionOrAnswer();
+        }
+        else
+        {
+            StartCoroutine(DelaySpawn(2f));
+        }
     }
 
     //Call The first write question
@@ -39,9 +46,17 @@ public class CliantManager : MonoBehaviour
     }
     private void WriteQuestionOrAnswer() //Selects question or answer and calls the text writer
     {
+        if (Virgilio_Tutorial)
+        {
+            dialogueSystem.dialogueData = Virgilio_tutorial;
+            dialogueSystem.ChangeStateEnable();
+            dialogueSystem.CallChangeText();
+            return;
+        }
         if (questionOrAnswer == false) //Question
         {
             dialogueSystem.dialogueData = currentCliant.Demand;
+            dialogueSystem.ChangeStateEnable();
             dialogueSystem.CallChangeText();//Call Writer
         }
         else if (questionOrAnswer == true) //Answer
@@ -55,6 +70,11 @@ public class CliantManager : MonoBehaviour
     }
     public void InvertQuestionOrAnswer()
     {
+        if (Virgilio_Tutorial)
+        {
+            StartCoroutine(DelaySpawn(2f)); Virgilio_Tutorial = false;
+            return;
+        }
         if (questionOrAnswer)
         {
             questionOrAnswer = false;

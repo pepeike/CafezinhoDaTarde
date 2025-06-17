@@ -13,15 +13,22 @@ MonoBehaviour:
   m_Name: "Plat\xE3o 3- caso o jogador erre"
   m_EditorClassIdentifier: 
   talkScript:
+  - name: "Plat\xE3o "
+    text: "Tinha certeza que havia alcan\xE7ado a quebra do mundo sens\xEDvel, "
   - name: "Plat\xE3o"
-    text: "Tinha certeza que havia alcan\xE7ado a quebra do mundo sens\xEDvel, que
-      me via envolto do mundo ideal que me aguardava fora da caverna. Agora, diante
-      desta bebida est\xE9ril e sem sabor, percebo a verdade, n\xE3o passo de uma
-      alma vazia, condenada a vagar eternamente pelos campos asf\xF3delos.\r\n\n"
+    text: que me via envolto do mundo ideal que me aguardava fora da caverna.
+  - name: "Plat\xE3o"
+    text: " Agora, diante desta bebida est\xE9ril e sem sabor, percebo a verdade,\r\n"
+  - name: "Plat\xE3o"
+    text: "n\xE3o passo de uma alma vazia, condenada a vagar eternamente pelos campos
+      asf\xF3delos.\r\n"
   - name: Atendente
     text: "Sinto muito por ter falhado senhor, talvez em uma pr\xF3xima eu consiga
       lhe entregar algo que lhe agrade.\n"
   - name: "Plat\xE3o"
-    text: "Seguirei meu caminho, sabendo que certas hablidades s\xE3o provenientes
-      de um dom adquerido no nascimento, \xE9 uma pena que voc\xEA n\xE3o teve tal
-      sorte."
+    text: Seguirei meu caminho,
+  - name: "Plat\xE3o"
+    text: "sabendo que certas hablidades s\xE3o provenientes de um dom adquerido
+      no nascimento,"
+  - name: "Plat\xE3o"
+    text: "\xE9 uma pena que voc\xEA n\xE3o teve tal sorte."

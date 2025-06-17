@@ -15,12 +15,13 @@ MonoBehaviour:
   talkScript:
   - name: Sun Tzu
     text: "A vit\xF3ria \xE9 alcan\xE7ada por aqueles que conhecem profundamente
-      seus inimigos, e obviamente, a si mesmos. Uma batalha jamais ser\xE1 vencida
-      sem tal conhecimento. h\xE1 muito  os ventos do inverno me ensinaram isto,
-      entretanto, meus conhecimentos apenas s\xE3o acompanhantes da longa jornada
-      ao p\xF3s vida. Diga-me jovem servo, poderia me preparar um ch\xE1, para que
-      eu possa conhecer a maestria de seu preparo e compar\xE1-lo com minha terra
-      natal?\r\n"
+      seus inimigos, e obviamente, a si mesmos. "
+  - name: Sun Tzu
+    text: "Uma batalha jamais ser\xE1 vencida sem tal conhecimento. h\xE1 muito 
+      os ventos do inverno me ensinaram isto,"
+  - name: Sun Tzu
+    text: "entretanto, meus conhecimentos apenas s\xE3o acompanhantes da longa jornada
+      ao p\xF3s vida."
   - name: Atendente
     text: "\xC9 uma honra te-lo nesta cafeteria general, tenho certeza que nossos
       ch\xE1s seram de seu agrado.\n"

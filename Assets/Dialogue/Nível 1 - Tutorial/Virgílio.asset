@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a7276e88c3b4634486f89d1533ee889, type: 3}
+  m_Name: "Virg\xEDlio"
+  m_EditorClassIdentifier: 
+  talkScript:
+  - name: "virg\xEDlio"
+    text: " Ol\xE1, poderia me servir um caf\xE9 por gentileza meu amigo?"
+  - name: atendente
+    text: "O\u2026 o que? Que lugar \xE9 este?\r\n"
+  - name: "Virg\xEDlio"
+    text: "Ah, n\xE3o lhe derem as devidas explica\xE7\xF5es de sua situa\xE7\xE3o."
+  - name: Atendente
+    text: "Como assim? e quem \xE9 voc\xEA?\r\n"
+  - name: "Virg\xEDio"
+    text: " Sou Virg\xEDlio Maro,  mando meus p\xEAsames."
+  - name: "Virg\xEDio"
+    text: ' Espero que sua passagem do mundo material para este tenha sido amena. '
+  - name: Atendente
+    text: "Eu\u2026 eu morri?"
+  - name: Atendente
+    text: "E estou em uma maldita cafeteria conversando com o tema das minhas aulas
+      de hist\xF3ria?"
+  - name: "Virg\xEDio"
+    text: "\xC9 uma situa\xE7\xE3o dif\xEDcil de se assimilar, eu entendo,"
+  - name: "Virg\xEDio"
+    text: " mas agora voc\xEA precisa se manter firme. Sua penit\xEAncia pode n\xE3o
+      ser algo terr\xEDvel, por\xE9m \xE9 trabalhoso. "
+  - name: Atendente
+    text: "Penit\xEAncia? Em uma cafeteria? "
+  - name: "Virg\xEDio"
+    text: Infelizmente sim, mas vou lhe mostrar como se faz.

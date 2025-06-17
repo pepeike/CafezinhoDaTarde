@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0743f96f3849ff442a4bee12da2effcf, type: 3}
-  m_Name: "Plat\xE3oCObj"
+  m_Name: Personagem generico 1 CObj
   m_EditorClassIdentifier: 
   debugCliantName: 
   tipeOfCliants: 0
-  Demand: {fileID: 11400000, guid: cac110e1d0cc7ee4abb623fe33fb8fee, type: 2}
-  CorrectAnswer: {fileID: 11400000, guid: 74c897a877c0fc448a345fb80b0a0d81, type: 2}
-  WrongAnswer: {fileID: 11400000, guid: 6bb2b2ad84f57164e81c83685e57830d, type: 2}
+  Demand: {fileID: 11400000, guid: 803b04b7a1ac2b84284a04290fb99bf5, type: 2}
+  CorrectAnswer: {fileID: 11400000, guid: 206a8f99deab15642978269179387a2b, type: 2}
+  WrongAnswer: {fileID: 11400000, guid: 3f20aeeca0a6a8649a143faa912ee392, type: 2}
   aceptedBeverages:
-  - capuccino
-  CliantPrefab: {fileID: 5682326698612710783, guid: aff122aebef46584ebbeb7434e571e11, type: 3}
+  - "ch\xE1 com a\xE7\xFAcar"
+  CliantPrefab: {fileID: 0}
   hasPatience: 0
   patience: 0

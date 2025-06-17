@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a7276e88c3b4634486f89d1533ee889, type: 3}
+  m_Name: Fazendeiro -Acerto
+  m_EditorClassIdentifier: 
+  talkScript:
+  - name: Fazendeiro
+    text: "Ohhh trem bom da mulestia, se eu soubesse que o caf\xE9 daqui era t\xE3o
+      bom, eu tinha tratado de morrer antes."
+  - name: Atendente
+    text: Fico feliz que tenha gostado, posso sempre lhe servir quando estiver por
+      perto.
+  - name: Fazendeiro
+    text: Epa, oh coisa boa.
