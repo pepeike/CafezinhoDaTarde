@@ -604,6 +604,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 396740749}
   m_CullTransparentMesh: 1
+--- !u!1 &426106640 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7661870880282263615, guid: 1736e3eb1abdcf340ad74a8b453930a5, type: 3}
+  m_PrefabInstance: {fileID: 545104868003262884}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &441115441
 GameObject:
   m_ObjectHideFlags: 0
@@ -1001,6 +1006,8 @@ MonoBehaviour:
   panelOpenSound: {fileID: 8300000, guid: f659e89c5425f8044b06569bf92fe846, type: 3}
   panelCloseSound: {fileID: 8300000, guid: f659e89c5425f8044b06569bf92fe846, type: 3}
   volume: 0.7
+  buttons: []
+  levelButtons: {fileID: 426106640}
 --- !u!82 &728913130
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2712,9 +2719,29 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 728913129}
     - target: {fileID: 1434308855773361593, guid: 1736e3eb1abdcf340ad74a8b453930a5, type: 3}
+      propertyPath: m_Interactable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1434308855773361593, guid: 1736e3eb1abdcf340ad74a8b453930a5, type: 3}
+      propertyPath: m_Colors.m_ColorMultiplier
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1434308855773361593, guid: 1736e3eb1abdcf340ad74a8b453930a5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1434308855773361593, guid: 1736e3eb1abdcf340ad74a8b453930a5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 728913129}
+    - target: {fileID: 1434308855773361593, guid: 1736e3eb1abdcf340ad74a8b453930a5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1434308855773361593, guid: 1736e3eb1abdcf340ad74a8b453930a5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2110460871447984242, guid: 1736e3eb1abdcf340ad74a8b453930a5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -2751,6 +2778,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 728913129}
+    - target: {fileID: 3238459164246398628, guid: 1736e3eb1abdcf340ad74a8b453930a5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6282358693752486913, guid: 1736e3eb1abdcf340ad74a8b453930a5, type: 3}
       propertyPath: m_Name
       value: MenuLevel
@@ -2843,6 +2874,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 728913129}
+    - target: {fileID: 6624303572536803673, guid: 1736e3eb1abdcf340ad74a8b453930a5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

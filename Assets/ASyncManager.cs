@@ -15,7 +15,9 @@ public class ASyncManager : MonoBehaviour
     }
     public void Start()
     {
-        StartLoad("LevelProposal");
+        string loadScene = "Level "+PlayerPrefs.GetInt("LevelLoadnow"); 
+        print(loadScene);
+        StartLoad(loadScene);
         
     }
 

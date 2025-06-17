@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/MenuProposal.unity
     guid: aa1be6914edc1f349a5a86aaa236c77a
   - enabled: 1
-    path: Assets/Scenes/LevelProposal.unity
+    path: Assets/Scenes/Level 1.unity
     guid: 26c0d7b8e11493c4797ef66b2c9b7201
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity

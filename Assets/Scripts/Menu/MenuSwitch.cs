@@ -32,10 +32,23 @@ public class MenuSwitch : MonoBehaviour
 
     private AudioSource audioSource;
 
+    public Button[] buttons;
+    public GameObject levelButtons;
+
     void Awake()
     {
+        ButtonsToArray();
         audioSource = GetComponent<AudioSource>();
         UpdateLockIcons();
+        int unlockedLevel = PlayerPrefs.GetInt("UnlockedLevel", 1);
+        for (int i = 0; i < buttons.Length; i++) 
+        {
+            buttons[i].interactable = false;
+        }
+        for (int i = 0;i < unlockedLevel; i++)
+        {
+            buttons[i].interactable = true;
+        }
     }
 
     public void ShowPanel(GameObject panel)
@@ -50,13 +63,24 @@ public class MenuSwitch : MonoBehaviour
         PlaySound(panelCloseSound);
     }
 
-    public void LoadLevel(string level)
+
+    public void LoadLevel(int level)
+    {
+        SceneManager.LoadScene("Loading");
+        PlayerPrefs.SetInt("LevelLoadnow", level);
+
+    }
+    public void LsoadLevel(string level)
     {
         foreach (var day in days)
         {
             if (day.completed && day.levelName == level)
             {
-                SceneManager.LoadScene(level);
+                //ativa depois que junta os leveis
+                //string lavelName = "Level " + level;
+                //SceneManager.LoadScene(lavelName);
+                SceneManager.LoadScene("Loading");
+                PlayerPrefs.SetString("LevelLoadnow", level);
                
                 return;
             }
@@ -87,6 +111,16 @@ public class MenuSwitch : MonoBehaviour
         if (clip != null && audioSource != null)
         {
             audioSource.PlayOneShot(clip, volume);
+        }
+    }
+
+    void ButtonsToArray()
+    {
+        int ChildCount = levelButtons.transform.childCount;
+        buttons = new Button[ChildCount];
+        for (int i = 0; i < ChildCount; i++) 
+        {
+            buttons[i] = levelButtons.transform.GetChild(i).gameObject.GetComponent<Button>();
         }
     }
 
