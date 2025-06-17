@@ -4,7 +4,7 @@ using UnityEngine;
 public class Cliant : ScriptableObject
 {
     //script para guardar as informações de cada cliente
-    [HideInInspector] public string debugCliantName;[HideInInspector] public int tipeOfCliants;
+    [HideInInspector] public string debugCliantName;
     public DialogueData Demand; public DialogueData CorrectAnswer; public DialogueData WrongAnswer;
     public string[] aceptedBeverages;
     public GameObject CliantPrefab;

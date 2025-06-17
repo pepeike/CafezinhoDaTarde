@@ -19,6 +19,6 @@ MonoBehaviour:
   WrongAnswer: {fileID: 11400000, guid: 3f20aeeca0a6a8649a143faa912ee392, type: 2}
   aceptedBeverages:
   - "ch\xE1 com a\xE7\xFAcar"
-  CliantPrefab: {fileID: 0}
+  CliantPrefab: {fileID: 1440783811141981598, guid: f977e853c21810043b110c6366272ba3, type: 3}
   hasPatience: 0
   patience: 0

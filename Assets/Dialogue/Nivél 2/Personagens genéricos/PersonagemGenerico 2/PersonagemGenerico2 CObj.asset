@@ -15,10 +15,10 @@ MonoBehaviour:
   debugCliantName: 
   tipeOfCliants: 0
   Demand: {fileID: 11400000, guid: 325c1e420a25d074ea9a04b6060e0bae, type: 2}
-  CorrectAnswer: {fileID: 11400000, guid: e18d87fe900e8894ba5c170ae32b8ff6, type: 2}
-  WrongAnswer: {fileID: 11400000, guid: 99f75fff28f756d408cc695a2ff6e190, type: 2}
+  CorrectAnswer: {fileID: 11400000, guid: 99f75fff28f756d408cc695a2ff6e190, type: 2}
+  WrongAnswer: {fileID: 11400000, guid: e18d87fe900e8894ba5c170ae32b8ff6, type: 2}
   aceptedBeverages:
   - "caf\xE9 com canela"
-  CliantPrefab: {fileID: 0}
+  CliantPrefab: {fileID: 5727610108326201148, guid: 338851969621a1a48adaadabd56f29aa, type: 3}
   hasPatience: 0
   patience: 0

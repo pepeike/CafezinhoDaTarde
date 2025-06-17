@@ -9,6 +9,7 @@ public class CliantManager : MonoBehaviour
     public DialogueSystem dialogueSystem; public SpawnerController spawnerController;
 
     public bool Virgilio_Tutorial;  public DialogueData Virgilio_tutorial;
+    public bool TwoDrinks;
     public List<Cliant> cliants; /* Lista de Clientes */ private Cliant currentCliant; /* Separates Current Cliant */ private int intCurrentCliant; // Position of current Cliant in List
 
     public UnityEvent chengeCam; public UnityEvent LockInteraction; public UnityEvent UnLockInteraction;
@@ -109,6 +110,7 @@ public class CliantManager : MonoBehaviour
         else
         {
             intCurrentCliant = intCurrentCliant - 1;
+            StartCoroutine(DelayDeSpawn(1f));
             /////////////////////////////////////////////////////////////      <= ADD Win Condition
             Debug.LogWarning("Awaiting Win/End_Condition Code");
         }
