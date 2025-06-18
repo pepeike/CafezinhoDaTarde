@@ -14,10 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   talkScript:
   - name: Fazendeiro
-    text: "Ohhh trem bom da mulestia, se eu soubesse que o caf\xE9 daqui era t\xE3o
-      bom, eu tinha tratado de morrer antes."
+    text: "Ohhh trem bom da mulestia, se eu soubesse que o caf\xE9 "
+  - name: Fazendeiro
+    text: "daqui era t\xE3o bom, eu tinha tratado de morrer antes."
   - name: Atendente
-    text: Fico feliz que tenha gostado, posso sempre lhe servir quando estiver por
-      perto.
+    text: 'Fico feliz que tenha gostado, posso sempre '
+  - name: 'Atendente '
+    text: lhe servir quando estiver por perto.
   - name: Fazendeiro
     text: Epa, oh coisa boa.

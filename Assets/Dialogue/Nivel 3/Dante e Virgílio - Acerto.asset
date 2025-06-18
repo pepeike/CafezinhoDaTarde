@@ -14,13 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   talkScript:
   - name: Dante
-    text: "O sabor desta bebida me conforta, me traz de volta as tarde de ver\xE3o
-      na rep\xFAblica florentina, "
+    text: 'O sabor desta bebida me conforta, me traz de volta '
   - name: Dante
-    text: "Uma sensa\xE7\xE3o que transcende a mem\xF3ria, de fato, as dimens\xF5es
-      destes reinos \xE9 algo grandioso."
+    text: "as tardes de ver\xE3o na rep\xFAblica florentina, "
+  - name: Dante
+    text: "Uma sensa\xE7\xE3o que transcende a mem\xF3ria, de fato, "
+  - name: Dante
+    text: "as dimens\xF5es destes reinos \xE9 algo grandioso."
   - name: "Virg\xEDlio"
-    text: "Agora meu caro Dante, nossa jornada ter\xE1 que se inciar. Obrigado jovem
-      atentende, at\xE9 nosso proximo encontro."
+    text: "Agora meu caro Dante, nossa jornada ter\xE1 que se inciar. "
+  - name: "Virg\xEDlio"
+    text: "Obrigado jovem atentende, at\xE9 nosso proximo encontro."
   - name: 'Atendente '
     text: "At\xE9 a proxima meus amigos"

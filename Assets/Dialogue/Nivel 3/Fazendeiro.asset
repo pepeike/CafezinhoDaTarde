@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   talkScript:
   - name: Fazendeiro
-    text: "Arr\xE1! Que cheirinho bom \xE9 esse, meu parceiro? Parece caf\xE9 fresquinho
-      da ro\xE7a!"
+    text: "Arr\xE1! Que cheirinho bom \xE9 esse, meu parceiro? "
+  - name: Fazendeiro
+    text: "Parece caf\xE9 fresquinho da ro\xE7a!"
   - name: Atendente
     text: "Posso lhe servir senhor, aposto que voc\xEA vai gostar."
   - name: Fazendeiro

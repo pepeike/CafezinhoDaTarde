@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   talkScript:
   - name: "Plat\xE3o "
-    text: "Tinha certeza que havia alcan\xE7ado a quebra do mundo sens\xEDvel, "
+    text: "Tinha certeza que havia alcan\xE7ado a quebra do "
   - name: "Plat\xE3o"
-    text: 'que me via envolto do mundo ideal '
+    text: "mundo sens\xEDvel,  que me via envolto do mundo ideal "
   - name: "Plat\xE3o"
     text: ' que me aguardava fora da caverna.'
   - name: "Plat\xE3o"
@@ -28,9 +28,9 @@ MonoBehaviour:
   - name: "Plat\xE3o"
     text: "condenada a vagar eternamente pelos campos asf\xF3delos.\r\n"
   - name: Atendente
-    text: "Sinto muito por ter falhado senhor, \n"
+    text: "Sinto muito por ter falhado senhor, talvez na pr\xF3xima eu \n"
   - name: Atendente
-    text: "talvez na pr\xF3xima eu consiga lhe entregar algo que lhe agrade."
+    text: consiga lhe entregar algo que lhe agrade.
   - name: "Plat\xE3o"
     text: Seguirei meu caminho,
   - name: "Plat\xE3o"

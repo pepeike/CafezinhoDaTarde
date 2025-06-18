@@ -14,14 +14,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   talkScript:
   - name: Dante
-    text: "Agonia \xE9 a \xFAnica coisa que sinto com esta bebida, como pode uma
-      sensa\xE7\xE3o t\xE3o terr\xEDvel ser poss\xEDvel"
+    text: "Agonia \xE9 a \xFAnica coisa que sinto com esta bebida, "
+  - name: Dante
+    text: "como pode uma sensa\xE7\xE3o t\xE3o terr\xEDvel ser poss\xEDvel"
   - name: Atendente
-    text: "Eu devo ter errado no modo de prepr\xE1ro, pe\xE7o infinitas desculpas,
-      posso tentar refazer para o senhor."
+    text: "Eu devo ter errado no modo de prepr\xE1ro, "
+  - name: Atendente
+    text: "pe\xE7o infinitas desculpas, posso tentar refazer para o senhor."
   - name: "Virg\xEDlio"
     text: "N\xE3o se preocupe, as sensa\xE7\xF5es nete lado da exist\xEAncia agem
       de formas ocultas ao conhecimento humano. "
+  - name: "Virg\xEDlio"
+    text: 'agem de formas ocultas ao conhecimento humano. '
   - name: 'Atendente '
     text: "Talvez na pr\xF3xima vez que nos vermos poderei fazer melhor."
   - name: Dante

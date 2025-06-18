@@ -14,16 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   talkScript:
   - name: "Virg\xEDlio"
-    text: "Esta ser\xE1 a \xFAltima parada amena antes que sua jornada se direcione 
-      ao abismo existencial."
+    text: "Esta ser\xE1 a \xFAltima parada amena antes que "
+  - name: "Virg\xEDlio"
+    text: sua jornada se direcione  ao abismo existencial.
   - name: Dante
     text: Uma taverna?
   - name: "Virg\xEDlio"
-    text: "O \xFAltimo conforto que uma alma pode ter antes de sua caminhada para
-      ilumina\xE7\xE3o, "
+    text: "O \xFAltimo conforto que uma alma pode ter antes de sua "
   - name: "Virg\xEDlio"
-    text: " para algumas, \xE9 a \xFAnica coisa que d\xE1 for\xE7as para enfrentar
-      seu destino.\r\n"
+    text: "caminhada para ilumina\xE7\xE3o, para algumas, \xE9 a \xFAnica coisa \r\n"
+  - name: "Virg\xEDlio"
+    text: "que d\xE1 for\xE7as para enfrentar seu destino."
   - name: Dante
     text: " O que veremos \xE0 frente?\r\n"
   - name: "Virg\xEDlio"
@@ -33,8 +34,10 @@ MonoBehaviour:
   - name: "Virg\xEDlio"
     text: "O caminho para o para\xEDso come\xE7a no inferno.\r\n"
   - name: Dante
-    text: "Atendente, meu cora\xE7\xE3o arde diante do medo, voc\xEA poderia me dar
-      algo que acalme minha alma? "
+    text: "Atendente, meu cora\xE7\xE3o arde diante do medo, voc\xEA poderia "
   - name: Dante
-    text: "Claro, acredito que um ch\xE1 com leite seria ideal para voc\xEA, seu
-      calor seria um alento \xE0 sua ang\xFAstia."
+    text: ' me dar algo que acalme minha alma? '
+  - name: Atendente
+    text: "Claro, acredito que um ch\xE1 com leite seria ideal para voc\xEA, "
+  - name: Atendente
+    text: " seu calor seria um alento \xE0 sua ang\xFAstia."

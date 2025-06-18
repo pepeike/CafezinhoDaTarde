@@ -30,7 +30,9 @@ MonoBehaviour:
   - name: "Plat\xE3o"
     text: ' e agora aqui, '
   - name: "Plat\xE3o"
-    text: " indago da verdadeira sensa\xE7\xE3o de uma bebida reconfortante"
+    text: " indago da verdadeira sensa\xE7\xE3o de "
+  - name: "Plat\xE3o"
+    text: uma bebida reconfortante
   - name: "Plat\xE3o"
     text: por gentileza,  me mostre o sabor que somente
   - name: "Plat\xE3o"

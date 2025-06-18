@@ -20,7 +20,6 @@ MonoBehaviour:
   - name: Atendente
     text: "Voc\xEA j\xE1 viu muitas?"
   - name: Alma penada
-    text: "Oh se vi, to aqui desde os protestos de 1964, aquilo foi dureza, mas seu
-      caf\xE9 faz valer a pena."
+    text: 'Oh se vi, to aqui desde os protestos de 1964, '
   - name: Alma penada
     text: " aquilo foi dureza, mas seu caf\xE9 faz valer a pena."

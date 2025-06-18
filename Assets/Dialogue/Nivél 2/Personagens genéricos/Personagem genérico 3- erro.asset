@@ -16,6 +16,8 @@ MonoBehaviour:
   - name: 'Alma penada '
     text: "Quem voc\xEA pagou para ter est\xE1 fama, isto aqui t\xE1 lamentav\xE9l."
   - name: Atendente
-    text: Eu devo ter errado em algum passo, fiquei nervoso, sinto muito.
+    text: 'Eu devo ter errado em algum passo, '
+  - name: Atendente
+    text: fiquei nervoso, sinto muito.
   - name: Alma penada
     text: "Na pr\xF3xima tu acerta. "
