@@ -1,74 +1,123 @@
 using UnityEngine;
+using UnityEngine.Events; // Para usar UnityEvent
 
-public class StirDetection : MonoBehaviour
+public class AceleracaoCafe : MonoBehaviour
 {
-    [Header("Configurações")]
-    public float stirThreshold = 1.5f;
-    public float minStirTime = 0.3f;
-    public float rotationSpeedMultiplier = 0.5f;
+    [Header("Configurações de rotação")]
+    public float limRotacao = 1.0f;
+    public float minRotacaoTime = 0.2f;
+    public float rotationSpeedMult = 0.8f;
     public float maxRotationSpeed = 5f;
     public float idleStopTime = 2f;
-    public float lerpSpeed = 2f; // Velocidade da suavização
+    public float lerpSpeed = 3f;
 
-    private Vector3 _lastAcceleration;
-    private float _lastStirTime;
-    private Animator _coffeeAnimator;
-    private float _targetRotationSpeed = 0f; // Velocidade alvo (para Lerp)
-    private float _currentRotationSpeed = 0f;
-    private float _lastInputTime;
-    private float _rotationProgress = 0f;
+    [Header("Redução de velocidade")]
+    public float requiredRotationAngle = 270f;
+    public float minAngleChange = 10f;
+
+    [Header("Eventos")]
+    // Ativa eventos ao atingir velocidade maxima;
+    public UnityEvent onMaxSpeedReached; 
+
+    private Vector3 lastAcceleration;
+    private float lastStirTime;
+    private Animator coffeeAnimator;
+    private float targetRotationSpeed = 0f;
+    private float currentRotationSpeed = 0f;
+    private float lastInputTime;
+    private float rotationProgress = 0f;
+    private bool MaxSpeedReached = false; // Controller
 
     void Start()
     {
-        _lastAcceleration = Input.acceleration;
-        _coffeeAnimator = GetComponent<Animator>();
+        lastAcceleration = Input.acceleration;
+        coffeeAnimator = GetComponent<Animator>();
     }
 
     void Update()
     {
         Vector3 currentAcceleration = Input.acceleration;
-        float accelerationChange = (currentAcceleration - _lastAcceleration).magnitude;
+        float accelerationChange = (currentAcceleration - lastAcceleration).magnitude;
 
-        // Detecção de movimento
-        if (accelerationChange > stirThreshold)
+        if (accelerationChange > limRotacao)
         {
-            _lastInputTime = Time.time;
+            lastInputTime = Time.time;
 
-            if (Time.time > _lastStirTime + minStirTime)
+            if (Time.time > lastStirTime + minRotacaoTime)
             {
-                _lastStirTime = Time.time;
+                lastStirTime = Time.time;
                 UpdateRotationProgress(currentAcceleration);
             }
         }
 
-        // Define a velocidade alvo (0 se inativo)
-        _targetRotationSpeed = (Time.time > _lastInputTime + idleStopTime) ? 0f : Mathf.Min(_targetRotationSpeed, maxRotationSpeed);
+        targetRotationSpeed = (Time.time > lastInputTime + idleStopTime)
+            ? 0f
+            : Mathf.Min(targetRotationSpeed, maxRotationSpeed);
 
-        // Suaviza a velocidade atual em direção ao alvo
-        _currentRotationSpeed = Mathf.Lerp(
-            _currentRotationSpeed,
-            _targetRotationSpeed,
+        // Verifica se atingiu a velocidade máxima
+        if (targetRotationSpeed >= maxRotationSpeed && !MaxSpeedReached)
+        {
+            OnMaxSpeedReached();
+            MaxSpeedReached = true;
+        }
+        else if (targetRotationSpeed < maxRotationSpeed)
+        {
+            MaxSpeedReached = false;
+        }
+
+        currentRotationSpeed = Mathf.Lerp(
+            currentRotationSpeed,
+            targetRotationSpeed,
             lerpSpeed * Time.deltaTime
         );
 
-        // Aplica rotação
-        transform.Rotate(0, 0, _currentRotationSpeed * Time.deltaTime);
-        _lastAcceleration = currentAcceleration;
+        transform.Rotate(0, 0, currentRotationSpeed * Time.deltaTime);
+        lastAcceleration = currentAcceleration;
     }
 
     void UpdateRotationProgress(Vector3 currentAccel)
     {
         Vector2 dir = new Vector2(currentAccel.x, currentAccel.y).normalized;
-        Vector2 lastDir = new Vector2(_lastAcceleration.x, _lastAcceleration.y).normalized;
+        Vector2 lastDir = new Vector2(lastAcceleration.x, lastAcceleration.y).normalized;
 
         float angleChange = Vector2.SignedAngle(lastDir, dir);
-        _rotationProgress += Mathf.Abs(angleChange);
 
-        if (_rotationProgress >= 360f)
+        if (Mathf.Abs(angleChange) > minAngleChange)
         {
-            _rotationProgress = 0f;
-            _targetRotationSpeed += rotationSpeedMultiplier; // Acelera o alvo
-            _coffeeAnimator.SetTrigger("Stir");
+            rotationProgress += Mathf.Abs(angleChange);
+
+            if (rotationProgress >= requiredRotationAngle)
+            {
+                rotationProgress = 0f;
+                targetRotationSpeed += rotationSpeedMult;
+                if (coffeeAnimator != null)
+                {
+                    coffeeAnimator.SetTrigger("Stir");
+                }
+            }
         }
+    }
+
+    void OnMaxSpeedReached()
+    {
+        // Chama o evento UnityEvent
+        onMaxSpeedReached.Invoke();
+
+        // Exemplo de outras ações que podem ser feitas:
+        Debug.Log("Velocidade máxima atingida!");
+
+        // Você pode adicionar aqui:
+        // - Efeitos sonoros
+        // - Partículas
+        // - Mudanças visuais
+        // - Desbloqueio de conquistas
+    }
+
+    public void ResetRotation()
+    {
+        rotationProgress = 0f;
+        targetRotationSpeed = 0f;
+        currentRotationSpeed = 0f;
+        MaxSpeedReached = false;
     }
 }

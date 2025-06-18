@@ -2700,7 +2700,7 @@ GameObject:
   - component: {fileID: 953434815}
   - component: {fileID: 953434814}
   m_Layer: 5
-  m_Name: Coff_Acc
+  m_Name: M_Cafe_Acc
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2775,12 +2775,41 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c5e892fcbff4044e9ee9239014a016b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stirThreshold: 0.8
-  minStirTime: 0.3
-  rotationSpeedMultiplier: 100
+  limRotacao: 1
+  minRotacaoTime: 0.2
+  rotationSpeedMult: 100
   maxRotationSpeed: 1000
   idleStopTime: 2
   lerpSpeed: 2
+  requiredRotationAngle: 270
+  minAngleChange: 10
+  onMaxSpeedReached:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1418393317}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Close
+          m_BoolArgument: 0
+        m_CallState: 1
+      - m_Target: {fileID: 2088453641}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Open
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!95 &953434815
 Animator:
   serializedVersion: 7
