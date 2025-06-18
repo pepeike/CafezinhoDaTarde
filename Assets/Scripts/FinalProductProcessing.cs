@@ -14,12 +14,12 @@ public class FinalProductProcessing : MonoBehaviour {
         {"1,0", "café puro"},
         {"2,0", "café com açúcar"},
         {"3,0", "café com canela"},
-        {"4,0", "café com leite"},
-        {"5,0", "cappuccino"},
+        {"5,0", "café com leite"},
+        {"7,0", "cappuccino"},
         {"1,1", "chá preto"},
         {"2,1", "chá com açúcar"},
         {"3,1", "chá com canela"},
-        {"4,1", "chá latte"},
+        {"5,1", "chá latte"},
     };
 
     public bool occupied = false;

@@ -19,7 +19,14 @@ public class CoffeeBrewer : MonoBehaviour {
     //public IngredientCarrier liquidCarrier;
     public FinalProductProcessing cup;
 
+
+    private bool isTea = true;
+
+
     public void OnDropIngred(Ingredient ingred, IngredientCarrier carry) {
+        if (ingred.GetIngredType() == IngredientType.LavaShroom) {
+            isTea = false; // Se o ingrediente for LavaShroom, é café
+        }
         if (ingred.groundable && !ingred.GetGround()) {
             Destroy(carry.gameObject);
             Debug.Log("Ingrediente precisa ser moído.");
@@ -98,7 +105,7 @@ public class CoffeeBrewer : MonoBehaviour {
             //int outEffect = processedIngredient.GetEffect();
             //int outTaste = processedIngredient.isBean ? 0 : 1; // Efeito do ingrediente processado
             
-            cup.OnPourDrink(processedIngredient.isBean ? 0 : 1, outEffect);
+            cup.OnPourDrink(isTea ? 0 : 1, outEffect);
             cup.UpdateProduct();
 
             //cup.OnPourDrink(processedIngredient.isBean ? 0 : 1, processedIngredient.GetEffect());
@@ -130,6 +137,8 @@ public class CoffeeBrewer : MonoBehaviour {
         liquidIngredient = null;
         carrier = null;
         cup = null;
+        isTea = true; // Reseta o estado para chá
+
 
         Debug.Log("Brewer resetado.");
     }
