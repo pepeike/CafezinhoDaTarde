@@ -1331,6 +1331,7 @@ MonoBehaviour:
   currentState: 0
   processedIngredPrefabs: []
   carrier: {fileID: 0}
+  anim: {fileID: 482556120}
 --- !u!95 &482556120
 Animator:
   serializedVersion: 7
@@ -4040,6 +4041,8 @@ MonoBehaviour:
   currentState: 0
   carrier: {fileID: 0}
   cup: {fileID: 0}
+  anim: {fileID: 1393257240}
+  isTea: 1
 --- !u!95 &1393257240
 Animator:
   serializedVersion: 7

@@ -18,8 +18,9 @@ public class CoffeeBrewer : MonoBehaviour {
     public Ingredient liquidIngredient = null;
     //public IngredientCarrier liquidCarrier;
     public FinalProductProcessing cup;
+    public Animator anim;
 
-
+    [SerializeField]
     private bool isTea = true;
 
 
@@ -64,7 +65,10 @@ public class CoffeeBrewer : MonoBehaviour {
         if (currentState == BrewerState.Idle) {
             if (processedIngredient == null && liquidIngredient == null) {
                 Debug.Log("Aguardando ingredientes para iniciar o preparo.");
-            } else {
+            } else if (cup == null) {
+                Debug.Log("Coloque uma xícara para iniciar o preparo.");
+            }
+            else {
                 StartCoroutine(BrewingProcess());
                 Debug.Log(procIngreds.Count + " ingredientes processados.");
             }
@@ -77,8 +81,10 @@ public class CoffeeBrewer : MonoBehaviour {
 
     IEnumerator BrewingProcess() {
         currentState = BrewerState.Brewing;
+        cup.GetComponentInChildren<SpriteRenderer>().enabled = false; // Desativa o sprite do copo enquanto está preparando a bebida
         Debug.Log("Iniciando preparo da bebida...");
         // Simula o tempo de preparo
+        anim.SetBool("isOn", true); // Ativa a animação de preparo
         yield return new WaitForSeconds(3f);
         OnBrewingFinished();
     }
@@ -86,6 +92,8 @@ public class CoffeeBrewer : MonoBehaviour {
 
     public void OnBrewingFinished() {
         currentState = BrewerState.Finished;
+        anim.SetBool("isOn", false); // Desativa a animação de preparo
+        cup.GetComponentInChildren<SpriteRenderer>().enabled = true;
         Debug.Log("Preparo concluído!");
         bool brewed = false;
         int outEffect = 0;
@@ -105,7 +113,7 @@ public class CoffeeBrewer : MonoBehaviour {
             //int outEffect = processedIngredient.GetEffect();
             //int outTaste = processedIngredient.isBean ? 0 : 1; // Efeito do ingrediente processado
             
-            cup.OnPourDrink(isTea ? 0 : 1, outEffect);
+            cup.OnPourDrink(isTea ? 1 : 0, outEffect);
             cup.UpdateProduct();
 
             //cup.OnPourDrink(processedIngredient.isBean ? 0 : 1, processedIngredient.GetEffect());

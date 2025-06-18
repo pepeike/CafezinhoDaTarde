@@ -15,6 +15,9 @@ public class CoffeeGrinder : MonoBehaviour
     public Ingredient processedIngredient;
     public GameObject[] processedIngredPrefabs;
     public IngredientCarrier carrier;
+
+    public Animator anim;
+
     //public GameObject groundIngredPrefab;
 
     public void StartGrinding(Ingredient ingred, IngredientCarrier _carrier) {
@@ -41,6 +44,7 @@ public class CoffeeGrinder : MonoBehaviour
     IEnumerator GrindingProcess() {
         // Muda o estado da máquina para "Grinding"
         // Aqui você pode adicionar animações ou efeitos sonoros
+        anim.SetBool("isOn", true); // Ativa a animação de moagem
         currentState = GrinderState.Grinding;
         yield return new WaitForSeconds(2f); // Simula o tempo de moagem
         OnGrindingFinished();
@@ -51,6 +55,7 @@ public class CoffeeGrinder : MonoBehaviour
         // Por exemplo, você pode ativar um efeito visual ou sonoro
         Debug.Log("Moagem concluída!");
         currentState = GrinderState.Finished;
+        anim.SetBool("isOn", false); // Desativa a animação de moagem
 
         // Muda o estado da máquina para "Finished"
         // Aqui você pode adicionar animações ou efeitos sonoros
