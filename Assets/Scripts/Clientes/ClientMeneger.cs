@@ -7,9 +7,9 @@ public class CliantManager : MonoBehaviour
 {
     // Cria e Manega os clientes e suas respostas.
     public DialogueSystem dialogueSystem; public SpawnerController spawnerController;
+    public WinScreenMaker winScreenMaker;
 
     public bool Virgilio_Tutorial;  public DialogueData Virgilio_tutorial;
-    public bool TwoDrinks;
     public List<Cliant> cliants; /* Lista de Clientes */ private Cliant currentCliant; /* Separates Current Cliant */ private int intCurrentCliant; // Position of current Cliant in List
 
     public UnityEvent chengeCam; public UnityEvent LockInteraction; public UnityEvent UnLockInteraction;
@@ -112,7 +112,8 @@ public class CliantManager : MonoBehaviour
             intCurrentCliant = intCurrentCliant - 1;
             StartCoroutine(DelayDeSpawn(1f));
             /////////////////////////////////////////////////////////////      <= ADD Win Condition
-            Debug.LogWarning("Awaiting Win/End_Condition Code");
+            //Debug.LogWarning("Awaiting Win/End_Condition Code");
+            winScreenMaker.CallWinScreen(cliants);
         }
 
     } /* And sets The text select Back to question */

@@ -8,6 +8,7 @@ public class Cliant : ScriptableObject
     public DialogueData Demand; public DialogueData CorrectAnswer; public DialogueData WrongAnswer;
     public string[] aceptedBeverages;
     public GameObject CliantPrefab;
+    public bool isCorect { get; private set; } = false;
 
     public int pMultyplyer { get; private set; } = 3;
     public bool hasPatience;
@@ -25,6 +26,7 @@ public class Cliant : ScriptableObject
         }
         if (isThere == true)
         {
+            isCorect = true;
             return CorrectAnswer;
         }
         else
