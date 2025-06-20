@@ -30,6 +30,10 @@ public class MenuSwitch : MonoBehaviour
     [SerializeField] private AudioClip panelCloseSound;
     [SerializeField][Range(0, 1)] private float volume = 0.7f;
 
+    [Header("Transition")]
+    [SerializeField] private GameObject openouttranstion;
+    [SerializeField] public int storedlevelint;
+
     private AudioSource audioSource;
 
     public Button[] buttons;
@@ -37,6 +41,7 @@ public class MenuSwitch : MonoBehaviour
 
     void Awake()
     {
+        storedlevelint = 1;
         ButtonsToArray();
         audioSource = GetComponent<AudioSource>();
         UpdateLockIcons();
@@ -66,8 +71,9 @@ public class MenuSwitch : MonoBehaviour
 
     public void LoadLevel(int level)
     {
+        
         SceneManager.LoadScene("Loading");
-        PlayerPrefs.SetInt("LevelLoadnow", level);
+        PlayerPrefs.SetInt("LevelLoadnow", storedlevelint);
 
     }
     public void LsoadLevel(string level)
@@ -122,6 +128,13 @@ public class MenuSwitch : MonoBehaviour
         {
             buttons[i] = levelButtons.transform.GetChild(i).gameObject.GetComponent<Button>();
         }
+    }
+
+    public void TransitionBeforeLevelSwitch(int leveltoload)
+    {
+        openouttranstion.SetActive(true);
+        storedlevelint = 1;
+        
     }
 
     // Métodos simplificados para os botões da UI
