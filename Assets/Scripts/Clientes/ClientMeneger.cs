@@ -9,7 +9,8 @@ public class CliantManager : MonoBehaviour
     public DialogueSystem dialogueSystem; public SpawnerController spawnerController;
     public WinScreenMaker winScreenMaker;
 
-    public bool Virgilio_Tutorial;  public DialogueData Virgilio_tutorial;
+    public bool Virgilio_Tutorial;  public DialogueData Virgilio_tutorial; public GameObject VirgilioPREFAB;
+
     public List<Cliant> cliants; /* Lista de Clientes */ private Cliant currentCliant; /* Separates Current Cliant */ private int intCurrentCliant; // Position of current Cliant in List
 
     public UnityEvent chengeCam; public UnityEvent LockInteraction; public UnityEvent UnLockInteraction;
@@ -25,7 +26,7 @@ public class CliantManager : MonoBehaviour
         //currentCliant.InitiateCliant(); //start for cliant
         if (Virgilio_Tutorial)
         {
-            WriteQuestionOrAnswer();
+            StartCoroutine(TutorialSpawn(2f));
         }
         else
         {
@@ -73,6 +74,7 @@ public class CliantManager : MonoBehaviour
     {
         if (Virgilio_Tutorial)
         {
+            StartCoroutine(DelayDeSpawn(0.5f));
             StartCoroutine(DelaySpawn(2f)); Virgilio_Tutorial = false;
             return;
         }
@@ -156,7 +158,14 @@ public class CliantManager : MonoBehaviour
     IEnumerator DelaySpawn(float a)
     {
         yield return new WaitForSeconds(a);
-        spawnerController.SpawnCliant(currentCliant);
+        if(currentCliant.CliantPrefab2 != null)
+        {
+            spawnerController.DuoSpawnCliant(currentCliant);
+        }
+        else
+        {
+            spawnerController.SpawnCliant(currentCliant);
+        }
         chengeCam?.Invoke();
         LockInteraction?.Invoke();      //Lock other inputs
         yield return new WaitForSeconds(0.5f);
@@ -167,5 +176,16 @@ public class CliantManager : MonoBehaviour
     {
         yield return new WaitForSeconds(a);
         spawnerController.DeSpawnCliant();
+    }
+
+    IEnumerator TutorialSpawn(float a)
+    {
+        yield return new WaitForSeconds(a);
+        spawnerController.TutorialSpawn(VirgilioPREFAB);
+        chengeCam?.Invoke();
+        LockInteraction?.Invoke();      //Lock other inputs
+        yield return new WaitForSeconds(0.5f);
+        dialogueSystem.ChangeStateEnable();
+        WriteQuestionOrAnswer();
     }
 }

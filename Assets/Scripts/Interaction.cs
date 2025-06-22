@@ -76,8 +76,10 @@ public class Interaction : MonoBehaviour {
             if (hit.collider.CompareTag("Product")) {
                 if (hits.Any(h => h.collider.CompareTag("Brewer"))) {
                     // Se o produto for clicado e houver um Brewer, arrasta o produto e reseta o copo do Brewer
-                    StartCoroutine(DragProduct(hit.transform.gameObject));
-                    hits[hits.ToList().FindIndex(h => h.collider.CompareTag("Brewer"))].collider.GetComponent<CoffeeBrewer>().ResetCup();
+                    if (hit.transform.GetComponent<FinalProductProcessing>().occupied == false) {
+                        StartCoroutine(DragProduct(hit.transform.gameObject));
+                        hits[hits.ToList().FindIndex(h => h.collider.CompareTag("Brewer"))].collider.GetComponent<CoffeeBrewer>().ResetCup();
+                    }   
                     return;
                 } else {
                     // Se o produto for clicado mas não houver Brewer, apenas arrasta o produto

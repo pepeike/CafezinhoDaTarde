@@ -7,6 +7,7 @@ public class FinalProductProcessing : MonoBehaviour {
     public string productName; // Nome do produto
     [HideInInspector]
     public int[] productProperties;
+    private bool isValid = false;
 
     // Dicionario que determina o nome do produto final com base nos ingredientes e processos utilizados
     public Dictionary<string, string> coffeeDict = new Dictionary<string, string> {
@@ -53,6 +54,7 @@ public class FinalProductProcessing : MonoBehaviour {
         if (coffeeDict.TryGetValue(_key, out string _name))                        // Ve se a combinação existe no dicionario
         {
             productName = _name;                                                   // Se existir, atualiza o nome do produto
+            isValid = true;                                                       // Marca como válido
         } else {
             productName = "Invalid";                                               // Se nao, atualiza pra indicar que a combinação nao é valida
         }
@@ -65,7 +67,7 @@ public class FinalProductProcessing : MonoBehaviour {
     }
 
     [SerializeField]
-    public Sprite[] productSprites = new Sprite[5]; // Lista de sprites do produto final
+    public Sprite[] productSprites = new Sprite[8]; // Lista de sprites do produto final
     public SpriteRenderer spr;
 
     private Dictionary<string, int> sprKeys = new Dictionary<string, int> {
@@ -73,12 +75,13 @@ public class FinalProductProcessing : MonoBehaviour {
         { "café puro", 0 }, // Café puro
         { "café com açúcar", 0 }, // Café com açúcar
         { "café com canela", 1 }, // Café com canela
-        { "café com leite", 0 }, // Café com leite
-        { "cappuccino", 0 }, // Cappuccino
+        { "café com leite", 7 }, // Café com leite
+        { "cappuccino", 6 }, // Cappuccino
         { "chá preto", 2 }, // Chá preto
         { "chá com açúcar", 2 }, // Chá com açúcar
         { "chá com canela", 3 }, // Chá com canela
-        { "chá latte", 2 }  // Chá latte
+        { "chá latte", 2 },  // Chá latte
+        {  "Invalid", 0 } // Produto inválido ou não definido
     };
 
     public void UpdateSprite() {
@@ -93,6 +96,15 @@ public class FinalProductProcessing : MonoBehaviour {
         }
     }
 
-    
+    public void CallAccel() {
+        if (!isValid) {
+            Debug.Log("Produto inválido ou não definido. Não chamando função do acelerômetro.");
+            return;
+        } else {
+            Debug.Log("Chamando função do acelerometro com o produto: " + productName);
+        }
+
+        
+    }
 }
 

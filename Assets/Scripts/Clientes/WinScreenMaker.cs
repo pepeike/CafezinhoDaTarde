@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class WinScreenMaker : MonoBehaviour
 {
@@ -33,7 +34,7 @@ public class WinScreenMaker : MonoBehaviour
         
         star1.SetActive(true);
         if (numOfHappyCliants > numDivided) { /*set 2 star*/ star2.SetActive(true); }
-        //if(numOfHappyCliants == cliants.Count) { /*set 3 star*/}
+        if(numOfHappyCliants == cliants.Count) { /*set 3 star*/ star3.SetActive(true); }
     }
 
     private IEnumerator TypeText(TextMeshProUGUI Text, string TextToWrite)
@@ -47,5 +48,10 @@ public class WinScreenMaker : MonoBehaviour
         }
         //typeFinished?.Invoke();
 
+    }
+
+    public void CallMenu()
+    {
+        SceneManager.LoadScene("MenuProposal");
     }
 }

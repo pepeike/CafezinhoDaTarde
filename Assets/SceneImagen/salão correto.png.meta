@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: ed8a702b1f885d04897506928c3f7cb5
+guid: 1873bcadeb1e4a74a91e88c6a7996d14
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1545340295290353980
-    second: CoffeMilk_0
+      213: -2751335398518476560
+    second: "sal\xE3o correto_0"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -139,13 +139,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: CoffeMilk_0
+      name: "sal\xE3o correto_0"
       rect:
         serializedVersion: 2
-        x: 17
-        y: 16
-        width: 33
-        height: 22
+        x: 0
+        y: 0
+        width: 600
+        height: 300
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c39f0ed9fc6227510800000000000000
-      internalID: 1545340295290353980
+      spriteID: 0f03951480b41d9d0800000000000000
+      internalID: -2751335398518476560
       vertices: []
       indices: 
       edges: []
@@ -174,7 +174,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      CoffeMilk_0: 1545340295290353980
+      "sal\xE3o correto_0": -2751335398518476560
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

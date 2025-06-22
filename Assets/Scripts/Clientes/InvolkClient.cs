@@ -59,7 +59,7 @@ public class SpawnerController : MonoBehaviour
     }
 
     //RLH107////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    private GameObject CurrentSpawnedCliant;
+    private GameObject CurrentSpawnedCliant, SpawnedCliant2;
     public void SpawnCliant(Cliant CliantToSpawn)
     {
         if (CliantToSpawn.CliantPrefab == null) { Debug.LogError(CliantToSpawn.debugCliantName + " / Cliente Sem PREFAB"); return; }
@@ -69,9 +69,25 @@ public class SpawnerController : MonoBehaviour
             //audioSource.PlayOneShot(spawnSound); // Toca o som sem interromper outros áudios
         }
     }
+    public void DuoSpawnCliant(Cliant CliantToSpawn1)
+    {
+        if (CliantToSpawn1.CliantPrefab == null) { Debug.LogError(CliantToSpawn1.debugCliantName + " / Cliente Sem PREFAB"); return; }
+        if (CliantToSpawn1.CliantPrefab2 == null) { Debug.LogError(CliantToSpawn1 + " / Cliente Não Existente"); return; }
+        CurrentSpawnedCliant = Instantiate(CliantToSpawn1.CliantPrefab, transform.position, Quaternion.identity);
+        SpawnedCliant2 = Instantiate(CliantToSpawn1.CliantPrefab2, transform.position + new Vector3(8,0,0), Quaternion.identity);
+    }
     public void DeSpawnCliant() 
     {
         if(CurrentSpawnedCliant == null) { Debug.LogWarning("There is no spawned Cliant"); return; }
         Destroy(CurrentSpawnedCliant);
+        if(SpawnedCliant2 != null)
+        {
+            Destroy(SpawnedCliant2); SpawnedCliant2 = null;
+        }
+    }
+    public void TutorialSpawn(GameObject tospawn)
+    {
+        if(tospawn == null) { Debug.LogError("TutorialSpriteGameObjectMissing"); }
+        CurrentSpawnedCliant = Instantiate(tospawn, transform.position, Quaternion.identity);
     }
 }

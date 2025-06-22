@@ -1,10 +1,25 @@
 fileFormatVersion: 2
-guid: ed8a702b1f885d04897506928c3f7cb5
+guid: 454febf6e43e6654886f91bb5f9c6c0b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1545340295290353980
-    second: CoffeMilk_0
+      213: 713194899514424945
+    second: cenario correto_0
+  - first:
+      213: 4389784530559104385
+    second: cenario correto_1
+  - first:
+      213: 1195227579241752056
+    second: cenario correto_2
+  - first:
+      213: 4513290194217339432
+    second: cenario correto_3
+  - first:
+      213: -3997256521232585569
+    second: cenario correto_4
+  - first:
+      213: -6171392527663962952
+    second: cenario correto_5
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,12 +61,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -139,13 +154,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: CoffeMilk_0
+      name: cenario correto_0
       rect:
         serializedVersion: 2
-        x: 17
-        y: 16
-        width: 33
-        height: 22
+        x: 0
+        y: 67
+        width: 207
+        height: 170
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +169,118 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c39f0ed9fc6227510800000000000000
-      internalID: 1545340295290353980
+      spriteID: 17e7d218bf6c5e900800000000000000
+      internalID: 713194899514424945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cenario correto_1
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 190
+        width: 36
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 185fa70c5c5abec30800000000000000
+      internalID: 4389784530559104385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cenario correto_2
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 191
+        width: 95
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f56476962d469010800000000000000
+      internalID: 1195227579241752056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cenario correto_3
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 102
+        width: 69
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82a049ae48d62ae30800000000000000
+      internalID: 4513290194217339432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cenario correto_4
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 146
+        width: 101
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9c61df4f54e688c0800000000000000
+      internalID: -3997256521232585569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cenario correto_5
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 76
+        width: 163
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b4e61b813fca5aa0800000000000000
+      internalID: -6171392527663962952
       vertices: []
       indices: 
       edges: []
@@ -164,7 +289,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -174,7 +299,12 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      CoffeMilk_0: 1545340295290353980
+      cenario correto_0: 713194899514424945
+      cenario correto_1: 4389784530559104385
+      cenario correto_2: 1195227579241752056
+      cenario correto_3: 4513290194217339432
+      cenario correto_4: -3997256521232585569
+      cenario correto_5: -6171392527663962952
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
