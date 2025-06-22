@@ -81,7 +81,7 @@ public class FinalProductProcessing : MonoBehaviour {
         { "chá com açúcar", 2 }, // Chá com açúcar
         { "chá com canela", 3 }, // Chá com canela
         { "chá latte", 2 },  // Chá latte
-        {  "Invalid", 4 } // Produto inválido ou não definido
+        {  "Invalid", 0 } // Produto inválido ou não definido
     };
 
     public void UpdateSprite() {
