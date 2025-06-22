@@ -11,6 +11,7 @@ public class MenuSwitch : MonoBehaviour
         public bool completed;
         public string levelName;
         public Image lockIcon;
+
     }
 
     [Header("Configuração de Paineis")]
@@ -33,6 +34,7 @@ public class MenuSwitch : MonoBehaviour
     [Header("Transition")]
     [SerializeField] private GameObject openouttranstion;
     [SerializeField] public int storedlevelint;
+    [SerializeField] private Scene currentscene;
 
     private AudioSource audioSource;
 
@@ -71,9 +73,17 @@ public class MenuSwitch : MonoBehaviour
 
     public void LoadLevel(int level)
     {
+        currentscene = SceneManager.GetActiveScene();
+        if (currentscene.name == "Level 1")
+        {
+            SceneManager.LoadScene("MenuProposal");
+        }
+        else
+        {
+            SceneManager.LoadScene("Loading");
+            PlayerPrefs.SetInt("LevelLoadnow", storedlevelint);
+        }
         
-        SceneManager.LoadScene("Loading");
-        PlayerPrefs.SetInt("LevelLoadnow", storedlevelint);
 
     }
     public void LsoadLevel(string level)

@@ -7,7 +7,7 @@ public class Autodeactivate : MonoBehaviour
 
     private void Start()
     {
-        Invoke("ShowAnimation", 10f);
+        Invoke("ShowAnimation", 0f);
     }
 
 
