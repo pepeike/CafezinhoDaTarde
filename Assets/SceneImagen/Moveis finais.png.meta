@@ -1,25 +1,22 @@
 fileFormatVersion: 2
-guid: 454febf6e43e6654886f91bb5f9c6c0b
+guid: d74c29cf4ebdfd44f966801290b66ec9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 713194899514424945
-    second: cenario correto_0
+      213: -943605014639241677
+    second: Moveis finais_0
   - first:
-      213: 4389784530559104385
-    second: cenario correto_1
+      213: 8077724765705848524
+    second: Moveis finais_1
   - first:
-      213: 1195227579241752056
-    second: cenario correto_2
+      213: -3668264716713385181
+    second: Moveis finais_2
   - first:
-      213: 4513290194217339432
-    second: cenario correto_3
+      213: -2582434169071684409
+    second: Moveis finais_3
   - first:
-      213: -3997256521232585569
-    second: cenario correto_4
-  - first:
-      213: -6171392527663962952
-    second: cenario correto_5
+      213: -8456865873667075590
+    second: Moveis finais_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -154,7 +151,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: cenario correto_0
+      name: Moveis finais_0
       rect:
         serializedVersion: 2
         x: 0
@@ -169,14 +166,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 17e7d218bf6c5e900800000000000000
-      internalID: 713194899514424945
+      spriteID: 33696261d34a7e2f0800000000000000
+      internalID: -943605014639241677
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cenario correto_1
+      name: Moveis finais_1
       rect:
         serializedVersion: 2
         x: 79
@@ -191,14 +188,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 185fa70c5c5abec30800000000000000
-      internalID: 4389784530559104385
+      spriteID: cc6c54570e7d91070800000000000000
+      internalID: 8077724765705848524
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cenario correto_2
+      name: Moveis finais_2
       rect:
         serializedVersion: 2
         x: 259
@@ -213,20 +210,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8f56476962d469010800000000000000
-      internalID: 1195227579241752056
+      spriteID: 323233aeca4b71dc0800000000000000
+      internalID: -3668264716713385181
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cenario correto_3
+      name: Moveis finais_3
       rect:
         serializedVersion: 2
-        x: 451
-        y: 102
-        width: 69
-        height: 93
+        x: 455
+        y: 95
+        width: 110
+        height: 147
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -235,42 +232,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 82a049ae48d62ae30800000000000000
-      internalID: 4513290194217339432
+      spriteID: 7c4b6a83ec9592cd0800000000000000
+      internalID: -2582434169071684409
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cenario correto_4
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 146
-        width: 101
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f9c61df4f54e688c0800000000000000
-      internalID: -3997256521232585569
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cenario correto_5
+      name: Moveis finais_4
       rect:
         serializedVersion: 2
         x: 242
         y: 76
         width: 163
-        height: 68
+        height: 82
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -279,8 +254,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8b4e61b813fca5aa0800000000000000
-      internalID: -6171392527663962952
+      spriteID: af153f65b4d23aa80800000000000000
+      internalID: -8456865873667075590
       vertices: []
       indices: 
       edges: []
@@ -299,12 +274,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      cenario correto_0: 713194899514424945
-      cenario correto_1: 4389784530559104385
-      cenario correto_2: 1195227579241752056
-      cenario correto_3: 4513290194217339432
-      cenario correto_4: -3997256521232585569
-      cenario correto_5: -6171392527663962952
+      Moveis finais_0: -943605014639241677
+      Moveis finais_1: 8077724765705848524
+      Moveis finais_2: -3668264716713385181
+      Moveis finais_3: -2582434169071684409
+      Moveis finais_4: -8456865873667075590
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
