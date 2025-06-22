@@ -13,7 +13,7 @@ public class IngredientSpawner : MonoBehaviour
     IngredientType ingredientType;
 
     public static Ingredient LavaShroom = new Ingredient(IngredientType.LavaShroom, true, true, 1);        // Ingrediente do tipo LavaShroom
-    public static Ingredient SkullTwig = new Ingredient(IngredientType.SkullTwig, true, false, 2);        // Ingrediente do tipo SkullTwig
+    public static Ingredient SkullTwig = new Ingredient(IngredientType.SkullTwig, false, false, 2);        // Ingrediente do tipo SkullTwig
     public static Ingredient SourTree = new Ingredient(IngredientType.SourTree, true, false, 1);           // Ingrediente do tipo SourTree
     public static Ingredient NethSucralose = new Ingredient(IngredientType.NethSucralose, false, false, 1);// Ingrediente do tipo NethSucralose
     public static Ingredient Milk = new Ingredient(IngredientType.Milk, 4, true);                    // Ingrediente do tipo Milk (leite)
