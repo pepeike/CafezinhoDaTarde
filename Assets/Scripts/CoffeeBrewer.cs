@@ -81,6 +81,7 @@ public class CoffeeBrewer : MonoBehaviour {
 
     IEnumerator BrewingProcess() {
         currentState = BrewerState.Brewing;
+        cup.occupied = true; // Marca o copo como ocupado
         cup.GetComponentInChildren<SpriteRenderer>().enabled = false; // Desativa o sprite do copo enquanto está preparando a bebida
         Debug.Log("Iniciando preparo da bebida...");
         // Simula o tempo de preparo
@@ -92,6 +93,7 @@ public class CoffeeBrewer : MonoBehaviour {
 
     public void OnBrewingFinished() {
         currentState = BrewerState.Finished;
+        cup.occupied = false; // Marca o copo como desocupado
         anim.SetBool("isOn", false); // Desativa a animação de preparo
         cup.GetComponentInChildren<SpriteRenderer>().enabled = true;
         Debug.Log("Preparo concluído!");
