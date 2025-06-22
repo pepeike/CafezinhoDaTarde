@@ -1880,10 +1880,12 @@ MonoBehaviour:
   dialogueSystem: {fileID: 614919498}
   spawnerController: {fileID: 30724944}
   winScreenMaker: {fileID: 614919502}
-  Virgilio_Tutorial: 0
+  Virgilio_Tutorial: 1
   Virgilio_tutorial: {fileID: 11400000, guid: 8b4d24a4a517cb34f80011334b4af043, type: 2}
+  VirgilioPREFAB: {fileID: 7529982211088695839, guid: 4145e4dde9591d74b9dc8a6068f5d391, type: 3}
   cliants:
   - {fileID: 11400000, guid: 213a22c346c22b042adf7bf4d534bed5, type: 2}
+  - {fileID: 11400000, guid: 2c63efd48e2e39b47b9d3733a7f92e32, type: 2}
   - {fileID: 11400000, guid: 3de48388676f13b419b3042298749415, type: 2}
   chengeCam:
     m_PersistentCalls:
@@ -5598,7 +5600,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 454febf6e43e6654886f91bb5f9c6c0b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -6896,13 +6898,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 441115445}
     m_Modifications:
+    - target: {fileID: 162398520241931810, guid: 534d75266fee47a4e9275a0993be6868, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 162398520241931810, guid: 534d75266fee47a4e9275a0993be6868, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 162398520241931810, guid: 534d75266fee47a4e9275a0993be6868, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3074787631033066239, guid: 534d75266fee47a4e9275a0993be6868, type: 3}
       propertyPath: m_Name
       value: Winner
       objectReference: {fileID: 0}
     - target: {fileID: 3074787631033066239, guid: 534d75266fee47a4e9275a0993be6868, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3375201461742051609, guid: 534d75266fee47a4e9275a0993be6868, type: 3}
       propertyPath: m_AnchoredPosition.x
