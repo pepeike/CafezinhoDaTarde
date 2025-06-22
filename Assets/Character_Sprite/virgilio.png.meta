@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      virgilio_0: 6236008371475671644
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
