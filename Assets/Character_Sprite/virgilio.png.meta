@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 441727440120b404e978b883b7c0ef05
+guid: 447135a04b48330409d20466e2a294ba
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3077563673480497254
-    second: Capputino_Full_0
+      213: 6236008371475671644
+    second: virgilio_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -139,13 +139,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Capputino_Full_0
+      name: virgilio_0
       rect:
         serializedVersion: 2
-        x: 17
-        y: 16
-        width: 37
-        height: 28
+        x: 10
+        y: 32
+        width: 241
+        height: 299
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 668837bfad3b5ba20800000000000000
-      internalID: 3077563673480497254
+      spriteID: c5a6b26f290ca8650800000000000000
+      internalID: 6236008371475671644
       vertices: []
       indices: 
       edges: []
@@ -173,8 +173,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Capputino_Full_0: 3077563673480497254
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

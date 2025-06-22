@@ -3267,6 +3267,12 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6275319441517886131, guid: a75ecdd0bf44fbc4392bc8693591948c, type: 3}
+      propertyPath: m_text
+      value: 'iSABELA
+
+        Artista 2D'
+      objectReference: {fileID: 0}
     - target: {fileID: 6640628025504696269, guid: a75ecdd0bf44fbc4392bc8693591948c, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
