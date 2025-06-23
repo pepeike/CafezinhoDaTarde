@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 3dd37b548acc60e4fbb3b4b779248e9b
+guid: e372abecbed6ce047b4770c767a541d5
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4787326073447310641
-    second: seta continuar 1_0
+      213: -6069163959233666866
+    second: seta continuar 2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -110,7 +110,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: tvOS
+    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -135,24 +135,11 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: seta continuar 1_0
+      name: seta continuar 2_0
       rect:
         serializedVersion: 2
         x: 0
@@ -167,8 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fca1530fc40009db0800000000000000
-      internalID: -4787326073447310641
+      spriteID: ec0264ee88ff5cba0800000000000000
+      internalID: -6069163959233666866
       vertices: []
       indices: 
       edges: []
@@ -187,7 +174,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      seta continuar 1_0: -4787326073447310641
+      seta continuar 2_0: -6069163959233666866
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
