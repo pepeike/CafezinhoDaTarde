@@ -18,10 +18,10 @@ MonoBehaviour:
   - name: Sun Tzu
     text: indago isto pelo fato que morrer queimado deve ser melhor
   - name: Sun Tzu
-    text: que beber isto
+    text: que beber isto!
   - name: Atendente
-    text: Meus erro deve ter afetado o favor, me perdoe general
+    text: Meus erro deve ter afetado o favor, me perdoe general.
   - name: 'Sun Tzu '
-    text: "Em nossas pr\xF3ximas vidas, o reencontro \xE9 inevit\xE1vel "
+    text: "Em nossas pr\xF3ximas vidas, o reencontro \xE9 inevit\xE1vel."
   - name: 'Sun Tzu '
-    text: "Aguardarei a sua pr\xF3xima possibildiade de acerto"
+    text: "Aguardarei a sua pr\xF3xima possibildiade de acerto!"

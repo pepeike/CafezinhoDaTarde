@@ -16,10 +16,10 @@ MonoBehaviour:
   - name: Dante
     text: "Mas o que \xE9 isto!!! Uma ultima lembran\xE7a do inferno?"
   - name: "Virg\xEDlio"
-    text: "As vezes, um simples erro pode ter resultados horr\xEDveis"
+    text: "As vezes, um simples erro pode ter resultados horr\xEDveis."
   - name: Atendente
-    text: Eu...devo ter errado ou colocado muita canela, sinto muito
+    text: Eu...devo ter errado ou colocado muita canela, sinto muito.
   - name: "Virg\xEDlio"
-    text: "N\xE3o se culpe, jovem, ter\xE1 muito tempo para aprender melhor"
+    text: "N\xE3o se culpe, jovem, ter\xE1 muito tempo para aprender melhor."
   - name: Dante
     text: "Vamos, n\xE3o aguento mais este lugar!!!"

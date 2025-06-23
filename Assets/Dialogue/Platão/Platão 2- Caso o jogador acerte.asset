@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   talkScript:
   - name: "Plat\xE3o"
-    text: 'longe da realidade que me cercava, '
+    text: 'Longe da realidade que me cercava, '
   - name: "Plat\xE3o"
     text: percebo o tamanho vazio que meu conhecimento continha,
   - name: "Plat\xE3o"

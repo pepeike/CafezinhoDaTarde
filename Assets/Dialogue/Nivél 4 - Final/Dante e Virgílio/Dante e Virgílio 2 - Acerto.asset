@@ -14,13 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   talkScript:
   - name: Dante
-    text: "Doce na medida certa, que sensa\xE7\xE3o maravilhosa "
+    text: "Doce na medida certa, que sensa\xE7\xE3o maravilhosa."
   - name: Dante
-    text: Somente algo divino poderia fazer algo deste tipo
+    text: Somente algo divino poderia fazer uma coisa deste tipo.
   - name: "Virg\xEDlio"
-    text: "O para\xEDso, em todas suas esferas"
+    text: "O para\xEDso, em todas suas esferas."
   - name: "Virg\xEDlio"
-    text: "traz segredos inimagin\xE1veis, isto \xE9 s\xF3 o came\xE7o"
+    text: "Traz segredos inimagin\xE1veis, isto \xE9 s\xF3 o come\xE7o."
   - name: Dante
     text: "Pelo amor de Deus, vamo logo ent\xE3o!"
   - name: Atendente

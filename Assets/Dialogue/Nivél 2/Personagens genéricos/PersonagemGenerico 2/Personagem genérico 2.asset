@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   talkScript:
   - name: 'Alma penada '
-    text: "Ola, bom dia, minha noite de sono foi pessima, quase nao consegui dormir,
+    text: "Ola, bom dia, minha noite de sono foi p\xE9ssima, quase nao consegui dormir,
       gostaria do caf\xE9 mais forte que voc\xEA tiver para me acordar"
   - name: Atendente
-    text: "Acredito que um caf\xE9 ira ajud\xE1-lo."
+    text: Darei meu melhor.

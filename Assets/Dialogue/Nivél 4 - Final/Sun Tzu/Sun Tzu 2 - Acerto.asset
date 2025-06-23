@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   talkScript:
   - name: Sun Tzu
-    text: "Minha hora se aproxima, \xE9 visivel at\xE9 para um cego"
+    text: "Minha hora se aproxima, \xE9 visivel at\xE9 para um cego."
   - name: Sun Tzu
     text: 'Preciso de energia, um humilde servo do campo '
   - name: Sun Tzu

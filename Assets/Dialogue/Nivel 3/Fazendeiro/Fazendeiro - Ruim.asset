@@ -15,9 +15,9 @@ MonoBehaviour:
   talkScript:
   - name: Fazendeiro
     text: "Mas que trem horr\xEDvel \xE9 este homi. Xinga logo minha m\xE3e, mas
-      n\xE3 me servi uma porcaria desta!!"
+      n\xE3o me serve uma porcaria desta!!"
   - name: Atendente
-    text: "Sinto muito senhor, acho que devo ter falhado em mecher na m\xE1quina.
+    text: "Sinto muito senhor, acho que devo ter falhado em mexer na m\xE1quina.
       Na pr\xF3xima eu farei melhor."
   - name: Fazendeiro
     text: "\xC9 companheiro, tu aprende a mexer nesses treco a\xED."

@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   talkScript:
   - name: 'Alma penada '
-    text: "Minha nossa homem, que coisa maravilhosa, voc\xEA \xE9 de longe \xE9 uma
-      das melhores almas que j\xE1 trabalhou aqui"
+    text: "Minha nossa, homem, que coisa maravilhosa, voc\xEA \xE9 de longe uma das
+      melhores almas que j\xE1 trabalharam aqui."
   - name: Atendente
     text: "Voc\xEA j\xE1 viu muitas?"
   - name: Alma penada
-    text: "Oh se vi, to aqui desde os protestos de 1964, aquilo foi dureza, mas seu
-      caf\xE9 faz valer a pena."
+    text: "Oh se vi, t\xF4 aqui desde os protestos de 1964, aquilo foi dureza, mas
+      seu caf\xE9 faz valer a pena."

@@ -14,16 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   talkScript:
   - name: 'Alma penada '
-    text: "Vo...voc\xEA poderia me ajudar? "
+    text: "Isso \xE9 est\xE9ril e sem sabor... "
   - name: Atendente
-    text: Claro, o que deseja?
+    text: Talvez eu tenha passado do ponto, posso preparar outro.
   - name: Alma penada
-    text: "Estou aqui h\xE1 tantos anos, s\xE9culos, talvez mil\xEAnios? "
+    text: "N\xE3o h\xE1 necessidade, eu n\xE3o sei porque insito..."
   - name: 'Alma penada '
-    text: "N\xE3o sei, o tempo corre diferente..."
+    text: "Seguirei vagando, na esperan\xE7a de um dia lembrar. "
   - name: Atendente
-    text: "Voc\xEA tem algo de prefer\xEAncia?"
+    text: "Lembrar de qu\xEA?"
   - name: Alma penada
-    text: "Algo quente e suave por favor, lembro-me s\xF3 disto"
+    text: "Do rosto de meu irm\xE3o, e do que aconteceu conosco..."
   - name: Alma penada
-    text: "Da minha m\xE3e timando algo quente comigo"
+    text: "Lembro-me s\xF3 do fogo caindo do c\xE9u."

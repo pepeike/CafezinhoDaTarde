@@ -16,12 +16,12 @@ MonoBehaviour:
   - name: Dante
     text: "De novo aqui? Ap\xF3s tanto horror? Qual o sentido?"
   - name: "Virg\xEDlio"
-    text: "N\xE3o \xE9 nossa fun\xE7\xE3o questionar a ordem divina"
+    text: "N\xE3o \xE9 nossa fun\xE7\xE3o questionar a ordem divina."
   - name: "Virg\xEDlio"
-    text: "mas voc\xEA pode se acalmar com uma bebida novamente"
+    text: "Mas voc\xEA pode se acalmar com uma bebida novamente."
   - name: Dante
     text: "Senhor, voc\xEA teria algo doce? "
   - name: Dante
-    text: "Que alivie as vis\xF5es que eu tive nesta jornada"
+    text: "Que alivie as vis\xF5es que eu tive nesta jornada?"
   - name: Atendente
-    text: "Um capuccino seria ideal para voc\xEA, vou preparar rapidinho"
+    text: "Um capuccino seria ideal para voc\xEA, vou preparar rapidinho."

@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   talkScript:
   - name: "Plat\xE3o"
-    text: Mas que bebida saborosa e relaxante
+    text: Mas que bebida saborosa e relaxante...
   - name: "Plat\xE3o"
     text: "Amaria beber isto com Arist\xF3teles ap\xF3s longas reuni\xF5es"
   - name: Atendente
     text: Com certeza ajuda, fico feliz que tenha gostado
   - name: Atendente
-    text: "\xC9 o favorito do Sun Tzu, ele sempre que experimentar todos"
+    text: "\xC9 o favorito do Sun Tzu, ele sempre quer experimentar todos"
   - name: "Plat\xE3o"
-    text: "\xC9 s\xE9rio? Agora me alegro em aceitar seus convites "
+    text: "\xC9 s\xE9rio? Agora me alegro em aceitar seus convites."

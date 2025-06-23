@@ -14,13 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   talkScript:
   - name: "Plat\xE3o"
-    text: "As irm\xE3s do destino me trouxeram aqui novamente"
+    text: "As irm\xE3s do destino me trouxeram aqui novamente."
   - name: "Plat\xE3o"
-    text: "Afinal, j\xE1 estou cansado de longos debates nesta realidade"
+    text: "Afinal, j\xE1 estou cansado de longos debates nesta realidade."
   - name: "Plat\xE3o"
-    text: "gostaria de relaxar um pouco, que tal este tal de ch\xE1?"
+    text: "Gostaria de relaxar um pouco, que tal este tal de ch\xE1?"
   - name: Atendente
-    text: Fico muito feliz de te receber novamente senhor
+    text: Fico muito feliz de te receber novamente senhor.
   - name: Atendente
     text: Nada melhor que um chazinho nestas horas!
   - name: "Plat\xE3o"

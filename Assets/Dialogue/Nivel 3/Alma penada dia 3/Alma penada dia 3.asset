@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   talkScript:
   - name: 'Alma penada '
-    text: "como posso ajuda-lo o meu nobre pepecador, estou sentindo grande energia
-      em voc\xEA em voc\xEA!!!!"
+    text: "Como posso ajud\xE1-lo, meu nobre pecador, estou sentindo uma grande energia
+      em voc\xEA!!!!"
   - name: Atendente
-    text: Estou apenas trabalhando senhor, mas posso lhe servir algo?
+    text: Estou apenas trabalhando senhor, mas posso lhe servir algo.
   - name: Alma penada
-    text: 'Uma xicara de latte sem creme, esse aqui ja esta passado. '
+    text: "Uma xicara de latte sem creme, esse aqui j\xE1 est\xE1 passado. "

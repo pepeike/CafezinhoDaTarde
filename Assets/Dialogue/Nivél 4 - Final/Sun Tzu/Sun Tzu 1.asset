@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   talkScript:
   - name: Sun Tzu
-    text: "Minha hora se aproxima, \xE9 visivel at\xE9 para um cego"
+    text: "Minha hora se aproxima, \xE9 visivel at\xE9 para um cego."
   - name: Sun Tzu
     text: 'Preciso de energia, um humilde servo do campo '
   - name: Sun Tzu
     text: "me recomendou este tal de caf\xE9, poderia me servir isto?"
   - name: Atendente
-    text: "Ah caf\xE9? claro general, tenho certeza que ser\xE1 \xFAtil"
+    text: "Ah caf\xE9? Claro general, tenho certeza que ser\xE1 \xFAtil."
   - name: Sun Tzu
-    text: Irei esperar calmamente
+    text: Irei esperar calmamente.

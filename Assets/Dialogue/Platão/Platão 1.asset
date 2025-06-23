@@ -31,5 +31,5 @@ MonoBehaviour:
     text: 'por gentileza,  me mostre o sabor que somente uma bebida complexa pode
       fornecer nesta realidade ideial. '
   - name: Atendente
-    text: Ahhhh claro, tenho certeza que lhe darei uma experincia que seja condizente
-      com sua pessoa.
+    text: "Ahhhh claro, tenho certeza que lhe darei uma experi\xEAncia que seja condizente
+      com sua pessoa."

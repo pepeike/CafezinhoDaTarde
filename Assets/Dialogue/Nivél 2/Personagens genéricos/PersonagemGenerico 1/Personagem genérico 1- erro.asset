@@ -16,7 +16,7 @@ MonoBehaviour:
   - name: 'Alma penada '
     text: "Mais um atendente que n\xE3o sabe preparar bebidas."
   - name: Atendente
-    text: eu sinto muito, posso tentar refazer.
+    text: Eu sinto muito, posso tentar refazer.
   - name: Alma penada
     text: "N\xE3o se preocupe, amanh\xE3 voltarei. Veja pelo lado bom, tu \xE9 melhor
       que o \xC1tila, o maluco nem sabia o que era caf\xE9."

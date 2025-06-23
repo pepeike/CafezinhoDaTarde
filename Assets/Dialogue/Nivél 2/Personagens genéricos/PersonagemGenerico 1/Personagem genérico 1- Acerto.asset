@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   talkScript:
   - name: 'Alma penada '
-    text: "Voc\xEA faz milagres nesta cafeteria sabia? O coisa boa, muitas pessoas
+    text: "Voc\xEA faz milagres nesta cafeteria sabia? \xD4 coisa boa, muitas pessoas
       no seu lugar n\xE3o sabiam o que estavam fazendo."
   - name: Atendente
     text: Fico feliz, mas teve muitos no meu lugar?
