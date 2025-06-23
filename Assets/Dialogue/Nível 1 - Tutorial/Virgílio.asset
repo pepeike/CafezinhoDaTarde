@@ -18,7 +18,7 @@ MonoBehaviour:
   - name: atendente
     text: "O\u2026 o que? Que lugar \xE9 este?\r\n"
   - name: "Virg\xEDlio"
-    text: "Ah, n\xE3o lhe derem as devidas explica\xE7\xF5es de sua situa\xE7\xE3o."
+    text: "Ah, n\xE3o lhe deram as devidas explica\xE7\xF5es de sua situa\xE7\xE3o."
   - name: Atendente
     text: "Como assim? e quem \xE9 voc\xEA?\r\n"
   - name: "Virg\xEDio"
