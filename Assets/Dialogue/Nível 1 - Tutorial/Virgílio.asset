@@ -24,7 +24,7 @@ MonoBehaviour:
   - name: "Virg\xEDio"
     text: " Sou Virg\xEDlio Maro,  mando meus p\xEAsames."
   - name: "Virg\xEDio"
-    text: ' Espero que sua passagem do mundo material para este tenha sido amena. '
+    text: 'Espero que sua passagem do mundo material para este tenha sido amena. '
   - name: Atendente
     text: "Eu\u2026 eu morri?"
   - name: Atendente
@@ -38,4 +38,7 @@ MonoBehaviour:
   - name: Atendente
     text: "Penit\xEAncia? Em uma cafeteria? "
   - name: "Virg\xEDio"
-    text: Infelizmente sim, mas vou lhe mostrar como se faz.
+    text: "Infelizmente sim, preste aten\xE7\xE3o nos pedidos dos clientes, alguns
+      podem ser confusos no que desejam"
+  - name: "Virg\xEDio"
+    text: 'Acesse as receitas por meio do menu e boa sorte! '
