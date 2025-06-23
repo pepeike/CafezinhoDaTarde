@@ -70,11 +70,11 @@ public class MenuSwitch : MonoBehaviour
         PlaySound(panelCloseSound);
     }
 
-
+    public string LevelName;
     public void LoadLevel(int level)
     {
         currentscene = SceneManager.GetActiveScene();
-        if (currentscene.name == "Level 1")
+        if (currentscene.name == LevelName)
         {
             SceneManager.LoadScene("MenuProposal");
         }

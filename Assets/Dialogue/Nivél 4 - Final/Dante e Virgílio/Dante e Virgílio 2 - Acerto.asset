@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a7276e88c3b4634486f89d1533ee889, type: 3}
+  m_Name: "Dante e Virg\xEDlio 2 - Acerto"
+  m_EditorClassIdentifier: 
+  talkScript:
+  - name: Dante
+    text: "Doce na medida certa, que sensa\xE7\xE3o maravilhosa "
+  - name: Dante
+    text: Somente algo divino poderia fazer algo deste tipo
+  - name: "Virg\xEDlio"
+    text: "O para\xEDso, em todas suas esferas"
+  - name: "Virg\xEDlio"
+    text: "traz segredos inimagin\xE1veis, isto \xE9 s\xF3 o came\xE7o"
+  - name: Dante
+    text: "Pelo amor de Deus, vamo logo ent\xE3o!"
+  - name: Atendente
+    text: "N\xE3o sabia que conseguia fazer algo t\xE3o bom, boa viagem!"

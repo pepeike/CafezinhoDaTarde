@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0743f96f3849ff442a4bee12da2effcf, type: 3}
+  m_Name: Personagem generico 3 CObj
+  m_EditorClassIdentifier: 
+  debugCliantName: 
+  Demand: {fileID: 11400000, guid: 7d2526c4d8ee9154796a6cf5f62f66f1, type: 2}
+  CorrectAnswer: {fileID: 11400000, guid: e572615e7d9e62d4cb9d9967f14987ca, type: 2}
+  WrongAnswer: {fileID: 11400000, guid: 0914405b13402b845af6709bc7ec2f61, type: 2}
+  aceptedBeverages:
+  - "caf\xE9 com leite"
+  CliantPrefab: {fileID: 5727610108326201148, guid: 338851969621a1a48adaadabd56f29aa, type: 3}
+  CliantPrefab2: {fileID: 0}
+  hasPatience: 0
+  patience: 0

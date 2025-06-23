@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0743f96f3849ff442a4bee12da2effcf, type: 3}
+  m_Name: Fazendeiro CObj
+  m_EditorClassIdentifier: 
+  debugCliantName: 
+  Demand: {fileID: 11400000, guid: dd881b7ad9b634a4980007f5be659c65, type: 2}
+  CorrectAnswer: {fileID: 11400000, guid: 6a7fc9f9540ac0841b968a4e2ef50245, type: 2}
+  WrongAnswer: {fileID: 11400000, guid: a8b08cb630e62d7479aece31a301977d, type: 2}
+  aceptedBeverages:
+  - "caf\xE9 puro"
+  CliantPrefab: {fileID: 1440783811141981598, guid: f977e853c21810043b110c6366272ba3, type: 3}
+  CliantPrefab2: {fileID: 0}
+  hasPatience: 0
+  patience: 0

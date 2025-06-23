@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a7276e88c3b4634486f89d1533ee889, type: 3}
+  m_Name: "Personagem gen\xE9rico -erro"
+  m_EditorClassIdentifier: 
+  talkScript:
+  - name: 'Alma penada '
+    text: "Vo...voc\xEA poderia me ajudar? "
+  - name: Atendente
+    text: Claro, o que deseja?
+  - name: Alma penada
+    text: "Estou aqui h\xE1 tantos anos, s\xE9culos, talvez mil\xEAnios? "
+  - name: 'Alma penada '
+    text: "N\xE3o sei, o tempo corre diferente..."
+  - name: Atendente
+    text: "Voc\xEA tem algo de prefer\xEAncia?"
+  - name: Alma penada
+    text: "Algo quente e suave por favor, lembro-me s\xF3 disto"
+  - name: Alma penada
+    text: "Da minha m\xE3e timando algo quente comigo"

@@ -25,7 +25,7 @@ public class WinScreenMaker : MonoBehaviour
         }
         // call screen
         WinnObject.SetActive(true);
-        StartCoroutine(TypeText(TextClientesSatisfeitos, "Clientes Satisfeitos: "+ numOfHappyCliants)); StartCoroutine(TypeText(TextTotalCliants, "Numero de Clientes: "+ cliants.Count));
+        StartCoroutine(TypeText(TextClientesSatisfeitos, "Clientes Satisfeitos: "+ numOfHappyCliants)); StartCoroutine(TypeText(TextTotalCliants, "Número de Clientes: "+ cliants.Count));
         
         //   O SetActive é para teste//
         //   O SetActive é para teste//

@@ -13,12 +13,13 @@ MonoBehaviour:
   m_Name: Personagem generico 1 CObj
   m_EditorClassIdentifier: 
   debugCliantName: 
-  tipeOfCliants: 0
   Demand: {fileID: 11400000, guid: 803b04b7a1ac2b84284a04290fb99bf5, type: 2}
   CorrectAnswer: {fileID: 11400000, guid: 206a8f99deab15642978269179387a2b, type: 2}
   WrongAnswer: {fileID: 11400000, guid: 3f20aeeca0a6a8649a143faa912ee392, type: 2}
   aceptedBeverages:
+  - "ch\xE1 preto"
   - "ch\xE1 com a\xE7\xFAcar"
   CliantPrefab: {fileID: 1440783811141981598, guid: f977e853c21810043b110c6366272ba3, type: 3}
+  CliantPrefab2: {fileID: 0}
   hasPatience: 0
   patience: 0

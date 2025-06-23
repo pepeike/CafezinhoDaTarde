@@ -17,8 +17,9 @@ MonoBehaviour:
   CorrectAnswer: {fileID: 11400000, guid: 0fda09fb4f9c55c408ccc4e5827c4406, type: 2}
   WrongAnswer: {fileID: 11400000, guid: 7dcc5b12b9bfdd24a83ddc5c9a65386d, type: 2}
   aceptedBeverages:
+  - "ch\xE1 preto"
   - "ch\xE1 com a\xE7\xFAcar"
-  CliantPrefab: {fileID: 7461639284461016051, guid: 11c2fc184b7c6ef4e82471531200c0b3, type: 3}
-  CliantPrefab2: {fileID: 7529982211088695839, guid: 4145e4dde9591d74b9dc8a6068f5d391, type: 3}
+  CliantPrefab: {fileID: 7461639284461016051, guid: cba6f744a96f40f41a66d7599ad2b962, type: 3}
+  CliantPrefab2: {fileID: 7529982211088695839, guid: e785ab93d8c78f946892b21986d16340, type: 3}
   hasPatience: 0
   patience: 0

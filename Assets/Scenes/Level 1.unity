@@ -1119,6 +1119,8 @@ MonoBehaviour:
   - {fileID: 993732229}
   - {fileID: 1747967210}
   - {fileID: 417040791}
+  - {fileID: 1418393313}
+  - {fileID: 2088453636}
   openoutTransition: {fileID: 0}
   pausescreenReturn: {fileID: 0}
   interact: {fileID: 0}
@@ -1970,11 +1972,11 @@ MonoBehaviour:
   winScreenMaker: {fileID: 614919502}
   Virgilio_Tutorial: 1
   Virgilio_tutorial: {fileID: 11400000, guid: 8b4d24a4a517cb34f80011334b4af043, type: 2}
-  VirgilioPREFAB: {fileID: 7529982211088695839, guid: 4145e4dde9591d74b9dc8a6068f5d391, type: 3}
+  VirgilioPREFAB: {fileID: 7529982211088695839, guid: e785ab93d8c78f946892b21986d16340, type: 3}
   cliants:
   - {fileID: 11400000, guid: 213a22c346c22b042adf7bf4d534bed5, type: 2}
-  - {fileID: 11400000, guid: 2c63efd48e2e39b47b9d3733a7f92e32, type: 2}
   - {fileID: 11400000, guid: 3de48388676f13b419b3042298749415, type: 2}
+  - {fileID: 11400000, guid: 8f12c5271495d624e8d0b7b7ee667be4, type: 2}
   chengeCam:
     m_PersistentCalls:
       m_Calls:
@@ -2014,6 +2016,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1533166831}
+        m_TargetAssemblyTypeName: PaperPause, Assembly-CSharp
+        m_MethodName: Reset
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   LockInteraction:
     m_PersistentCalls:
       m_Calls:
@@ -2041,6 +2055,18 @@ MonoBehaviour:
           m_StringArgument: Lock Interaction
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1533166831}
+        m_TargetAssemblyTypeName: PaperPause, Assembly-CSharp
+        m_MethodName: ChangeLock
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Lock Interaction
+          m_BoolArgument: 0
+        m_CallState: 2
   UnLockInteraction:
     m_PersistentCalls:
       m_Calls:
@@ -2059,6 +2085,18 @@ MonoBehaviour:
       - m_Target: {fileID: 441115446}
         m_TargetAssemblyTypeName: PanelChanger, Assembly-CSharp
         m_MethodName: ChangeLockChange
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Un Lock Interaction
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1533166831}
+        m_TargetAssemblyTypeName: PaperPause, Assembly-CSharp
+        m_MethodName: ChangeLock
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3716,6 +3754,7 @@ MonoBehaviour:
     m_Handle: 0
   buttons: []
   levelButtons: {fileID: 0}
+  LevelName: 
 --- !u!82 &1065099352
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4120,6 +4159,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 1
+      - m_Target: {fileID: 441115446}
+        m_TargetAssemblyTypeName: PanelChanger, Assembly-CSharp
+        m_MethodName: SetPanelTrue
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 441115446}
+        m_TargetAssemblyTypeName: PanelChanger, Assembly-CSharp
+        m_MethodName: SetPanelTrue
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 4
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1086288800
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6477,6 +6540,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 1
+      - m_Target: {fileID: 441115446}
+        m_TargetAssemblyTypeName: PanelChanger, Assembly-CSharp
+        m_MethodName: SetPanelFalse
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 441115446}
+        m_TargetAssemblyTypeName: PanelChanger, Assembly-CSharp
+        m_MethodName: SetPanelFalse
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 4
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1952240597
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6963,7 +7050,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2049036182497744916, guid: a7b1a74c559d0dc4fb3715e44fb9d8b6, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2178131056210328399, guid: a7b1a74c559d0dc4fb3715e44fb9d8b6, type: 3}
       propertyPath: m_Color.a

@@ -9,7 +9,7 @@ public class PaperPause : MonoBehaviour
 
     public Animator Paper;
     public Button pausebutton;
-
+    private bool Lock = true;
 
     /*
         public void ActivatePaper()
@@ -26,11 +26,17 @@ public class PaperPause : MonoBehaviour
 
         }
     */
+    public void ChangeLock(bool LockState)
+    {
+        Lock = LockState;
+    }
     public void SetPause()
     {
-        pause.SetActive(true);
-        BtnPause.SetActive(false);
-
+        if (Lock)
+        {
+            pause.SetActive(true);
+            BtnPause.SetActive(false);
+        }
     }
 
     public void Reset()

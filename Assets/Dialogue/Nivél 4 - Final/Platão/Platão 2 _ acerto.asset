@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a7276e88c3b4634486f89d1533ee889, type: 3}
+  m_Name: "Plat\xE3o 2 _ acerto"
+  m_EditorClassIdentifier: 
+  talkScript:
+  - name: "Plat\xE3o"
+    text: Mas que bebida saborosa e relaxante
+  - name: "Plat\xE3o"
+    text: "Amaria beber isto com Arist\xF3teles ap\xF3s longas reuni\xF5es"
+  - name: Atendente
+    text: Com certeza ajuda, fico feliz que tenha gostado
+  - name: Atendente
+    text: "\xC9 o favorito do Sun Tzu, ele sempre que experimentar todos"
+  - name: "Plat\xE3o"
+    text: "\xC9 s\xE9rio? Agora me alegro em aceitar seus convites "

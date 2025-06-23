@@ -1000,6 +1000,7 @@ MonoBehaviour:
     m_Handle: 0
   buttons: []
   levelButtons: {fileID: 426106640}
+  LevelName: 
 --- !u!82 &599435973
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1262,6 +1263,7 @@ MonoBehaviour:
     m_Handle: 0
   buttons: []
   levelButtons: {fileID: 426106640}
+  LevelName: 
 --- !u!82 &728913130
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2959,6 +2961,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 441115445}
     m_Modifications:
     - target: {fileID: 1257555508496860092, guid: 1736e3eb1abdcf340ad74a8b453930a5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1257555508496860092, guid: 1736e3eb1abdcf340ad74a8b453930a5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 3
       objectReference: {fileID: 0}
@@ -3035,6 +3041,10 @@ PrefabInstance:
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 2921514299728713028, guid: 1736e3eb1abdcf340ad74a8b453930a5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2921514299728713028, guid: 1736e3eb1abdcf340ad74a8b453930a5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 3
       objectReference: {fileID: 0}
@@ -3048,7 +3058,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2921514299728713028, guid: 1736e3eb1abdcf340ad74a8b453930a5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3238459164246398628, guid: 1736e3eb1abdcf340ad74a8b453930a5, type: 3}
       propertyPath: m_IsActive
@@ -3140,6 +3150,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6334339381428856275, guid: 1736e3eb1abdcf340ad74a8b453930a5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6624303572536803673, guid: 1736e3eb1abdcf340ad74a8b453930a5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6624303572536803673, guid: 1736e3eb1abdcf340ad74a8b453930a5, type: 3}
