@@ -14,12 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   talkScript:
   - name: Sun Tzu
-    text: "Minha hora se aproxima, \xE9 visivel at\xE9 para um cego."
+    text: Esta bebida tem um sabor forte e amargo.
   - name: Sun Tzu
-    text: 'Preciso de energia, um humilde servo do campo '
+    text: Realmente era tudo que precisava.
   - name: Sun Tzu
-    text: "me recomendou este tal de caf\xE9, poderia me servir isto?"
+    text: "Gostaria de t\xEA-la diante minhas longas horas de medita\xE7\xE3o, ou
+      nos dias de batalha."
   - name: Atendente
-    text: "Ah caf\xE9? claro general, tenho certeza que ser\xE1 \xFAtil"
+    text: "Ah, sim, me enche de alegria ver que a bebida cumpriu sua fun\xE7\xE3o!"
   - name: Sun Tzu
-    text: Irei esperar calmamente
+    text: "Sempre bom ver um servo alcan\xE7ando a perfei\xE7\xE3o em sua arte."
