@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a7276e88c3b4634486f89d1533ee889, type: 3}
+  m_Name: "Dante e Virg\xEDlio 3- Erro"
+  m_EditorClassIdentifier: 
+  talkScript:
+  - name: Dante
+    text: "Mas o que \xE9 isto!!! Uma ultima lembran\xE7a do inferno?"
+  - name: "Virg\xEDlio"
+    text: "As vezes, um simples erro pode ter resultados horr\xEDveis"
+  - name: Atendente
+    text: Eu...devo ter errado ou colocado muita canela, sinto muito
+  - name: "Virg\xEDlio"
+    text: "N\xE3o se culpe, jovem, ter\xE1 muito tempo para aprender melhor"
+  - name: Dante
+    text: "Vamos, n\xE3o aguento mais este lugar!!!"

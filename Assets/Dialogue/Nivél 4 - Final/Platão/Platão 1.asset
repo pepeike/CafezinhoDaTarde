@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a7276e88c3b4634486f89d1533ee889, type: 3}
+  m_Name: "Plat\xE3o 1"
+  m_EditorClassIdentifier: 
+  talkScript:
+  - name: "Plat\xE3o"
+    text: "As irm\xE3s do destino me trouxeram aqui novamente"
+  - name: "Plat\xE3o"
+    text: "Afinal, j\xE1 estou cansado de longos debates nesta realidade"
+  - name: "Plat\xE3o"
+    text: "gostaria de relaxar um pouco, que tal este tal de ch\xE1?"
+  - name: Atendente
+    text: Fico muito feliz de te receber novamente senhor
+  - name: Atendente
+    text: Nada melhor que um chazinho nestas horas!
+  - name: "Plat\xE3o"
+    text: 'Espero que sim, debater com esta tal de Ayn Rand '
+  - name: "Plat\xE3o"
+    text: "foi algo denso e interressante, por\xE9m cansativo"

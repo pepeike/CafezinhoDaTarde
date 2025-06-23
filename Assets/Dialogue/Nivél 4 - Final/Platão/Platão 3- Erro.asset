@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a7276e88c3b4634486f89d1533ee889, type: 3}
+  m_Name: "Plat\xE3o 3- Erro"
+  m_EditorClassIdentifier: 
+  talkScript:
+  - name: "Plat\xE3o"
+    text: "Isto definitivamente parece um h\xF3plon me acertando o nariz"
+  - name: "Plat\xE3o"
+    text: "Que tipo de bebida \xE9 est\xE1?"
+  - name: Atendente
+    text: "Eu devo ter errado, \xE9 uma bebida chinesa t\xE3o saborosa."
+  - name: Atendente
+    text: "\xC9 o favorito do Sun Tzu, ele sempre quer experimentar todos"
+  - name: "Plat\xE3o"
+    text: A guerra definitivamente  o enlouqueceu
+  - name: "Plat\xE3o"
+    text: 'Para isto ser a bebida favorita dele '
