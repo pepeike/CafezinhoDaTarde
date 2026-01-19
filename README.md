@@ -7,8 +7,8 @@ Gabriela Nunes\
 Isabela Luz\
 Lucas \*\
 (Pedro) Lena Ikeoka\
-Pedro Marcondes/
-Lucas Scott/
+Pedro Marcondes\
+Lucas Scott\
 \
 \
 \* *Colocar sobrenome*
