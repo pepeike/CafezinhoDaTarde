@@ -7,7 +7,7 @@ Gabriela Nunes\
 Isabela Luz\
 Lucas \*\
 (Pedro) Lena Ikeoka\
-Pedro Marcondes
+Pedro Marcondes/
 Lucas Scott/
 \
 \
