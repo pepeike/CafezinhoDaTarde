@@ -8,7 +8,7 @@ Isabela Luz\
 Lucas \*\
 (Pedro) Lena Ikeoka\
 Pedro Marcondes
-Lucas Scott
+Lucas Scott/
 \
 \
 \* *Colocar sobrenome*
